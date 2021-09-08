@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+---
+layout: default
 
-You can use the [editor on GitHub](https://github.com/jianhengLiu/jianhengLiu.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+---
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# 教育背景
 
-### Markdown
+- **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(保研)
+- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+我的研究聚焦于**机器人的感知定位与运动规划**，现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[网络机器人与系统实验室（NRSL）]([NRSL十二周年纪念2009-2021 (nrs-lab.com)](http://nrs-lab.com/))攻读学术型研究生学位。
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+# 科研经历
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+# 荣誉奖励
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jianhengLiu/jianhengLiu.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- 2019-2020一等奖学金，2018-2019三等奖学金，2017-2018二等奖学金
+- 2020ROBOCON国家一等奖，2019ROBOCON国家二等奖
+- 2019挑战杯国家三等奖，2019互联网+黑龙江省铜奖，2019哈工大“祖光杯”深圳校区金奖
+- 2018全国大学生英语竞赛C类二等奖
+- 2018国际青少年无人机大赛大满贯特等奖
