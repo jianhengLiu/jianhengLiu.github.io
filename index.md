@@ -68,11 +68,10 @@ layout: default
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
-
 <table>
 <td  width="40%" style="vertical-align:middle;">
 <video width="300px" controls autoplay muted>
-                <source src="./index.assets/quadcopterController.mkv">
+                <source src="./index.assets/SE3control_minimumsnap.mp4">
             </video>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
@@ -80,6 +79,7 @@ layout: default
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br>
@@ -124,4 +124,3 @@ C++ Course Project (Complied in CodeBlocks)<br>
     一个三关节平面机械臂的正逆运动学解算以及动画演示
     </td>
 </table> 
-
