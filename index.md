@@ -3,7 +3,7 @@ layout: default
 
 ---
 
-# 教育背景
+## 教育背景
 
 - **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(保研)
 - **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业
@@ -12,15 +12,15 @@ layout: default
 
 
 
-# 科研成果
+## Publication
 
-- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**, Jianheng Liu\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**, **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 *\* 表示相同贡献*
 
-# 科研经历
 
 
+## Research
 
 <table><tr>
 <td  width="30%" style="vertical-align:middle;"><img src="./index.assets/image-20210908104823823.png"/></td>
@@ -34,7 +34,7 @@ layout: default
 
 
 
-# 荣誉奖励
+## Honors & Awards
 
 - 2019-2020一等奖学金，2018-2019三等奖学金，2017-2018二等奖学金
 - 2020ROBOCON国家一等奖，2019ROBOCON国家二等奖
