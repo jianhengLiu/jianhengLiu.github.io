@@ -84,18 +84,16 @@ layout: default
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
     </td>
 </table> 
-
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="300px" controls autoplay muted>
-                <source src="./index.assets/SE3control_minimumsnap.mp4">
-            </video>
+    <iframe src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
     <strong>quad_controller_SE3</strong><br>
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br>
@@ -108,12 +106,9 @@ quadrotor controller based on SE3 geometric control.
     基于贝塞尔曲线以及基于最小化snap的移动机器人轨迹规划算法，同时开发了二维地图管理工具<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>用于算法验证及可视化
     </td>
 </table> 
-
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="300px" controls autoplay muted>
-                <source src="./index.assets/quadcopterController.mkv">
-            </video>
+    <iframe src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
@@ -121,6 +116,7 @@ quadrotor controller based on SE3 geometric control.
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/steeringwheel.png"/><br>
@@ -130,6 +126,8 @@ quadrotor controller based on SE3 geometric control.
 一个基于CoppeliaSim/V-Rep仿真平台的舵轮底盘搭建教程，并利用ROS作为通讯架构控制底盘
     </td>
 </table> 
+
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/manipulator.gif"/><br>
