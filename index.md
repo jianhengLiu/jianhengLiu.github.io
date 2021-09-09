@@ -31,7 +31,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video controls autoplay muted>
+<video width="330px" controls autoplay muted>
                 <source src="./index.assets/dynamic-vins.mp4" type="video/mp4">
             </video>
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
@@ -70,7 +70,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video controls autoplay muted>
+<video width="330px" controls autoplay muted>
                 <source src="./index.assets/quadcopterController.mkv" type="video/mkv">
             </video>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
@@ -94,7 +94,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video controls autoplay muted>
+<video width="330px" controls autoplay muted>
                 <source src="./index.assets/quadcopterController.mkv" type="video/mkv">
             </video>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]</td>
