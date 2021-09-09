@@ -14,13 +14,25 @@ layout: default
 
 # 科研成果
 
-**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**, Jianheng Liu\*, Yunfan Ren\*, Haoyao Chen, and Yunhui Liu, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**, Jianheng Liu\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 *\* 表示相同贡献*
 
 # 科研经历
 
-<p><img src="./img/potrait.jpeg" width="100" height="100" style="float:left;" />这是一段文字</p>
+
+
+<table><tr>
+<td  width="30%" style="vertical-align:middle;"><img src="./index.assets/image-20210908104823823.png"/></td>
+<td width="70%">
+    <strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong><br>
+<strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br>
+<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br>
+        We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
+    </td>
+</tr></table> 
+
+
 
 # 荣誉奖励
 
