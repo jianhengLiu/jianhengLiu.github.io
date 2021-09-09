@@ -68,6 +68,20 @@ layout: default
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
+
+<table>
+<td  width="40%" style="vertical-align:middle;">
+<video width="300px" controls autoplay muted>
+                <source src="./index.assets/MatRix.mp4">
+            </video>
+<td width="60%" style="vertical-align:top;">
+    <strong>MatRix</strong><br>
+    2020智能科创C端训练营作品MatRix！<br>
+    一个可交互的智能地毯，能够通过防呆设计的磁吸接口实现无限拼接，
+    MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
+    </td>
+</table> 
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
 <video width="300px" controls autoplay muted>
@@ -79,7 +93,6 @@ layout: default
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
-
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br>
