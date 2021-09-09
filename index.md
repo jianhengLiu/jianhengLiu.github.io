@@ -13,7 +13,9 @@ layout: default
 
 # Publication
 
-- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**, **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu, IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**
+  **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu
+  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 *\* denotes equal contribution*
 
