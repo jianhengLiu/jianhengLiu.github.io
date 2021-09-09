@@ -31,7 +31,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <video src="./index.assets/dynamic-vins.mp4" autoplay="" loop="" controls="" muted="muted" playsinline="" controlsList="nodownload"></video>
+    <video src="./index.assets/dynamic-vins.mp4" autoplay="" loop="" controls="" muted="muted"></video>
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
 </td>
 <td width="60%">
@@ -68,7 +68,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video src="./index.assets/quadcopterController.mkv" autoplay="" loop="" controls="" muted="muted" playsinline="" controlsList="nodownload"></video>
+<video src="./index.assets/quadcopterController.mkv" autoplay="" loop="" controls="" muted="muted"></video>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%">
     <strong>quad_controller_SE3</strong><br>
@@ -90,7 +90,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video src="./index.assets/quadcopterController.mkv" autoplay="" loop="" controls="" muted="muted" playsinline="" controlsList="nodownload"></video>
+<video src="./index.assets/quadcopterController.mkv" autoplay="" loop="" controls="" muted="muted"></video>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]</td>
 <td width="60%">
     <strong>FlightController</strong><br>
