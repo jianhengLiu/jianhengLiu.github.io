@@ -9,7 +9,7 @@ layout: default
 
 我的研究聚焦于**机器人的感知定位与运动规划**，现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[网络机器人与系统实验室（NRSL）]([NRSL十二周年纪念2009-2021 (nrs-lab.com)](http://nrs-lab.com/))攻读学术型研究生学位。
 
-**主修课程：**高等代数、数学分析、自动控制原理、自动控制实践、数字图像处理、机器视觉、系统建模与仿真、数学规划、机器人学导论、最优控制
+**主修课程：**高等代数、数学分析、自动控制原理、自动控制实践、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot)
 
 # Publication
 
@@ -70,12 +70,9 @@ layout: default
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
-
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="300px" controls autoplay muted>
-                <source src="./index.assets/MatRix.mp4">
-            </video>
+    <iframe src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </td>
 <td width="60%" style="vertical-align:top;">
     <strong>MatRix</strong><br>
@@ -84,6 +81,7 @@ layout: default
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
     </td>
 </table> 
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
     <iframe src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
