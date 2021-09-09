@@ -31,7 +31,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="320px" controls autoplay muted>
+<video width="300px" controls autoplay muted>
                 <source src="./index.assets/dynamic-vins.mp4">
             </video>
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
@@ -41,6 +41,7 @@ layout: default
         Dynamic-VINS is a SLAM system based on <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>. I try to combine YOLOv3 to eliminate the impact of the dynamic feature to SLAM system. The whole system is conducted in HUAWEI Atlas 200DK. A resposity adapting YOLOv3 and ROS to Atlas200DK is release to <a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>. And more feature is on the development.
     </td>
 </table> 
+
 
 
 <table>
@@ -70,7 +71,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="320px" controls autoplay muted>
+<video width="300px" controls autoplay muted>
                 <source src="./index.assets/quadcopterController.mkv">
             </video>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
@@ -92,10 +93,9 @@ quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
 
-
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="320px" controls autoplay muted>
+<video width="300px" controls autoplay muted>
                 <source src="./index.assets/quadcopterController.mkv">
             </video>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
@@ -105,6 +105,7 @@ quadrotor controller based on SE3 geometric control.
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
+
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/steeringwheel.png"/><br>
     [<a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>]</td>
