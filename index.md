@@ -74,6 +74,7 @@ layout: default
 <video width="300px" controls autoplay muted>
                 <source src="./index.assets/MatRix.mp4">
             </video>
+</td>
 <td width="60%" style="vertical-align:top;">
     <strong>MatRix</strong><br>
     2020智能科创C端训练营作品MatRix！<br>
