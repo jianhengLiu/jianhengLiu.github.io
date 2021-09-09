@@ -13,9 +13,9 @@ layout: default
 
 # Publication
 
-- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**
-  **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu
-  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**<br/>
+   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu<br/>
+   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 *\* denotes equal contribution*
 
@@ -39,18 +39,19 @@ layout: default
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
 </td>
 <td width="60%" style="vertical-align:top;">
-    <strong>Dynamic-VINS</strong><br>
+    <strong>Dynamic-VINS</strong><br/>
         Dynamic-VINS is a SLAM system based on <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>. I try to combine YOLOv3 to eliminate the impact of the dynamic feature to SLAM system. The whole system is conducted in HUAWEI Atlas 200DK. A resposity adapting YOLOv3 and ROS to Atlas200DK is release to <a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>. And more feature is on the development.
     </td>
 </table> 
 
 
 
+
 <table>
-<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/positioning.gif"/><br>
+<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
-    <strong>VINS-RGBD-FAST</strong><br>
+    <strong>VINS-RGBD-FAST</strong><br/>
         VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to accelerate the system's performance in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
     <li>extract FAST feature instead of Harris feature and solved feature clusttering problem</li>
     <li>added stationary initialization</li>
@@ -64,9 +65,9 @@ layout: default
     [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
-    <strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong><br>
-<strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br>
-<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br>
+    <strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong><br/>
+<strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br/>
+<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br/>
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
@@ -75,8 +76,8 @@ layout: default
     <iframe src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </td>
 <td width="60%" style="vertical-align:top;">
-    <strong>MatRix</strong><br>
-    2020智能科创C端训练营作品MatRix！<br>
+    <strong>MatRix</strong><br/>
+    2020智能科创C端训练营作品MatRix！<br/>
     一个可交互的智能地毯，能够通过防呆设计的磁吸接口实现无限拼接，
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
     </td>
@@ -87,52 +88,50 @@ layout: default
     <iframe src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
-    <strong>quad_controller_SE3</strong><br>
+    <strong>quad_controller_SE3</strong><br/>
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
 
 
 <table>
-<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br>
+<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br/>
     [<a href="https://github.com/jianhengLiu/BezierTrajGenerator">BezierTrajGenerator</a>]
     [<a href="https://github.com/jianhengLiu/MinimumSnapTrajGenerator">MinimumSnapTrajGenerator</a>]
     [<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
-    <strong>BezierTrajGenerator/MinimumSnapTrajGenerator</strong><br>
+    <strong>BezierTrajGenerator/MinimumSnapTrajGenerator</strong><br/>
     基于贝塞尔曲线以及基于最小化snap的移动机器人轨迹规划算法，同时开发了二维地图管理工具<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>用于算法验证及可视化
     </td>
 </table> 
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
     <iframe src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
-    <strong>FlightController</strong><br>
+    <strong>FlightController</strong><br/>
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
 
-
 <table>
-<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/steeringwheel.png"/><br>
+<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/steeringwheel.png"/><br/>
     [<a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
-    <strong>CoppeliaSim/V-Rep舵轮教程</strong><br>
+    <strong>CoppeliaSim/V-Rep舵轮教程</strong><br/>
 一个基于CoppeliaSim/V-Rep仿真平台的舵轮底盘搭建教程，并利用ROS作为通讯架构控制底盘
     </td>
 </table> 
 
-
-
 <table>
-<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/manipulator.gif"/><br>
+<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/manipulator.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
-    <strong>Manipulator_GUI</strong><br>
-C++ Course Project (Complied in CodeBlocks)<br>
+    <strong>Manipulator_GUI</strong><br/>
+C++ Course Project (Complied in CodeBlocks)<br/>
     一个三关节平面机械臂的正逆运动学解算以及动画演示
     </td>
 </table> 
