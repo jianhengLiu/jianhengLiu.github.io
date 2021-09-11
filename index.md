@@ -59,10 +59,9 @@ layout: default
     <li>lower the required bandwidth of the system</li>
     </td>
 </table> 
-
 <table>
-<td  width="40%" style="vertical-align:middle;"><img src="./index.assets/image-20210908104823823.png"/>
-    [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>]
+<td  width="40%" style="vertical-align:middle;"><iframe src="//player.bilibili.com/player.html?aid=590278777&bvid=BV1Qq4y1U7n4&cid=404680713&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] 
     </td>
 <td width="60%" style="vertical-align:top;">
     <strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong><br/>
@@ -82,6 +81,7 @@ layout: default
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
     </td>
 </table> 
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
