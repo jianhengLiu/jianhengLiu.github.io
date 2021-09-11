@@ -33,7 +33,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-<video width="300px" controls autoplay muted>
+<video width="310px" controls autoplay muted>
                 <source src="./index.assets/dynamic-vins.mp4">
             </video>
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
@@ -43,6 +43,7 @@ layout: default
         Dynamic-VINS is a SLAM system based on <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>. I try to combine YOLOv3 to eliminate the impact of the dynamic feature to SLAM system. The whole system is conducted in HUAWEI Atlas 200DK. A resposity adapting YOLOv3 and ROS to Atlas200DK is release to <a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>. And more feature is on the development.
     </td>
 </table> 
+
 
 
 
@@ -72,7 +73,7 @@ layout: default
 </table>
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="310px" src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </td>
 <td width="60%" style="vertical-align:top;">
     <strong>MatRix</strong><br/>
@@ -83,15 +84,17 @@ layout: default
 </table> 
 
 
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="310px" src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
     <strong>quad_controller_SE3</strong><br/>
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
+
 
 
 <table>
@@ -108,7 +111,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="310px" src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
