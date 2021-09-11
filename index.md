@@ -46,8 +46,6 @@ layout: default
 
 
 
-
-
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
@@ -60,8 +58,11 @@ layout: default
     <li>lower the required bandwidth of the system</li>
     </td>
 </table> 
+
+
 <table>
-<td  width="40%" style="vertical-align:middle;"><iframe src="//player.bilibili.com/player.html?aid=590278777&bvid=BV1Qq4y1U7n4&cid=404680713&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<td  width="40%" style="vertical-align:middle;">
+<iframe width="310px" height="200px" src="//player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] 
     </td>
 <td width="60%" style="vertical-align:top;">
@@ -71,9 +72,12 @@ layout: default
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
+
+
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe width="310px" src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="310px" height="200px" src="//player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </td>
 <td width="60%" style="vertical-align:top;">
     <strong>MatRix</strong><br/>
@@ -87,7 +91,7 @@ layout: default
 
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe width="310px" src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="310px" height="200px" src="//player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=1&as_wide=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]</td>
 <td width="60%" style="vertical-align:top;">
     <strong>quad_controller_SE3</strong><br/>
@@ -109,9 +113,10 @@ quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
 
+
 <table>
 <td  width="40%" style="vertical-align:middle;">
-    <iframe width="310px" src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe width="310px" height="200px" src="//player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     </td>
 <td width="60%" style="vertical-align:top;">
@@ -119,6 +124,8 @@ quadrotor controller based on SE3 geometric control.
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
+
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/steeringwheel.png"/><br/>
@@ -128,6 +135,7 @@ quadrotor controller based on SE3 geometric control.
 一个基于CoppeliaSim/V-Rep仿真平台的舵轮底盘搭建教程，并利用ROS作为通讯架构控制底盘
     </td>
 </table> 
+
 
 <table>
 <td  width="40%" style="vertical-align:middle;"><img src="./index.assets/manipulator.gif"/><br/>
