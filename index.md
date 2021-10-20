@@ -56,6 +56,7 @@ layout: default
     <li>added stationary initialization</li>
     <li>added IMU-aided feature tracking and extracted-feature area's quality judgement</li>
     <li>lower the required bandwidth of the system</li>
+    <li>trade-off of accuracy and efficiency by constrain the optimized variables in backend</li>
     </td>
 </table> 
 
