@@ -45,14 +45,13 @@ layout: default
 </table> 
 
 
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
     <img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
     <big><big><strong>VINS-RGBD-FAST</strong></big></big><br/>
-        VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to accelerate the system's performance in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
+        VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to improve the system's efficiency in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
     <li>extract FAST feature instead of Harris feature and solved feature clusttering problem</li>
     <li>added stationary initialization</li>
     <li>added IMU-aided feature tracking and extracted-feature area's quality judgement</li>
@@ -60,6 +59,7 @@ layout: default
     <li>trade-off of accuracy and efficiency by constrain the optimized variables in backend</li>
     </td>
 </table> 
+
 
 
 
