@@ -51,7 +51,7 @@ layout: default
     <img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
-    <big><strong>VINS-RGBD-FAST</strong></big>big><br/>
+    <big><strong>VINS-RGBD-FAST</strong></big><br/>
         VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to accelerate the system's performance in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
     <li>extract FAST feature instead of Harris feature and solved feature clusttering problem</li>
     <li>added stationary initialization</li>
@@ -70,7 +70,7 @@ layout: default
     [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>] 
     </td>
 <td width="55%" style="vertical-align:top;">
-    <big><strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong></big>big><br/>
+    <big><strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong></big><br/>
 <strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br/>
 <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br/>
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
@@ -85,7 +85,7 @@ layout: default
     [<a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
-    <big><strong>MatRix</strong></big>big><br/>
+    <big><strong>MatRix</strong></big><br/>
     2020智能科创C端训练营作品MatRix！<br/>
     一个可交互的智能地毯，能够通过防呆设计的磁吸接口实现无限拼接，
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
