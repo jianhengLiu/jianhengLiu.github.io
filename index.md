@@ -45,10 +45,9 @@ layout: default
 </table> 
 
 
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <img width="374px" src="./index.assets/positioning.gif"/><br/>
+    <img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
     <strong>VINS-RGBD-FAST</strong><br/>
@@ -65,7 +64,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-<iframe width="374px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0" allowfullscreen="true"> </iframe><br/>
+<iframe width="374px" height="235px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0" allowfullscreen="true"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] 
     [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>] 
     </td>
@@ -81,7 +80,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-<iframe width="374px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+<iframe width="374px" height="235px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
     [<a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
@@ -98,7 +97,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <iframe width="374px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+    <iframe width="374px" height="235px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]
     [<a href="https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web">Video</a>]
     </td>
@@ -107,6 +106,7 @@ layout: default
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
+
 
 
 
@@ -126,10 +126,9 @@ quadrotor controller based on SE3 geometric control.
 </table> 
 
 
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <iframe width="374px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+    <iframe width="374px" height="235px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     [<a href="    https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>]
     </td>
@@ -145,7 +144,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <img width="374px" src="./index.assets/steeringwheel.png"/><br/>
+    <img src="./index.assets/steeringwheel.png"/><br/>
     [<a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
     <strong>CoppeliaSim/V-Rep舵轮教程</strong><br/>
@@ -157,7 +156,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <img width="374px" src="./index.assets/manipulator.gif"/><br/>
+    <img src="./index.assets/manipulator.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
     <strong>Manipulator_GUI</strong><br/>
