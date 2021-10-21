@@ -119,8 +119,8 @@ quadrotor controller based on SE3 geometric control.
     [<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>]
 </td>
 <td width="55%" style="vertical-align:top;">
-    <big><big><strong>BezierTrajGenerator</big></big></br>
-    <big><big>MinimumSnapTrajGenerator</strong></big></big><br/>
+    <big><big><strong>BezierTrajGenerator</strong></big></big></br>
+    <big><big><strong>MinimumSnapTrajGenerator</strong></big></big><br/>
     基于贝塞尔曲线以及基于最小化snap的移动机器人轨迹规划算法，同时开发了二维地图管理工具<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>用于算法验证及可视化
     </td>
 </table> 
