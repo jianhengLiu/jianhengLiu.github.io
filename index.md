@@ -39,7 +39,7 @@ layout: default
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
 </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>Dynamic-VINS</strong><br/>
+    <big><strong>Dynamic-VINS</strong></big><br/>
         Dynamic-VINS is a SLAM system based on <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>. I try to combine YOLOv3 to eliminate the impact of the dynamic feature to SLAM system. The whole system is conducted in HUAWEI Atlas 200DK. A resposity adapting YOLOv3 and ROS to Atlas200DK is release to <a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>. And more feature is on the development.
     </td>
 </table> 
@@ -51,7 +51,7 @@ layout: default
     <img src="./index.assets/positioning.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
-    <strong>VINS-RGBD-FAST</strong><br/>
+    <big><strong>VINS-RGBD-FAST</strong></big>big><br/>
         VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to accelerate the system's performance in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
     <li>extract FAST feature instead of Harris feature and solved feature clusttering problem</li>
     <li>added stationary initialization</li>
@@ -70,7 +70,7 @@ layout: default
     [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>] 
     </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong><br/>
+    <big><strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong></big>big><br/>
 <strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br/>
 <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br/>
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
@@ -85,7 +85,7 @@ layout: default
     [<a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>MatRix</strong><br/>
+    <big><strong>MatRix</strong></big>big><br/>
     2020智能科创C端训练营作品MatRix！<br/>
     一个可交互的智能地毯，能够通过防呆设计的磁吸接口实现无限拼接，
     MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
@@ -103,11 +103,10 @@ layout: default
     [<a href="https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web">Video</a>]
     </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>quad_controller_SE3</strong><br/>
+    <big><strong>quad_controller_SE3</strong></big><br/>
 quadrotor controller based on SE3 geometric control.
     </td>
 </table> 
-
 
 
 
@@ -121,10 +120,11 @@ quadrotor controller based on SE3 geometric control.
     [<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>]
     </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>BezierTrajGenerator/MinimumSnapTrajGenerator</strong><br/>
+    <big><strong>BezierTrajGenerator/MinimumSnapTrajGenerator</strong></big><br/>
     基于贝塞尔曲线以及基于最小化snap的移动机器人轨迹规划算法，同时开发了二维地图管理工具<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>用于算法验证及可视化
     </td>
 </table> 
+
 
 
 <table>
@@ -134,7 +134,7 @@ quadrotor controller based on SE3 geometric control.
     [<a href="    https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>]
     </td>
 <td width="55%" style="vertical-align:top;">
-    <strong>FlightController</strong><br/>
+    <big><strong>FlightController</strong></big><br/>
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
@@ -148,7 +148,7 @@ quadrotor controller based on SE3 geometric control.
     <img src="./index.assets/steeringwheel.png"/><br/>
     [<a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
-    <strong>CoppeliaSim/V-Rep舵轮教程</strong><br/>
+    <big><strong>CoppeliaSim/V-Rep舵轮教程</strong></big><br/>
 一个基于CoppeliaSim/V-Rep仿真平台的舵轮底盘搭建教程，并利用ROS作为通讯架构控制底盘
     </td>
 </table> 
@@ -160,7 +160,7 @@ quadrotor controller based on SE3 geometric control.
     <img src="./index.assets/manipulator.gif"/><br/>
     [<a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>]</td>
 <td width="55%" style="vertical-align:top;">
-    <strong>Manipulator_GUI</strong><br/>
+    <big><strong>Manipulator_GUI</strong></big><br/>
 C++ Course Project (Complied in CodeBlocks)<br/>
     一个三关节平面机械臂的正逆运动学解算以及动画演示
     </td>
