@@ -65,7 +65,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-<iframe width="354px" height="235px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0" allowfullscreen="true"> </iframe><br/>
+<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] 
     [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>] 
     </td>
@@ -81,7 +81,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-<iframe width="354px" height="235px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
     [<a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
@@ -98,7 +98,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <iframe width="354px" height="235px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]
     [<a href="https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web">Video</a>]
     </td>
@@ -129,7 +129,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <iframe width="354px" height="235px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     [<a href="    https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>]
     </td>
