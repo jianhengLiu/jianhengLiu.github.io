@@ -126,7 +126,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="50%" style="vertical-align:middle;">
-    <iframe width="395px" height="248px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <iframe src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
     [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
     [<a href="    https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>]
     </td>
