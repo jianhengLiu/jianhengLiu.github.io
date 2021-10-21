@@ -114,7 +114,7 @@ quadrotor controller based on SE3 geometric control.
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <img width="374px" src="./index.assets/bezier.png"/><br/>
+    <img src="./index.assets/bezier.png"/><br/>
     [<a href="https://github.com/jianhengLiu/BezierTrajGenerator">BezierTrajGenerator</a>]
     [<a href="https://github.com/jianhengLiu/MinimumSnapTrajGenerator">MinimumSnapTrajGenerator</a>]
     [<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>]
