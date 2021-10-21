@@ -33,7 +33,7 @@ layout: default
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
-<video controls autoplay muted>
+<video width="395px" controls autoplay muted>
                 <source src="./index.assets/dynamic-vins.mp4">
             </video><br/>
 [<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
@@ -59,7 +59,6 @@ layout: default
     <li>trade-off of accuracy and efficiency by constrain the optimized variables in backend</li>
     </td>
 </table> 
-
 
 
 <table>
@@ -111,6 +110,7 @@ quadrotor controller based on SE3 geometric control.
 
 
 
+
 <table>
 <td  width="45%" style="vertical-align:middle;"><img src="./index.assets/bezier.png"/><br/>
     [<a href="https://github.com/jianhengLiu/BezierTrajGenerator">BezierTrajGenerator</a>]
@@ -124,7 +124,6 @@ quadrotor controller based on SE3 geometric control.
 </table> 
 
 
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
     <iframe src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br/>
@@ -136,6 +135,7 @@ quadrotor controller based on SE3 geometric control.
 基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
     </td>
 </table> 
+
 
 
 
@@ -161,4 +161,3 @@ C++ Course Project (Complied in CodeBlocks)<br/>
     一个三关节平面机械臂的正逆运动学解算以及动画演示
     </td>
 </table> 
-
