@@ -5,25 +5,26 @@ layout: default
 # Education
 
 - **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(推免生)
-- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业
+- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业（15/70）
 
-我的研究聚焦于**机器人的感知定位与运动规划**，现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[网络机器人与系统实验室（NRSL）]([NRSL十二周年纪念2009-2021 (nrs-lab.com)](http://nrs-lab.com/))攻读学术型研究生学位。
+我的研究聚焦于**机器人的感知定位与运动规划**，现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[nROS-Lab（NRSL）](http://nrs-lab.com/))攻读学术型研究生学位。
 
 **主修课程：**高等代数、数学分析、自动控制原理、自动控制实践、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot)
 
 # Publication
 
+- <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
+   **Jianheng Liu**, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
+   RA-L and IROS, 2022 (**Under review**)
 - <big>**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**</big><br/>
-   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen and Yunhui Liu<br/>
+   **Jianheng Liu**, Yunfan Ren, Haoyao Chen and Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
-
-*\* denotes equal contribution*
 
 
 
 # Honors & Awards
 
-- 2019-2020一等奖学金，2018-2019三等奖学金，2017-2018二等奖学金
+- 2021-2022一等奖学金，2019-2020一等奖学金，2018-2019三等奖学金，2017-2018二等奖学金
 - 2020ROBOCON国家一等奖，2019ROBOCON国家二等奖
 - 2019挑战杯国家三等奖，2019互联网+黑龙江省铜奖，2019哈工大“祖光杯”深圳校区金奖
 - 2018全国大学生英语竞赛C类二等奖
@@ -36,13 +37,16 @@ layout: default
 <video width="354px" controls autoplay muted>
                 <source src="./index.assets/dynamic-vins.mp4">
             </video><br/>
-[<a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>]
+[<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
-    <big><big><strong>Dynamic-VINS</strong></big></big><br/>
-        Dynamic-VINS is a SLAM system based on <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>. I try to combine YOLOv3 to eliminate the impact of the dynamic feature to SLAM system. The whole system is conducted in HUAWEI Atlas 200DK. A resposity adapting YOLOv3 and ROS to Atlas200DK is release to <a href="https://github.com/jianhengLiu/YOLOv3-Atlas-ROS">YOLOv3-Atlas-ROS</a>. And more feature is on the development.
+    <big><big><strong>RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments</strong></big></big><br/>
+<strong>Jianheng Liu</strong>, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
+<i>RA-L and IROS, 2022 (<strong>Under review</strong>)</i><br/>
+    Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on <a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-Mono</a>. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
     </td>
 </table> 
+
 
 
 <table>
@@ -71,11 +75,12 @@ layout: default
     </td>
 <td width="55%" style="vertical-align:top;">
     <big><big><strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong></big></big><br/>
-<strong>Jianheng Liu*</strong>, Yunfan Ren*, Haoyao Chen and Yunhui Liu<br/>
+<strong>Jianheng Liu</strong>, Yunfan Ren, Haoyao Chen and Yunhui Liu<br/>
 <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br/>
         We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
     </td>
 </table>
+
 
 
 
