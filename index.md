@@ -33,10 +33,8 @@ layout: default
 # Research
 
 <table>
-<td  width="45%" style="vertical-align:middle;">
-<video width="354px" controls autoplay muted>
-                <source src="./index.assets/dynamic-vins.mp4">
-            </video><br/>
+    <td  width="45%" style="vertical-align:middle;">
+    <img src="./index.assets/dynamic_vins.gif"/><br/>
 [<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Video</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
@@ -46,6 +44,7 @@ layout: default
     Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on <a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-Mono</a>. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
     </td>
 </table> 
+
 
 
 
