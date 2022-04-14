@@ -5,11 +5,11 @@ layout: default
 # Education
 
 - **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(推免生)
-- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业（15/70）
+- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业（排名：15/70）
 
 我的研究聚焦于**机器人的感知定位与运动规划**，现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[nROS-Lab（NRSL）](http://nrs-lab.com/))攻读学术型研究生学位。
 
-**主修课程：**高等代数、数学分析、自动控制原理、自动控制实践、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot)
+**主修课程：**高等代数、数学分析、自动控制原理、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot)
 
 # Publication
 
@@ -35,7 +35,7 @@ layout: default
 <table>
     <td  width="45%" style="vertical-align:middle;">
     <img src="./index.assets/dynamic_vins.gif"/><br/>
-[<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Video</a>] 
+[<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Bilibili</a>] [<a href="https://youtu.be/y0U1IVtFBwY">Youtube</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
     <big><big><strong>RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments</strong></big></big><br/>
@@ -44,6 +44,7 @@ layout: default
     Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on <a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-Mono</a>. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
     </td>
 </table> 
+
 
 
 
