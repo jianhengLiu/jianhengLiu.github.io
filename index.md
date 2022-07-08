@@ -15,7 +15,7 @@ layout: default
 
 - <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
    **Jianheng Liu**, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
-   RA-L and IROS, 2022 (**Under review**)
+   RA-L and IROS, 2022
 - <big>**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**</big><br/>
    **Jianheng Liu**, Yunfan Ren, Haoyao Chen and Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
@@ -40,7 +40,7 @@ layout: default
 <td width="55%" style="vertical-align:top;">
     <big><big><strong>RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments</strong></big></big><br/>
 <strong>Jianheng Liu</strong>, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
-<i>RA-L and IROS, 2022 (<strong>Under review</strong>)</i><br/>
+<i>RA-L and IROS, 2022</i><br/>
     Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on <a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-Mono</a>. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
     </td>
 </table> 
