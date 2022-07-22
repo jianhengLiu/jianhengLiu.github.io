@@ -29,7 +29,7 @@ layout: default
    **Jianheng Liu\***, Yunfan Ren\*, Haoyao Chen and Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
-> \* equally contribution
+> \* equal contribution
 
 
 # Honors & Awards
