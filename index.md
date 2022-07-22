@@ -11,9 +11,10 @@ layout: default
 
 **主修课程：** 高等代数、数学分析、自动控制原理、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot)
 
-**研究方向：**
+**研究兴趣：**
 - SLAM
 - 三维重建
+- NeRF
 - 运动规划
 
 # Publication

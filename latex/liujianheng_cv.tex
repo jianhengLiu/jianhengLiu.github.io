@@ -35,7 +35,7 @@
 \phone[mobile]{+86 15625293598}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{943678231@qq.com}                               % optional, remove / comment the line if not wanted
+\email{liujianhengchris@qq.com}                               % optional, remove / comment the line if not wanted
 \homepage{https://github.com/jianhengLiu}                         % optional, remove / comment the line if not wanted  
 \extrainfo{\href{https://jianhengliu.github.io/}{https://jianhengliu.github.io/}}                 % optional, remove / comment the line if not wanted
 % \photo[64pt][0.4pt]{potrait.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
@@ -61,7 +61,9 @@
 
 \small{I am currently a postgraduate in Harbin Institute of Technology (Shenzhen), China, supervised by \textbf{Prof. Haoyao Chen}. I obtained my bachelor degree at Harbin Institute of Technology (Shenzhen), China in 2021.
 
-My research interest lies at \textbf{Robotics and Autonomous Systems, Localization and Mapping, Motion Planning, Unmanned Aerial Vehicles} and \textbf{Autonomous Navigation}. Multimedia and Chinese CV are available at \href{https://jianhengliu.github.io}{https://jianhengliu.github.io}.
+My research interest lies at \textbf{Robotics and Autonomous Systems, Localization and Mapping, Motion Planning} and \textbf{NeRF}. 
+
+Check out more information and multimedia of research experiences at \href{https://jianhengliu.github.io}{https://jianhengliu.github.io}.
 
 \section{Education}
 
@@ -77,7 +79,7 @@ My research interest lies at \textbf{Robotics and Autonomous Systems, Localizati
 
 \vspace{2pt}
 
-\section{Publication}
+\section{Publications}
 
 \vspace{5pt}
 
@@ -86,23 +88,24 @@ My research interest lies at \textbf{Robotics and Autonomous Systems, Localizati
 
 \item{\textbf{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments}
 
-\small{\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen}
-% \small{\textbf{Jianheng Liu}*, Yunfan Ren*, Haoyao Chen and Yunhui Liu}
+\small{\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen. \textbf{RA-L and IROS, 2022}}
+}
 
-\small{RA-L and IROS, 2022}
+\vspace{3pt}
+
+\item{\textbf{Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation}
+
+\small{Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, \textbf{Jianheng Liu}, Yunhui Liu. \textbf{IROS, 2022}}
 }
 
 \vspace{3pt}
 
 \item{\textbf{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload}
 
-\small{\textbf{Jianheng Liu}, Yunfan Ren, Haoyao Chen and Yunhui Liu}
-% \small{\textbf{Jianheng Liu}*, Yunfan Ren*, Haoyao Chen and Yunhui Liu}
-
-\small{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021) }
+\small{\textbf{Jianheng Liu}*, Yunfan Ren*, Haoyao Chen and Yunhui Liu. \textbf{IROS, 2021}}
 }
 
-% \small{* co-first author}
+\footnotesize{* equally contribution}
 
 \end{itemize}
 
@@ -125,7 +128,7 @@ My research interest lies at \textbf{Robotics and Autonomous Systems, Localizati
 \end{itemize}
 
 
-\section{Research}
+\section{Research Experiences}
 
 \vspace{6pt}
 
@@ -133,78 +136,74 @@ My research interest lies at \textbf{Robotics and Autonomous Systems, Localizati
 
 \item \textbf{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments:} 
 
-\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen
-
-RA-L and IROS, 2022
+\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen. \textbf{RA-L and IROS, 2022}
 
 Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on \href{https://github.com/HKUST-Aerial-Robotics/VINS-Mono}{VINS-Mono}. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{Dynamic-VINS}
-\item \textbf{Referred Video:} \href{https://youtu.be/y0U1IVtFBwY}{Youtube}, \href{https://www.bilibili.com/video/BV1bF411t7mx}{Bilibili}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{Dynamic-VINS}
+% \item \textbf{Referred Video:} \href{https://youtu.be/y0U1IVtFBwY}{Youtube}, \href{https://www.bilibili.com/video/BV1bF411t7mx}{Bilibili}
+% \end{itemize}
 \vspace{6pt}
 
-\item \textbf{VINS-RGBD-FAST:} VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements both in frontend and backend to improve the system's efficiency in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. For example, this system extracts FAST feature instead of Harris feature and solved feature clusttering problem, adds stationary initialization function, add IMU-aided feature tracking and extracted-feature area's quality judgement function, lowers the required bandwidth of the system, makes a trade-off of accuracy and efficiency by constrain the optimized variables in backend. Furthermore, we made this system as a module and applied it into UAV as a state feedback to track a generative trajectory stably. 
+\item \textbf{VINS-RGBD-FAST:} VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do refinements both in frontend and backend to improve the system's efficiency in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. Furthermore, we made this system as a module and applied it into UAV as a state feedback to track a generative trajectory stably. 
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}.
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}.
+% \end{itemize}
 \vspace{6pt}
 
 \item \textbf{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload:} 
 
-\textbf{Jianheng Liu}, Yunfan Ren, Haoyao Chen and Yunhui Liu
+\textbf{Jianheng Liu}, Yunfan Ren, Haoyao Chen and Yunhui Liu. \textbf{IROS, 2021}
 
-IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+A novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories.
 
-Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on \href{https://github.com/HKUST-Aerial-Robotics/VINS-Mono}{VINS-Mono}. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms. 
-
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based-Payload-State-Estimator}
-\item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web}{Bilibili}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based-Payload-State-Estimator}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web}{Bilibili}
+% \end{itemize}
 \vspace{6pt}
 
 \item \textbf{MatRix:} A extreme interesting prototype developed in 2020 XBOT PARK Smart Product Innovation Boot Camp. An interactive smart carpet, which can achieve infinite splicing through the magnetic suction connector with anti-dull design. MatRix can be used as your home intelligent terminal, game console, decoration and so on.
 
-\begin{itemize}
-\item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{Bilibili}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{Bilibili}
+% \end{itemize}
 
 \vspace{6pt}
 
 \item \textbf{quad-controller-SE3 \& FlightController:} quadrotor controller based on PX4/mavros and SE3 geometric control. And I also develop a simulation based on CoppeliaSim software to compute the desired thrust and torque of quadroter according to dynamic modelling, and use distribution matrix to decide the motor's speed. Furthermore, I conduct a trajectory tracking controller to follow a generative minimum snap trajectory for experiment.
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}, \href{https://github.com/jianhengLiu/FlightController}{FlightController}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}, \href{https://github.com/jianhengLiu/FlightController}{FlightController}
 
-\item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web}{Bilibili-1}, \href{https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web}{Bilibili-2}
-\end{itemize}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web}{Bilibili-1}, \href{https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web}{Bilibili-2}
+% \end{itemize}
 
 \vspace{6pt}
 
 \item \textbf{BezierTrajGenerator \& MinimumSnapTrajGenerator \& 
 MapManager:} Trajectory Generator based on Bezier Curve and Minimum Snap for autonomous robot. And I develop a 2D Map Manager for the verification and visualization for different algorithms.
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}, \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}, \href{https://github.com/jianhengLiu/MapManager}{MapManager}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}, \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}, \href{https://github.com/jianhengLiu/MapManager}{MapManager}
+% \end{itemize}
 
 \vspace{6pt}
 
 \item \textbf{CoppeliaSim/V-Rep Steeling Wheel Robot Tutorial:} A detailed tutorial for a CoppeliaSim/V-Rep beginner to construct their own Steeling Wheel Robot and control it via ROS.
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial}{CoppeliaSim-Steeringwheel-Tutorial}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial}{CoppeliaSim-Steeringwheel-Tutorial}
+% \end{itemize}
 \vspace{6pt}
 
 \item \textbf{Manipulator-GUI:} C++ Course Project (Complied in CodeBlocks). A three dimentional manipulator's forword/inverse kinematics calculation and visualization.
 
-\begin{itemize}
-\item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Manipulator_GUI}{Manipulator-GUI}
-\end{itemize}
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Manipulator_GUI}{Manipulator-GUI}
+% \end{itemize}
 
 \end{itemize}
 
