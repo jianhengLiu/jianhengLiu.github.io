@@ -26,10 +26,10 @@ layout: default
     Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
 - <big>**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**</big><br/>
-   **Jianheng Liu$^*$**, Yunfan Ren$^*$, Haoyao Chen and Yunhui Liu<br/>
+   **Jianheng Liu\***, Yunfan Ren\*, Haoyao Chen and Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
-> $^*$ equally contribution
+> \* equally contribution
 
 
 # Honors & Awards
