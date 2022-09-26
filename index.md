@@ -72,6 +72,16 @@ fully.
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
+    <img src="./index.assets/lvisam_putn.gif"/><br/>
+    [<a href="https://github.com/jianhengLiu/LVI-SAM-LIVOX">LVI-SAM-LIVOX</a>][<a href="https://github.com/jianhengLiu/PUTN">PUTN</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>LVI-SAM-LIVOX</strong></big></big><br/>
+    Easy-to-run LVI-SAM, adaptation with LIVOX-AVIA, and its application in simulator together with motion planner.
+    </td>
+</table> 
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
     <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=296794486&cid=730222765&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
     [<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Bilibili</a>] [<a href="https://youtu.be/y0U1IVtFBwY">Youtube</a>] 
     </td>
@@ -102,8 +112,15 @@ fully.
     </td>
 </table> 
 
-
-
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="./index.assets/slrecon.jpg"/><br/>
+    [<a href="https://github.com/jianhengLiu/SV-SLAM">Code</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>SemanticLineRecon</strong></big></big><br/>
+    Semantic line reconstruction with colmap and line3d++.
+    </td>
+</table> 
 
 <table>
 <td  width="45%" style="vertical-align:middle;">
