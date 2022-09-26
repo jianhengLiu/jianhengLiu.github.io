@@ -35,7 +35,7 @@
 \phone[mobile]{+86 15625293598}                   % optional, remove / comment the line if not wanted
 %\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-\email{943678231@qq.com}                               % optional, remove / comment the line if not wanted
+\email{liujianhengchris@qq.com}                               % optional, remove / comment the line if not wanted
 \homepage{https://github.com/jianhengLiu}                         % optional, remove / comment the line if not wanted  
 \extrainfo{https://jianhengliu.github.io/}                 % optional, remove / comment the line if not wanted
 % \photo[64pt][0.4pt]{potrait.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
@@ -58,14 +58,12 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
-\small{我现于\href{faculty.hitsz.edu.cn/chenhaoyao}{陈浩耀}教授带领的\href{http://nrs-lab.com/}{nROS-Lab(NRSL)})攻读学术型研究生学位，目前的研究兴趣聚焦于\textbf{机器人自主系统、定位与建图与基于深度学习的隐式地图表达}，致力于实现机器人的高效环境感知。
+\small{我现于\href{faculty.hitsz.edu.cn/chenhaoyao}{陈浩耀}教授带领的\href{http://nrs-lab.com/}{nROS-Lab}攻读学术型研究生学位，目前的研究兴趣聚焦于\textbf{机器人自主系统、定位与建图与基于深度学习的隐式地图表达}，致力于实现高效的机器人环境感知定位。
 
 欢迎到我的个人主页\href{https://jianhengliu.github.io}{https://jianhengliu.github.io}了解更多的个人信息以及项目经历！
 }
 
 \section{Education}
-
-\vspace{5pt}
 
 \begin{itemize}
 
@@ -78,8 +76,6 @@
 \vspace{2pt}
 
 \section{Publications}
-
-\vspace{5pt}
 
 \begin{itemize}
 
@@ -116,8 +112,6 @@
 
 \section{Honor \& Awards}
 
-\vspace{6pt}
-
 \begin{itemize}
 
 \item{研究生学业一等奖学金(2022-2023，2021-2022), 本科生学业一等奖学金(2019-2020), 三等奖学金(2018-2019), 二等奖学金(2017-2018)}
@@ -132,10 +126,20 @@
 
 \end{itemize}
 
+\section{Intern Experiences}
+
+\begin{itemize}
+
+\item{深圳科创学院智能驾驶中心：2021/09--2022/04}
+
+\item{云鲸智能感知部门：2022/05--2022/07}
+
+\item{腾讯RoboticsX实验室感知组：2022/09--Present}
+
+\end{itemize}
+
 
 \section{Research Experiences}
-
-\vspace{6pt}
 
 \begin{itemize}
 
@@ -150,8 +154,6 @@ size, and continuity.
 Our proposed information gain metric is based on spatial
 point sampling rather than voxel traversing, which can be
 seamlessly integrated into the implicit model.
-The metric is also differentiable, resulting in smoother
-and better view selection.
 An implicit reconstruction method for bounded objects
 considering free space is also proposed to use information
 fully.
@@ -160,7 +162,7 @@ fully.
 
 \textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen. \textbf{RA-L and IROS, 2022}
 
-Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on \href{https://github.com/HKUST-Aerial-Robotics/VINS-Mono}{VINS-Mono}. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
+Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry system for resource-restricted robots in dynamic environments. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on resource-restricted platforms, like \textbf{HUAWEI Atlas 200DK, NVIDIA Xavier AGX}.
 
 % \begin{itemize}
 % \item \textbf{Referred Code:} \href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{Dynamic-VINS}
@@ -168,7 +170,7 @@ Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for reso
 % \end{itemize}
 \vspace{6pt}
 
-\item \textbf{VINS-RGBD-FAST:} VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do refinements both in frontend and backend to improve the system's efficiency in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. Furthermore, we made this system as a module and applied it into UAV as a state feedback to track a generative trajectory stably. 
+\item \textbf{VINS-RGBD-FAST:} VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do refinements both in frontend and backend to improve the system's efficiency in resource-constrained embedded paltform. Furthermore, we made this system as a module and applied it into UAV as a state feedback to track a generative trajectory stably. 
 
 % \begin{itemize}
 % \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}.
@@ -195,7 +197,7 @@ A novel real-time system for estimating the payload position; the system consist
 
 \vspace{6pt}
 
-\item \textbf{quad-controller-SE3 \& FlightController:} quadrotor controller based on PX4/mavros and SE3 geometric control. And a simulation based on CoppeliaSim software to compute the desired thrust and torque of quadroter according to dynamic modelling, and use distribution matrix to decide the motor's speed. 
+\item \textbf{quad-controller-SE3 \& FlightController:} quadrotor controller based on PX4/mavros and SE3 geometric control. And a simulation based on CoppeliaSim. 
 
 % \begin{itemize}
 % \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}, \href{https://github.com/jianhengLiu/FlightController}{FlightController}
@@ -206,7 +208,7 @@ A novel real-time system for estimating the payload position; the system consist
 \vspace{6pt}
 
 \item \textbf{BezierTrajGenerator \& MinimumSnapTrajGenerator \& 
-MapManager:} Trajectory Generator based on Bezier Curve and Minimum Snap for autonomous robot. And I develop a 2D Map Manager for the verification and visualization for different algorithms.
+MapManager:} Trajectory Generator based on Bezier Curve and Minimum Snap. And a 2D Map Manager for the verification and visualization.
 
 % \begin{itemize}
 % \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}, \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}, \href{https://github.com/jianhengLiu/MapManager}{MapManager}

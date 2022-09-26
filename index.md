@@ -7,7 +7,7 @@ layout: default
 - **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(推免生)
 - **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业
 
-我现于\href{faculty.hitsz.edu.cn/chenhaoyao}{陈浩耀}教授带领的\href{http://nrs-lab.com/}{nROS-Lab(NRSL)})攻读学术型研究生学位，目前的研究兴趣聚焦于\textbf{机器人自主系统、定位与建图与基于深度学习的隐式地图表达}，致力于实现机器人的高效环境感知。
+我现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[nROS-Lab](http://nrs-lab.com/)(攻读学术型研究生学位，目前的研究兴趣聚焦于**机器人自主系统、定位与建图与基于深度学习的隐式地图表达**，致力于实现高效的机器人环境感知定位。
 
 <!-- **主修课程：** 高等代数、数学分析、自动控制原理、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot) -->
 
