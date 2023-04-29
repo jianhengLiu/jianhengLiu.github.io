@@ -19,25 +19,29 @@ layout: default
 
 # Publication
 
-- <big>**Active Implicit Reconstruction for Unknown Objects**</big><br/>
-   **Jianheng Liu**, Dongyu Yan* and Haoyao Chen<br/>
+- <big>**Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**</big><br/>
+   **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn<br/>
    Submitted to ICRA, 2023
 - <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
-   **Jianheng Liu**, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
+   **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen<br/>
    RA-L and IROS, 2022
 - <big>**Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**</big><br/>
     Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
+ - <big>**Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**</big><br/>
+  Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen<br/>
+ IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
 - <big>**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**</big><br/>
-   **Jianheng Liu\***, Yunfan Ren\*, Haoyao Chen and Yunhui Liu<br/>
+   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu<br/>
    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 > \* equal contribution
 
 
 # Honors & Awards
-
-- 研究生学业一等奖学金(2022-2023，2021-2022), 本科生学业一等奖学金(2019-2020), 三等奖学金(2018-2019), 二等奖学金(2017-2018)
+- 2023届硕士研究生优秀毕业生
+- 2022年硕士研究生国家奖学金
+- 研究生国家奖学金(2022)、学业一等奖学金(2022-2023，2021-2022)，本科生学业一等奖学金(2019-2020)、三等奖学金(2018-2019)、二等奖学金(2017-2018)
 - 2020ROBOCON国家一等奖，2019ROBOCON国家二等奖
 - 2019挑战杯国家三等奖，2019互联网+黑龙江省铜奖，2019哈工大“祖光杯”深圳校区金奖
 - 2018全国大学生英语竞赛C类二等奖
