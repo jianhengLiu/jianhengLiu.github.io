@@ -47,6 +47,14 @@ layout: default
 - 2018全国大学生英语竞赛C类二等奖
 - 2018国际青少年无人机大赛大满贯特等奖
 
+# Academic Service
+## Journal Reviewer:
+- IEEE Robotics and Automation Letters (RA-L), 2022
+- IEEE Transactions on Instrumentation and Measurement (TIM), 2022, 2023
+
+## Conference Reviewer:
+- IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2021
+
 # Research
 
 
