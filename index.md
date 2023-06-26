@@ -21,7 +21,7 @@ layout: default
 
 - <big>**Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**</big><br/>
    **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn<br/>
-   Submitted to ICRA, 2023
+   Submitted to RAL, 2023
 - <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
    **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen<br/>
    RA-L and IROS, 2022
