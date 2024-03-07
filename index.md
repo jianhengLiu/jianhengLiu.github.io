@@ -4,10 +4,11 @@ layout: default
 
 # Education
 
-- **2021/09-至今：**哈尔滨工业大学（深圳）控制科学与工程(推免生)
-- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业
+- **2023/09-至今：**香港大学机械工程 [@MaRS-Lab](https://mars.hku.hk/)
+- **2021/09-2023/06：**哈尔滨工业大学（深圳）控制科学与工程(推免生) [@nROS-Lab](http://nrs-lab.com/)
+- **2017/09-2021/06：**哈尔滨工业大学（深圳）自动化专业 [@nROS-Lab](http://nrs-lab.com/)
 
-我现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[nROS-Lab](http://nrs-lab.com/)(攻读学术型研究生学位，目前的研究兴趣聚焦于**机器人自主系统、定位与建图与基于深度学习的隐式地图表达**，致力于实现高效的机器人环境感知定位。
+<!-- 我现于[陈浩耀](faculty.hitsz.edu.cn/chenhaoyao)教授带领的[nROS-Lab](http://nrs-lab.com/)(攻读学术型研究生学位，目前的研究兴趣聚焦于**机器人自主系统、定位与建图与基于深度学习的隐式地图表达**，致力于实现高效的机器人环境感知定位。 -->
 
 <!-- **主修课程：** 高等代数、数学分析、自动控制原理、数字图像处理、[机器视觉](https://github.com/jianhengLiu/20Machine-Vision-Course)、系统建模与仿真、数学规划、[机器人学导论](https://github.com/jianhengLiu/20Robotics-Course)、最优控制、[移动机器人运动规划](https://github.com/jianhengLiu/MotionPlanningForMobileRobot) -->
 
@@ -19,9 +20,15 @@ layout: default
 
 # Publication
 
+- <big>**Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**</big><br/>
+   **Jianheng Liu**, Haoyao Chen<br/>
+   ICRA, 2024
 - <big>**Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**</big><br/>
    **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn<br/>
-   Submitted to RAL, 2023
+   RAL, 2023
+- <big>**Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**</big><br/>
+   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu<br/>
+   Automatica, 2023
 - <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
    **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen<br/>
    RA-L and IROS, 2022
@@ -64,9 +71,9 @@ layout: default
     <img src="./index.assets/ar_icra23.png"/><br/>
 </td>
 <td width="55%" style="vertical-align:top;">
-    <big><big><strong>Active Implicit Reconstruction for Unknown Objects</strong></big></big><br/>
+    <big><big><strong>Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation</strong></big></big><br/>
 <strong>Jianheng Liu</strong>, Dongyu Yan and Haoyao Chen<br/>
-<i>Submitted to ICRA, 2023</i><br/>
+<i>RAL, 2023</i><br/>
     We manage to transplant active reconstruction methods into
 implicit representation, which has advantages over
 traditional explicit representation in resolution, model
