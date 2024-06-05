@@ -15,7 +15,7 @@ layout: default
 **研究兴趣：**
 - SLAM
 - 三维重建
-- NeRF
+- NeRF/NDF
 - 运动规划
 
 # Publication
@@ -64,6 +64,21 @@ layout: default
 
 # Research
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=912450927&bvid=BV1iM4y1n78d&cid=1167555130&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=912450927&cid=1167555130&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>][<a href="https://www.bilibili.com/video/BV1BJ4m1V778/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>] [<a href="https://youtu.be/OZDNp90_DLE?si=1AvKupCzvtvn1aQ8">Youtube</a>] 
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio</strong></big></big><br/>
+<strong>Jianheng Liu</strong> and Haoyao Chen<br/>
+<i>ICRA, 2024</i><br/>
+    Robot-centric Implicit Mapping (RIM) is designed for large-scale incremental dense mapping. This method employs a hybrid representation, encoding shapes with implicit features via a multi-resolution voxel map and decoding signed distance fields through a shallow MLP. We advocate for a robot-centric local map to boost model training efficiency and curb the catastrophic forgetting issue. A decoupled scalable global map is further developed to archive learned features for reuse and maintain constant video memory consumption.
+fully.
+    </td>
+</table> 
 
 
 <table>
