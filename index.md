@@ -64,8 +64,6 @@ layout: default
 
 # Research
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=912450927&bvid=BV1iM4y1n78d&cid=1167555130&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
     <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=912450927&cid=1167555130&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
