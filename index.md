@@ -78,10 +78,9 @@ fully.
     </td>
 </table> 
 
-
 <table>
 <td  width="45%" style="vertical-align:middle;">
-    <img src="./index.assets/ar_icra23.png"/><br/>
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=574222068&cid=1217088233&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
     [<a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>]
     [<a href="https://www.bilibili.com/video/BV13z4y1s71y/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>][<a href="https://youtu.be/qKmFzIE4-C0?si=Whwq7n-kU87mvSzS">Youtube</a>] 
 </td>
