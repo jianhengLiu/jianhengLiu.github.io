@@ -84,6 +84,8 @@ fully.
 <table>
 <td  width="45%" style="vertical-align:middle;">
     <img src="./index.assets/ar_icra23.png"/><br/>
+    [<a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>]
+    [<a href="https://www.bilibili.com/video/BV13z4y1s71y/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>][<a href="https://youtu.be/qKmFzIE4-C0?si=Whwq7n-kU87mvSzS">Youtube</a>] 
 </td>
 <td width="55%" style="vertical-align:top;">
     <big><big><strong>Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation</strong></big></big><br/>
