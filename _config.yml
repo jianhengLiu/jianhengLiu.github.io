@@ -24,8 +24,8 @@ author:
   avatar           : "profile.jpg"
   name             : "Jianheng(Chris) Liu"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
+  bio              : "Robotics & Computer Vision"
+  # location         : "Shenzhen, China"
   employer         : "The University of Hong Kong"
   uri              : # URL
   email            : "liujianhengchris@qq.com" 
