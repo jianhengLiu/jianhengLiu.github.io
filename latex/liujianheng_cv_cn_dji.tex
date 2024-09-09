@@ -1,0 +1,278 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+% \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+% Uncomment to enable Chinese; needs XeLaTeX
+\usepackage{ctex}
+
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{刘健恒}{}
+%\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{Sanchez de Bustamante, 731, Buenos Aires, Argentina}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+86 15625293598}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{liujianhengchris@qq.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://jianhengliu.github.io}                         % optional, remove / comment the line if not wanted  
+\extrainfo{\href{https://scholar.google.com/citations?user=ZMbWaLkAAAAJ&hl=en}{Google Scholar}}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{potrait.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+% \begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+% \small
+{我现于\href{faculty.hitsz.edu.cn/chenhaoyao}{陈浩耀}教授带领的\href{http://nrs-lab.com/}{nROS-Lab}攻读学术型研究生学位，目前的研究兴趣聚焦于\textbf{机器人自主系统、定位、建图与规划}，致力于实现高效的机器人环境感知定位。
+
+欢迎到我的个人主页\href{https://jianhengliu.github.io}{https://jianhengliu.github.io}了解更多的个人信息以及项目经历！
+}
+
+\textbf{Keywords:} SLAM(VIO, LIO, Reconstruction), NeRF, Deep Learning, Planning
+
+\section{教育经历}
+
+\begin{itemize}
+
+\item{\cventry{2021/09--2023/06}{控制科学与工程（研究生学位）}{哈尔滨工业大学（深圳）}{推免生}{\textit{}}{}}
+
+\item{\cventry{2017/09--2021/06}{自动化（学士学位）}{哈尔滨工业大学（深圳）}{}{\textit{}}{}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+\section{论文}
+
+\begin{itemize}
+
+    \item{\textbf{\href{https://github.com/HITSZ-NRSL/RIM}{Towards Real-time Scalable Dense Mapping using Robot-centric Implicit Representation}}
+
+    \small{\textbf{Jianheng Liu}, Haoyao Chen. \textbf{Submitted to RAL, 2023}}
+    }
+    
+    \vspace{3pt}
+
+    \item{\textbf{\href{https://arxiv.org/abs/2303.16739}{Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation}}
+
+    \small{\textbf{Jianheng Liu}*, Dongyu Yan*, Quanfeng Yu, Haoyao Chen, Mengmeng Fu. \textbf{Submitted to RAL, 2023}}
+    }
+    
+    \vspace{3pt}
+
+
+    \item{\textbf{\href{https://github.com/HITSZ-NRSL/Dynamic-VINS}{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments}}
+
+    \small{\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu, Haoyao Chen. \textbf{RA-L and IROS, 2022}}
+    }
+
+    \vspace{3pt}
+
+    \item{\textbf{\href{https://ieeexplore.ieee.org/abstract/document/9981941/}{Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation}}
+
+    \small{Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, \textbf{Jianheng Liu}, Yunhui Liu. \textbf{IROS, 2022}}
+    }
+
+    \vspace{3pt}
+
+    
+    \item{\textbf{\href{https://ieeexplore.ieee.org/abstract/document/9872194}{Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load}}
+
+    \small{Siqiang Wang, \textbf{Jianheng Liu}, Xin Jiang, Haoyao Chen. \textbf{RCAR, 2022}}
+    }
+
+    \vspace{3pt}
+    
+
+    \item{\textbf{\href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload}}
+
+    \small{\textbf{Jianheng Liu}*, Yunfan Ren*, Haoyao Chen, Yunhui Liu. \textbf{IROS, 2021}}
+    }
+
+\footnotesize{* equal contribution}
+
+\end{itemize}
+
+
+\section{专利}
+
+\begin{itemize}
+
+    \item{\textbf{基于视觉编码器融合的悬挂负载状态估计器及估计方法: CN112991443A[P]. 2021.}
+
+    \small{陈浩耀，\textbf{刘健恒}，任云帆，欧阳俊源，刘云辉.}
+    }
+    
+\end{itemize}
+
+\section{获奖情况}
+
+\begin{itemize}
+
+
+\item{\textbf{2023届硕士研究生优秀毕业生}}
+
+\item{\textbf{2022年硕士研究生国家奖学金}}
+
+\item{\textbf{优秀学生荣誉称号}(2021-2022, 2017-2018)，\textbf{优秀学生干部荣誉称号}(2018-2019)}
+
+\item{\textbf{研究生学业奖学金}一等(2022-2023，2021-2022), \textbf{本科生学业奖学金}一等(2019-2020), 三等奖学金(2018-2019), 二等奖学金(2017-2018)}
+
+\item{\textbf{2020智能C端科创训练营最佳创意奖}}
+
+% \item{\textbf{全国大学生机器人竞赛ROBOCON}一等奖(2020), 二等奖(2019)}
+
+% \item{2019\textbf{挑战杯}国家三等奖，\textbf{互联网+}黑龙江省铜奖，\textbf{哈工大“祖光杯”}深圳校区金奖}
+
+% \item{2018\textbf{全国大学生英语竞赛C类}二等奖，\textbf{国际青少年无人机大赛}大满贯特等奖}
+
+\end{itemize}
+
+\section{实习经历}
+
+\begin{itemize}
+
+\item{\textbf{深圳科创学院}，智能驾驶中心：2021/09--2022/04}
+
+语义+线特征得三维重建、基于深度学习的SLAM探索
+
+\item{\textbf{云鲸智能}，感知部门：2022/05--2022/07}
+
+激光视觉融合定位与建图
+
+\item{\textbf{腾讯}，RoboticsX实验室感知组：2022/09--2022/12}
+
+高层图的开发与部署应用
+
+\end{itemize}
+
+
+\section{竞赛经历}
+
+\begin{itemize}
+    \item{\textbf{全国大学生机器人竞赛ROBOCON}一等奖(2020), 二等奖(2019)}
+
+    \item{2019\textbf{挑战杯}国家三等奖，\textbf{互联网+}黑龙江省铜奖，\textbf{哈工大“祖光杯”}深圳校区金奖}
+
+    \item{2018\textbf{全国大学生英语竞赛C类}二等奖，\textbf{国际青少年无人机大赛}大满贯特等奖}
+\end{itemize}
+
+\section{项目经历}
+
+\begin{itemize}
+
+    % \item \textbf{Scalable Robot-centric Implicit Mapping:} 机器人中心的隐式建图，实现大规模增量的实时隐式建图（毕业设计）。
+    
+    % \item \textbf{Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation:} 
+
+    % 基于隐式表达的物体主动重建方法，直接从隐式模型中评估视角的不确定性，通过先采样后优化的方法高效地获得Next-Best-View。
+
+\item \textbf{\href{https://github.com/jianhengLiu/LVI-SAM-LIVOX}{LVI-SAM-LIVOX + Putn}:} LVI-SAM的优化和对Livox的适配，配合Putn进行运动规划，实现仿真中机器人的自主导航（课程设计）。
+
+% \item \textbf{\href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments}:} 
+
+\item \textbf{\href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}}.
+适用于资源受限平台的RGB-D惯性里程计，基于此实现在华为Atlas 200DK边缘计算设备上实现飞行机械臂的自主抓取任务（华为项目）。
+
+
+
+\item \textbf{\href{https://github.com/jianhengLiu/SV-SLAM}{SemanticLineRecon}:} 基于语义分割结果、colmap和line3d++实现的语义线重建。
+
+
+% \item \textbf{\href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload}:} 
+
+% A novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based-Payload-State-Estimator}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web}{Bilibili}
+% \end{itemize}
+
+\item \textbf{\href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{MatRix}:} 2020 XBOT PARK科创训练营开发的一款极其有趣的原型。一款互动式智能地毯，通过防呆设计的磁吸接头实现无限拼接，可以作为您的家庭智能终端、游戏机、装饰品等。
+
+% \begin{itemize}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{Bilibili}
+% \end{itemize}
+
+
+\item \textbf{\href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}， \href{https://github.com/jianhengLiu/FlightController}{FlightController}}， \textbf{\href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}， \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}，
+\href{https://github.com/jianhengLiu/MapManager}{MapManager}}.
+
+% \item \textbf{\href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3} \& \href{https://github.com/jianhengLiu/FlightController}{FlightController}:} 基于PID几何控制的无人机控制器以及基于CoppeliaSim的无人机仿真。
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}, \href{https://github.com/jianhengLiu/FlightController}{FlightController}
+
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web}{Bilibili-1}, \href{https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web}{Bilibili-2}
+% \end{itemize}
+
+
+% \item \textbf{\href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator} \& \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator} \& 
+% \href{https://github.com/jianhengLiu/MapManager}{MapManager}:} 基于Bezier曲线和 Minimum Snap轨迹生成以及用于验证和可视化的二维地图.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}, \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}, \href{https://github.com/jianhengLiu/MapManager}{MapManager}
+% \end{itemize}
+
+
+\end{itemize}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.

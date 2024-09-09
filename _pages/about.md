@@ -1,49 +1,245 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+I am pursuing PhD degree at **The University of Hong Kong** under the supervision of **Prof. Fu Zhang**. I obtained both my master's and bachelor's degrees under the supervision of **Prof. Haoyao Chen** at **Harbin Institute of Technology (Shenzhen), China**.
 
-A data-driven personal website
+My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural Fields**.
+
+
+
+Education
 ======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+- **PhD degree:** The University of Hong Kong, Mechanical Engineering [@MaRS-Lab](https://mars.hku.hk/) 2023/09-
+- **Master degree:** Harbin Institute of Technology (Shenzhnen), Control Science and Engineering [@nROS-Lab](http://nrs-lab.com/) 2021/09-2023/06
+- **Bachelor degree:** Harbin Institute of Technology (Shenzhnen), Automation [@nROS-Lab](http://nrs-lab.com/) 2017/09-2021/06
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+# Publication
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+- <big>**Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**</big><br/>
+   **Jianheng Liu**, Haoyao Chen<br/>
+   ICRA, 2024
+- <big>**Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**</big><br/>
+   **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn<br/>
+   RAL, 2023
+- <big>**Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**</big><br/>
+   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu<br/>
+   Automatica, 2023
+- <big>**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**</big><br/>
+   **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen<br/>
+   RA-L and IROS, 2022
+- <big>**Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**</big><br/>
+    Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu<br/>
+   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
+ - <big>**Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**</big><br/>
+  Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen<br/>
+ IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
+- <big>**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**</big><br/>
+   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu<br/>
+   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+> \* equal contribution
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+# Research
 
-**Markdown generator**
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=912450927&cid=1167555130&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>][<a href="https://www.bilibili.com/video/BV1BJ4m1V778/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>] [<a href="https://youtu.be/OZDNp90_DLE?si=1AvKupCzvtvn1aQ8">Youtube</a>] 
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio</strong></big></big><br/>
+<strong>Jianheng Liu</strong> and Haoyao Chen<br/>
+<i>ICRA, 2024</i><br/>
+    Robot-centric Implicit Mapping (RIM) is designed for large-scale incremental dense mapping. This method employs a hybrid representation, encoding shapes with implicit features via a multi-resolution voxel map and decoding signed distance fields through a shallow MLP. We advocate for a robot-centric local map to boost model training efficiency and curb the catastrophic forgetting issue. A decoupled scalable global map is further developed to archive learned features for reuse and maintain constant video memory consumption.
+fully.
+    </td>
+</table> 
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=574222068&cid=1217088233&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>]
+    [<a href="https://www.bilibili.com/video/BV13z4y1s71y/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>][<a href="https://youtu.be/qKmFzIE4-C0?si=Whwq7n-kU87mvSzS">Youtube</a>] 
+</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation</strong></big></big><br/>
+<strong>Jianheng Liu</strong>, Dongyu Yan and Haoyao Chen<br/>
+<i>RAL, 2023</i><br/>
+    We manage to transplant active reconstruction methods into
+implicit representation, which has advantages over
+traditional explicit representation in resolution, model
+size, and continuity.
+Our proposed information gain metric is based on spatial
+point sampling rather than voxel traversing, which can be
+seamlessly integrated into the implicit model.
+The metric is also differentiable, resulting in smoother
+and better view selection.
+An implicit reconstruction method for bounded objects
+considering free space is also proposed to use information
+fully.
+    </td>
+</table> 
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/lvisam_putn.gif"/><br/>
+    [<a href="https://github.com/jianhengLiu/LVI-SAM-LIVOX">LVI-SAM-LIVOX</a>][<a href="https://github.com/jianhengLiu/PUTN">PUTN</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>LVI-SAM-LIVOX</strong></big></big><br/>
+    Easy-to-run LVI-SAM, adaptation with LIVOX-AVIA, and its application in simulator together with motion planner.
+    </td>
+</table> 
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=296794486&cid=730222765&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>][<a href="https://www.bilibili.com/video/BV1bF411t7mx">Bilibili</a>] [<a href="https://youtu.be/y0U1IVtFBwY">Youtube</a>] 
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments</strong></big></big><br/>
+<strong>Jianheng Liu</strong>, XuanFu Li, Yueqian Liu and Haoyao Chen<br/>
+<i>RA-L and IROS, 2022</i><br/>
+    Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for resource-restricted robots in dynamic environments. It is extended based on <a href="https://github.com/HKUST-Aerial-Robotics/VINS-Mono">VINS-Mono</a>. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. It adopts grid-based feature detection and proposes a fast and efficient method to extract high-quality FAST feature points. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on  resource-restricted platforms.
+    </td>
+</table> 
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/positioning.gif"/><br/>
+    [<a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>VINS-RGBD-FAST</strong></big></big><br/>
+        VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to improve the system's efficiency in resource-constrained embedded paltform, like HUAWEI Atlas 200DK, Raspberry Pi. 
+    <li>extract FAST feature instead of Harris feature and solved feature clusttering problem</li>
+    <li>added stationary initialization</li>
+    <li>added IMU-aided feature tracking and extracted-feature area's quality judgement</li>
+    <li>lower the required bandwidth of the system</li>
+    <li>trade-off of accuracy and efficiency by constrain the optimized variables in backend</li>
+    </td>
+</table> 
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/slrecon.jpg"/><br/>
+    [<a href="https://github.com/jianhengLiu/SV-SLAM">Code</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>SemanticLineRecon</strong></big></big><br/>
+    Semantic line reconstruction with colmap and line3d++.
+    </td>
+</table> 
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>] 
+    [<a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>] 
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload</strong></big></big><br/>
+<strong>Jianheng Liu</strong>, Yunfan Ren, Haoyao Chen and Yunhui Liu<br/>
+<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)</i><br/>
+        We develops a novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a novel encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories. Several experiments are performed to validate the high performance of the proposed method.
+    </td>
+</table>
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
+    [<a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>] 
+</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>MatRix</strong></big></big><br/>
+    2020智能科创C端训练营作品MatRix！<br/>
+    一个可交互的智能地毯，能够通过防呆设计的磁吸接口实现无限拼接，
+    MatRix可以作为你家庭的智能终端，游戏机，装饰品等等。
+    </td>
+</table> 
+
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>]
+    [<a href="https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web">Video</a>]
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>quad_controller_SE3</strong></big></big><br/>
+quadrotor controller based on SE3 geometric control.
+    </td>
+</table> 
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/bezier.png"/><br/>
+    [<a href="https://github.com/jianhengLiu/BezierTrajGenerator">BezierTrajGenerator</a>]
+    [<a href="https://github.com/jianhengLiu/MinimumSnapTrajGenerator">MinimumSnapTrajGenerator</a>]
+    [<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>]
+</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>BezierTrajGenerator</strong></big></big><br/>
+    <big><big><strong>MinimumSnapTrajGenerator</strong></big></big><br/>
+    基于贝塞尔曲线以及基于最小化snap的移动机器人轨迹规划算法，同时开发了二维地图管理工具<a href="https://github.com/jianhengLiu/MapManager">MapManager</a>用于算法验证及可视化
+    </td>
+</table> 
+
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
+    [<a href="https://github.com/jianhengLiu/FlightController">Code</a>]
+    [<a href="    https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>]
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>FlightController</strong></big></big><br/>
+基于ROS，C ++和coppeliaSim的四旋翼无人机控制仿真模型 采用动力学模型重构的控制器，计算升力f以及力矩M，并通过控制分配矩阵控制各电机转速，实现无人机控制
+    </td>
+</table> 
+
+
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/steeringwheel.png"/><br/>
+    [<a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>CoppeliaSim/V-Rep舵轮教程</strong></big></big><br/>
+一个基于CoppeliaSim/V-Rep仿真平台的舵轮底盘搭建教程，并利用ROS作为通讯架构控制底盘
+    </td>
+</table> 
+
+
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/misc/manipulator.gif"/><br/>
+    [<a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>]</td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Manipulator_GUI</strong></big></big><br/>
+C++ Course Project (Complied in CodeBlocks)<br/>
+    一个三关节平面机械臂的正逆运动学解算以及动画演示
+    </td>
+</table> 

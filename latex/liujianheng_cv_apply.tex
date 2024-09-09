@@ -1,0 +1,288 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+% \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+% Uncomment to enable Chinese; needs XeLaTeX
+\usepackage{ctex}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Jianheng}{Liu}
+%\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{Sanchez de Bustamante, 731, Buenos Aires, Argentina}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+86 15625293598}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{liujianhengchris@qq.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://github.com/jianhengLiu}                         % optional, remove / comment the line if not wanted  
+\extrainfo{\href{https://jianhengliu.github.io}{https://jianhengliu.github.io}}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{potrait.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+
+\makecvtitle
+
+\small{I am currently a postgraduate in Harbin Institute of Technology (Shenzhen), China, supervised by \textbf{Prof. Haoyao Chen}. I obtained my bachelor degree at Harbin Institute of Technology (Shenzhen), China in 2021.
+
+My research interests lie in \textbf{Robotics and Autonomous Systems, Localization and Mapping and NeRF}. 
+}
+
+\section{Education}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+% \item{\cventry{2021/09--Present}{Control Science and Engineering (Master degree)}{Harbin Institute of Technology (Shenzhnen)}{Recommended exemption Graduate}{\textit{}}{GPA: 3.27/4, Ranking: 19/31}}
+
+% \item{\cventry{2017/09--2021/06}{Automation (Bachelor degree)}{Harbin Institute of Technology (Shenzhnen)}{}{\textit{}}{GPA: 85.73/100, Ranking: 24/70}}
+
+\item{\cventry{2021/09--Present}{Control Science and Engineering (Master degree)}{Harbin Institute of Technology (Shenzhnen)}{Recommended exemption Graduate}{\textit{}}{GPA: 3.27/4, Ranking: 19/31}}
+
+\item{\cventry{2017/09--2021/06}{Automation (Bachelor degree)}{Harbin Institute of Technology (Shenzhnen)}{}{\textit{}}{GPA: 85.73/100, Ranking: 24/70}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+\section{Publications}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+    \item{\textbf{Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation}
+
+    \small{\textbf{Jianheng Liu}*, Dongyu Yan* and Haoyao Chen. (Under Review)}
+
+    2023 IEEE International Conference on Robotics and Automation (\textbf{ICRA}), \textbf{CiteScore: 6.4}.
+    }
+    
+    \vspace{3pt}
+
+    \item{\textbf{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments}
+
+    \small{\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen.}
+    
+    2022 IEEE Robotics and Automation Letters (\textbf{RAL}), \textbf{CiteScore: 8.0}.
+    }
+    
+    \vspace{3pt}
+
+    \item{\textbf{Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load}
+
+    \small{Siqiang Wang, \textbf{Jianheng Liu}, Xin Jiang and Haoyao Chen.
+    }
+
+    2022 IEEE International Conference on Real-time Computing and Robotics (\textbf{RCAR})
+    }
+    \vspace{3pt}
+
+
+
+\item{\textbf{Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation}
+
+\small{Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, \textbf{Jianheng Liu}, Yunhui Liu.}
+
+2022 IEEE International Conference on Intelligent Robots and Systems (\textbf{IROS}), \textbf{CiteScore: 3.9}.
+}
+
+\vspace{3pt}
+
+\item{\textbf{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload}
+
+\small{\textbf{Jianheng Liu}*, Yunfan Ren*, Haoyao Chen and Yunhui Liu. }
+
+2021 IEEE International Conference on Intelligent Robots and Systems (\textbf{IROS}), \textbf{CiteScore: 3.9}.
+}
+
+
+\footnotesize{* equal contribution}
+\end{itemize}
+
+\section{Patents}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+    \item{\textbf{Vision-encoder-based Suspended Payload State Estimator and Estimation Method}
+    
+    CN112991443A，2021.
+    }
+
+\end{itemize}
+
+\section{Honors \& Awards}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+    \item {\textbf{2022 Postgraduate National Scholarship}}
+
+\item{\textbf{Postgraduate Academic Scholarships} of First-class (2021-2022), First-class (2022-2023)}
+\item {\textbf{2021-2022 Excellent Student Award}}
+\item{\textbf{Undergraduate Academic Scholarships} of First-class (2019-2020), Third-class (2018-2019), Second-class (2017-2018)}
+
+\item{the First Price for \textbf{2020 National ROBOCON Competition}; the Second Price for \textbf{2020 National Quadruped Simulation Competition}}
+
+\item {the Best Design Award for \textbf{2020 Smart C-end Technology Innovation Training Camp}}
+
+\item{the Second Price for \textbf{2019 National ROBOCON Competition}}
+
+\item{the Third Prize for \textbf{2019 National Challenge Cup}}
+
+\item{the Bronze Prize for \textbf{2019 Internet plus of Heilongjiang Province}}
+\item{the Golden Price for \textbf{2019 ZuGuang Cup of Harbin Institute of Technology (Shenzhen)}}
+
+\item {\textbf{2018-2019 Excellent Student Leader Award} (Undergraduate Monoitor)}
+
+\item{the Second Prize for \textbf{2018 National English Competition for College Strudents}}
+\item {\textbf{2017-2018 Excellent Student Award}}
+
+\item{the Grand Prize for \textbf{the second International Youth Drone Competition}}
+
+\end{itemize}
+
+\section{Intern Experiences}
+
+\begin{itemize}
+
+\item{Shenzhen InnoX Academy, Intelligent Driving Center
+
+I was mainly responsible for research of collaborative semantic visual-lidar structure mapping. Further, I developed deep-learning-based visual SLAM for robust feature tracking and depth estimation.}
+
+\item{Narwal, Department of Perception
+
+I was mainly responsible for research of high-resolution visual-lidar mapping in a clustering room. Further, I developed a overlapping calculation algorithm between two given images with the aforehand high-resolution map for the training of re-location.}
+
+\item{Tencent, Robotics X
+
+I was mainly responsible for research of real-time high-resolution elevation mapping for legged robots' planning. It was a robot-centric elevation map that enable fast foothold planning.
+}
+
+\end{itemize}
+
+\section{Research Experiences}
+
+\begin{itemize}
+
+    \item \textbf{Active Implicit Reconstruction for Unknown Objects:} 
+
+\textbf{Jianheng Liu}, Dongyu Yan and Haoyao Chen. \textbf{Submitted to ICRA, 2023}
+
+We manage to transplant active reconstruction methods into
+implicit representation, which has advantages over
+traditional explicit representation in resolution, model
+size, and continuity.
+Our proposed information gain metric is based on spatial
+point sampling rather than voxel traversing, which can be
+seamlessly integrated into the implicit model.
+An implicit reconstruction method for bounded objects
+considering free space is also proposed to use information
+fully.
+
+\item \textbf{\href{https://github.com/jianhengLiu/LVI-SAM-LIVOX}{LVI-SAM-LIVOX}:} Easy-to-run LVI-SAM and its application in simulator together with motion planner.
+
+\item \textbf{\href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments}:} 
+
+\textbf{Jianheng Liu}, XuanFu Li, Yueqian Liu and Haoyao Chen. \textbf{RA-L and IROS, 2022}
+
+Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry system for resource-restricted robots in dynamic environments. It combines object detection and RGB-D cameras for dynamic feature recognition to reduce the computational cost, achieving an effect comparable to semantic segmentation. A competitive localization accuracy and robustness in dynamic environments are shown in a real-time application on resource-restricted platforms, like \textbf{HUAWEI Atlas 200DK}.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/HITSZ-NRSL/Dynamic-VINS.git}{Dynamic-VINS}
+% \item \textbf{Referred Video:} \href{https://youtu.be/y0U1IVtFBwY}{Youtube}, \href{https://www.bilibili.com/video/BV1bF411t7mx}{Bilibili}
+% \end{itemize}
+
+\item \textbf{\href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}:} Refined version of VINS-RGBD to improve the system's efficiency in resource-constrained embedded paltform.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}.
+% \end{itemize}
+
+\item \textbf{\href{https://github.com/jianhengLiu/SV-SLAM}{SemanticLineRecon}:} Semantic line reconstruction with colmap and line3d++.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/VINS-RGBD-FAST}{VINS-RGBD-FAST}.
+% \end{itemize}
+
+\item \textbf{\href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload}:} 
+
+\textbf{Jianheng Liu}, Yunfan Ren, Haoyao Chen and Yunhui Liu. \textbf{IROS, 2021}
+
+A novel real-time system for estimating the payload position; the system consists of a monocular fisheye camera and a encoder-based device. A Gaussian fusion-based estimation algorithm is developed to obtain the payload state estimation. Based on the robust payload position estimation, a payload controller is presented to ensure the reliable tracking performance on aggressive trajectories.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator}{Vision-encoder-based-Payload-State-Estimator}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web}{Bilibili}
+% \end{itemize}
+
+\item \textbf{\href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{MatRix}:} A extreme interesting prototype developed in 2020 XBOT PARK Smart Product Innovation Boot Camp. An interactive smart carpet, which can achieve infinite splicing through the magnetic suction connector with anti-dull design. MatRix can be used as your home intelligent terminal, game console, decoration and so on. (\textbf{Best Design Award})
+
+% \begin{itemize}
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web}{Bilibili}
+% \end{itemize}
+
+
+\item \textbf{\href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3} \& \href{https://github.com/jianhengLiu/FlightController}{FlightController}:} quadrotor controller based on PX4/mavros and SE3 geometric control. And a simulation based on CoppeliaSim. 
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/quad_controller_SE3}{quad-controller-SE3}, \href{https://github.com/jianhengLiu/FlightController}{FlightController}
+
+% \item \textbf{Referred Video:} \href{https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web}{Bilibili-1}, \href{https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web}{Bilibili-2}
+% \end{itemize}
+
+
+\item \textbf{\href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator} \& \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator} \& 
+\href{https://github.com/jianhengLiu/MapManager}{MapManager}:} Trajectory Generator based on Bezier Curve and Minimum Snap. And a 2D Map Manager for the verification and visualization.
+
+% \begin{itemize}
+% \item \textbf{Referred Code:} \href{https://github.com/jianhengLiu/BezierTrajGenerator}{BezierTrajGenerator}, \href{https://github.com/jianhengLiu/MinimumSnapTrajGenerator}{MinimumSnapTrajGenerator}, \href{https://github.com/jianhengLiu/MapManager}{MapManager}
+% \end{itemize}
+
+
+\end{itemize}
+
+\end{document}
+
+
+%% end of file `template.tex'.
