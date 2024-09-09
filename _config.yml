@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Jianheng Liu"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Jianheng(Chris) Liu"
+  name             : "Jianheng Liu"
   pronouns         : # example: "she/her"  
   bio              : "Robotics & Computer Vision"
   # location         : "Shenzhen, China"
@@ -34,7 +34,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=ZMbWaLkAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : #"http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0002-3124-5559"
   semantic         : # URL
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
@@ -43,7 +43,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/jianhengLiu"
+  github           : "jianhengLiu"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -218,7 +218,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
+  projects:
     output: true
     permalink: /:collection/:path/
 
@@ -270,12 +270,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
+  # _projects
   - scope:
       path: ""
-      type: talks
+      type: projects
     values:
-      layout: talk
+      layout: projects
       author_profile: true
       share: true
 
