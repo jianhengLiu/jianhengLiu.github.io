@@ -208,29 +208,35 @@
         </div>
     </div>
   </section>
-  <!-- Abstract. -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">Abstract</h2>
-      <div class="content has-text-justified">
-        <p>
-          This paper presents a unified surface reconstruction and rendering framework for LiDAR-visual systems,
-          integrating Neural Radiance Fields (NeRF) and Neural Distance Fields (NDF) to recover both appearance and
-          structural information from posed images and point clouds.
-          We address the structural visible gap between NeRF and NDF by utilizing a visible-aware occupancy map to
-          classify space into the free, occupied, visible unknown, and background regions. This classification
-          facilitates the recovery of a complete appearance and structure of the scene.
-          We unify the training of the NDF and NeRF using a spatial-varying scale SDF-to-density transformation for
-          levels of detail for both structure and appearance.
-          The proposed method leverages the learned NDF for structure-aware NeRF training by an adaptive sphere tracing
-          sampling strategy for accurate structure rendering.
-          In return, NeRF further refines structural in recovering missing or fuzzy structures in the NDF.
-          Extensive experiments demonstrate the superior quality and versatility of the proposed method across various
-          scenarios.
-        </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper presents a unified surface reconstruction and rendering framework for LiDAR-visual systems,
+              integrating Neural Radiance Fields (NeRF) and Neural Distance Fields (NDF) to recover both appearance and
+              structural information from posed images and point clouds.
+              We address the structural visible gap between NeRF and NDF by utilizing a visible-aware occupancy map to
+              classify space into the free, occupied, visible unknown, and background regions. This classification
+              facilitates the recovery of a complete appearance and structure of the scene.
+              We unify the training of the NDF and NeRF using a spatial-varying scale SDF-to-density transformation for
+              levels of detail for both structure and appearance.
+              The proposed method leverages the learned NDF for structure-aware NeRF training by an adaptive sphere
+              tracing
+              sampling strategy for accurate structure rendering.
+              In return, NeRF further refines structural in recovering missing or fuzzy structures in the NDF.
+              Extensive experiments demonstrate the superior quality and versatility of the proposed method across
+              various
+              scenarios.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <!--/ Abstract. -->
 
   <!-- Method. -->
@@ -263,112 +269,142 @@
     </div> -->
   <!--/ Method. -->
 
-  <div class="container is-centered has-text-centered">
-    <h2 class="title is-3">Results</h2>
-    Compressed Mesh
-  </div>
-  <div class="column is-max-desktop">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Results. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Surface Reconstruction Results</h2>
 
-    <h3 class="title is-4">Replica</h3>
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/office0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Office-0</h3>
+          <div class="content has-text-justified">
+            <p>
+              Compressed Mesh.
+            </p>
+          </div>
+          <!-- Replica. -->
+          <h3 class="title is-4">Replica</h3>
+          <div class="content has-text-justified">
+            <p>
+              We show our surface reconstructions results on room-scale indoor simulation dataset.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/office0.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Office-0</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/office1.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Office-1</h3>
+              </div>
+            </div>
+
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/office2.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Office-2</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/office3.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Office-3</h3>
+              </div>
+            </div>
+
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/office4.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Office-4</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/room0.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Room-0</h3>
+              </div>
+            </div>
+
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/room1.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Room-1</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
+                  src="./static/mesh/replica/room2.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Room-2</h3>
+              </div>
+            </div>
+          </div>
+          <!--/ Replica. -->
+
+
+          <!-- FAST-LIVO2. -->
+          <h3 class="title is-4">FAST-LIVO2</h3>
+          <div class="content has-text-justified">
+            <p>
+              For real-world datasets, we evaluate three types of trajectory datasets collected with a camera and a
+              LiDAR: forward-facing, object-centric, and free-view trajectories. Using handheld devices and the
+              FAST-LIVO2 localization algorithm, M2Mapping can be quickly deployed without time-consuming
+              Structure-from-Motion.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
+                  src="./static/mesh/fast_livo2/campus.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Campus</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
+                  src="./static/mesh/fast_livo2/red_bird.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Sculpture</h3>
+              </div>
+            </div>
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
+                  src="./static/mesh/fast_livo2/culture01.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Culture</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
+                  src="./static/mesh/fast_livo2/drive.glb" camera-controls="" auto-rotate="" exposure=".5"
+                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Drive</h3>
+              </div>
+            </div>
+          </div>
+          <!--/ FAST-LIVO2. -->
+
+        </div>
       </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/office1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Office-1</h3>
-      </div>
+      <!--/ Results. -->
     </div>
+  </section>
 
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/office2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Office-2</h3>
-      </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/office3.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Office-3</h3>
-      </div>
-    </div>
-
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/office4.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Office-4</h3>
-      </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/room0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Room-0</h3>
-      </div>
-    </div>
-
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/room1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Room-1</h3>
-      </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 180deg"
-          src="./static/mesh/replica/room2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Room-2</h3>
-      </div>
-    </div>
-    <br>
-
-    <h3 class="title is-4">FAST-LIVO2</h3>
-
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 0deg"
-          src="./static/mesh/fast_livo2/campus.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Campus</h3>
-      </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 0deg"
-          src="./static/mesh/fast_livo2/red_bird.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Sculpture</h3>
-      </div>
-    </div>
-    <div class="grid-container">
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 0deg"
-          src="./static/mesh/fast_livo2/culture01.glb" camera-controls="" auto-rotate="" exposure=".5"
-          generate-schema="" ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Culture</h3>
-      </div>
-      <div class="container is-centered has-text-centered">
-        <model-viewer style="height: 360px; width: 480px;" orientation="0deg 0deg 0deg"
-          src="./static/mesh/fast_livo2/drive.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-          ar-status="not-presenting"></model-viewer>
-        <h4 class="title is-5">Drive</h3>
-      </div>
-    </div>
-    <br>
-
-    </section>
-
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
           @misc{liu2024neuralsurfacereconstructionrendering,
             title={Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems}, 
             author={Jianheng Liu and Chunran Zheng and Yunfei Wan and Bowen Wang and Yixi Cai and Fu Zhang},
@@ -379,38 +415,38 @@
             url={https://arxiv.org/abs/2409.05310}, 
           }
           </code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://arxiv.org/abs/2409.05310">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/hku-mars/M2Mapping" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </section>
-
-
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-          <a class="icon-link" href="https://arxiv.org/abs/2409.05310">
-            <i class="fas fa-file-pdf"></i>
-          </a>
-          <a class="icon-link" href="https://github.com/hku-mars/M2Mapping" class="external-link" disabled>
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content">
-              <p>
-                This website is licensed under a <a rel="license"
-                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                  Commons Attribution-ShareAlike 4.0 International License</a>.
-              </p>
-              <p>
-                We really appreciate <a href="https://nerfies.github.io/">Nerfies</a>
-                for providing the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of the website
-                template.
-              </p>
-            </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We really appreciate <a href="https://nerfies.github.io/">Nerfies</a>
+              for providing the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of the website
+              template.
+            </p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   </div>
 </body>
 
