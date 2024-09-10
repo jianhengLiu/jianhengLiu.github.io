@@ -4,6 +4,19 @@ title: "Projects"
 author_profile: true
 ---
 
+
+<table>
+<td  width="45%" style="vertical-align:middle;">
+    <img src="../Projects/M2Mapping/static/images/pipeline_h.jpg"/><br/>
+    [<a href="https://github.com/hku-mars/M2Mapping.git">M2Mapping</a>] [<a href="https://jianhengliu.github.io/Projects/M2Mapping/">Project Page</a>]
+    </td>
+<td width="55%" style="vertical-align:top;">
+    <big><big><strong>Neural Surface Reconstruction and Rendering for Lidar-Visual Systems</strong></big></big><br/>
+<strong>Jianheng Liu</strong>, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai and Fu Zhang<br/>
+     A MultiModal Mapping (M2Mapping) Framework for LiDAR-Visual Systems
+    </td>
+</table> 
+
 <table>
 <td  width="45%" style="vertical-align:middle;">
     <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=912450927&cid=1167555130&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
