@@ -147,15 +147,15 @@
                   </a>
                 </span>
                 <!-- Video Link. -->
-                <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=wUp2I-X-IdI"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=NRlOa7oKDDQ"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
                 <!-- Code Link. -->
                 <span class="link-block">
                   <a href="https://github.com/hku-mars/M2Mapping.git"
@@ -188,32 +188,18 @@
   <section class="section">
     <div class="container is-max-desktop">
 
-      <!-- Paper video. -->
-      <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/wUp2I-X-IdI?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-      <!--/ Paper video. -->
-      <section class="hero teaser">
-        <div class="container is-max-desktop">
-          <img src="./static/images/pipeline_h.jpg" class="center" width="800px">
-          <h2 class="subtitle has-text-centered">
-            A MultiModal Mapping (M2Mapping) Framework for LiDAR-Visual Systems
-          </h2>
-        </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Abstract</h2>
+
+          <div class="container is-max-desktop  is-centered">
+            <img src="./static/images/pipeline_h.jpg" class="center" width="800px">
+            <h2 class="subtitle has-text-centered">
+              A MultiModal Mapping (M2Mapping) Framework for LiDAR-Visual Systems
+            </h2>
+          </div>
+
           <div class="content has-text-justified">
             <p>
               This paper presents a unified surface reconstruction and rendering framework for LiDAR-visual systems,
@@ -235,42 +221,21 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--/ Abstract. -->
+      <!--/ Abstract. -->
 
-  <!-- Method. -->
-  <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <img src="./static/images/overview.png" class="center" width="800px">
-        <div class="content has-text-justified">
-          <p>
-            <strong>EINRUL</strong> takes sparse LiDAR frames with rough poses as input and
-            optimizes an implicit representation of the scene in an efficient and accurate way.
-            The rough poses are refined simultaneously to guarantee a consistent geometry.
-            The usage of LiDAR allows it to be applied in various scenarios.
-          </p>
-        </div>
-        <img src="./static/images/thickness.png" class="center" width="800px">
-        <div class="content has-text-justified">
-          <p>
-            The key point of the method is to reconstruct a dense represenation (an implicit model)
-            of the scene with rather sparse input.
-            To overcome it, we present a method to directly supervise in 3D space without 2D rendering,
-            achieving strong supervision while being unbiased and occlusion-aware.
-          </p>
-          <p>
-            Since EINRUL is able to convert sparse depth data into a dense representation,
-            depth completion leveraging multiview information can be achieved as a byproduct.
-          </p>
+      <!-- Paper video. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/NRlOa7oKDDQ?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div> -->
-  <!--/ Method. -->
+      <!--/ Paper video. -->
 
-  <section class="section">
-    <div class="container is-max-desktop">
+
       <!-- Results. -->
       <div class="columns is-centered">
         <div class="column is-full-width">
@@ -359,7 +324,8 @@
             <p>
               For real-world datasets, we evaluate three types of trajectory datasets collected with a camera and a
               LiDAR: forward-facing, object-centric, and free-view trajectories. Using handheld devices and the
-              <a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a> localization algorithm, M2Mapping can be quickly deployed without time-consuming
+              <a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a> localization algorithm, M2Mapping can be
+              quickly deployed without time-consuming
               Structure-from-Motion.
             </p>
           </div>
