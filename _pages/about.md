@@ -19,31 +19,29 @@ Education
 
 # Publication
 
-- `<big>`**Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**`</big><br/>`
-  **Jianheng Liu**, Haoyao Chen`<br/>`
+- **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**
+  **Jianheng Liu**, Haoyao Chen
   ICRA, 2024
-- `<big>`**Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**`</big><br/>`
-  **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn`<br/>`
+- **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**
+  **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn
   RAL, 2023
-- `<big>`**Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**`</big><br/>`
-  Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu`<br/>`
+- **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**
+  Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
   Automatica, 2023
-- `<big>`**RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**`</big><br/>`
-  **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen`<br/>`
+- **RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**
+  **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen
   RA-L and IROS, 2022
-- `<big>`**Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**`</big><br/>`
-  Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu`<br/>`
+- **Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**
+  Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
-- `<big>`**Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**`</big><br/>`
-  Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen`<br/>`
+- **Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**
+  Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen
   IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
-- `<big>`**Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**`</big><br/>`
-  **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu`<br/>`
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**
+  **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu
   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 > \* equal contribution
-
-
 
 # Honors & Awards
 
