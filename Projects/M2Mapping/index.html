@@ -17,12 +17,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/bmw.png">
+  <link rel="stylesheet" href="static/css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <!-- <script src="./static/js/index.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="static/js/script.js"></script>
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -235,6 +238,170 @@
       </div>
       <!--/ Paper video. -->
 
+      <!-- Visual Comparision -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Extrapolation Views Rendering Comparisions</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              3D Gaussian Splatting initialized with dense point clouds, denoted as 3DGS*
+            </p>
+          </div>
+          <h3 class="title is-4">Replica</h3>
+
+          <div class="content has-text-justified">
+            <p>
+              We emphasize the issues of extrapolation rendering consistency by uniformly sampling positions and
+              orientations in each scene to generate the extrapolation dataset from Replica.
+            </p>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <!-- Visual Effects. -->
+
+            <div class="column">
+              <div class="content">
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:300px;">
+
+                  <div class="bal-after">
+                    <img src="static/images/replica/rendering/room0/ours_000004.jpg">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Ours
+                    </div>
+                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                      21 MB
+                    </div> -->
+                  </div>
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="static/images/replica/rendering/room0/gt_00004.jpeg">
+                      <div class="bal-beforePosition beforeLabel">
+                        Ground Truth
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <div class="bal-container-small image-compare" style="height:300px;">
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="static/images/replica/rendering/room0/h2mapping_000004.jpg">
+                      <div class="bal-beforePosition beforeLabel">
+                        H2Mapping
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+                    <img src="static/images/replica/rendering/room0/monogs_000004.jpg">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      MonoGS
+                    </div>
+                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                      21 MB
+                    </div> -->
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="content">
+
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:300px;">
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="static/images/replica/rendering/room0/3dgs_00004.jpeg">
+                      <div class="bal-beforePosition beforeLabel">
+                        3DGS*
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+                    <img src="static/images/replica/rendering/room0/ingp_00004.jpg">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      InstantNGP
+                    </div>
+                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                      21 MB
+                    </div> -->
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+          </div>
+
+
+          <h3 class="title is-4"><a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a></h3>
+          <div class="columns is-centered has-text-centered">
+            <!-- Visual Effects. -->
+
+            <div class="column">
+              <div class="content">
+                <img src="static/images/fast_livo2/extra/redsculture_ours.jpeg">
+                <img src="static/images/fast_livo2/extra/drive_ours.jpeg">
+                <h4 class="title is-5">Ours</h4>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <img src="static/images/fast_livo2/extra/redsculture_3dgs.jpeg">
+                <img src="static/images/fast_livo2/extra/drive_3dgs.jpg">
+                <h4 class="title is-5">3DGS*</h4>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <img src="static/images/fast_livo2/extra/redsculture_ingp.jpeg">
+                <img src="static/images/fast_livo2/extra/drive_ingp.jpg">
+                <h4 class="title is-5">InstantNGP</h4>
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+          </div>
+        </div>
+      </div>
+      <!--/ Matting. -->
 
       <!-- Results. -->
       <div class="columns is-centered">
@@ -414,6 +581,36 @@
     </div>
   </footer>
   </div>
+
+
+  <script>
+    for (var elm of document.querySelectorAll(".image-compare")) {
+      new BeforeAfter(elm)
+    }
+    var options = {
+      slidesToScroll: 1,
+      slidesToShow: 3,
+      loop: true,
+      infinite: true,
+      autoplay: false,
+      autoplaySpeed: 3000,
+    }
+
+    // Initialize all div with carousel class
+    var carousels = bulmaCarousel.attach('.carousel', options);
+
+    for (var i = 0; i < carousels.length; i++) {
+      // Add listener to  event
+      carousels[i].on('before:show', () => { });
+    }
+
+    // Access to bulmaCarousel instance of an element
+    var element = document.querySelector('#my-element');
+    if (element && element.bulmaCarousel) {
+      // bulmaCarousel instance is available as element.bulmaCarousel
+      element.bulmaCarousel.on('before-show', () => { });
+    }
+  </script>
 </body>
 
 </html>
