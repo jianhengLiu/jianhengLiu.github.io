@@ -20,25 +20,39 @@ Education
 # Publication
 
 - **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**
+  <br>
   **Jianheng Liu**, Haoyao Chen
+  <br>
   ICRA, 2024
 - **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**
-  **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fn
+  <br>
+  **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fu
+  <br>
   RAL, 2023
 - **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**
+  <br>
   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
+  <br>
   Automatica, 2023
 - **RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**
+  <br>
   **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen
+  <br>
   RA-L and IROS, 2022
 - **Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**
+  <br>
   Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
+  <br>
   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
 - **Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**
+  <br>
   Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen
+  <br>
   IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
 - **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**
+  <br>
   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu
+  <br>
   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
 
 > \* equal contribution
