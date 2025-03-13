@@ -8,7 +8,9 @@ author_profile: true
 
 <small><strong>Jianheng Liu</strong>, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai and Fu Zhang</small>
 <br/>
-A MultiModal Mapping (M2Mapping) Framework for LiDAR-Visual Systems
+<small><i><strong>ICRA, 2025</strong></i></small>
+<br/>
+A MultiModal Mapping (M2Mapping) Framework for Nueral Surface Reconstruction and Novel View Synthesis with LiDAR-Visual Systems
 <br/>
 <img src="../Projects/M2Mapping/static/images/pipeline_h.jpg"/><br/>
 <a href="https://github.com/hku-mars/M2Mapping.git">M2Mapping</a> | <a href="https://jianhengliu.github.io/Projects/M2Mapping/">Project Page</a>

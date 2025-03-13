@@ -19,6 +19,11 @@ Education
 
 # Publication
 
+- **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**
+  <br>
+  **Jianheng Liu**, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang
+  <br>
+  ICRA, 2025
 - **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**
   <br>
   **Jianheng Liu**, Haoyao Chen
