@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="A unified LiDAR-visual system achieving geometrically consistent photorealistic rendering and high-granularity surface reconstruction.">
+  <meta name="description"
+    content="A unified LiDAR-visual system achieving geometrically consistent photorealistic rendering and high-granularity surface reconstruction.">
   <meta name="keywords" content="GS-SDF, Neural Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction</title>
+  <title>GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and
+    Reconstruction</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -61,45 +63,46 @@
 
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://keunhong.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://jianhengliu.github.io/Projects/GS-SDF/">
-            GS-SDF
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://jianhengliu.github.io/Projects/M2Mapping/">
-            M2Mapping
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://jianhengliu.github.io/Projects/GS-SDF/">
+              GS-SDF
+            </a>
+            <a class="navbar-item" href="https://jianhengliu.github.io/Projects/M2Mapping/">
+              M2Mapping
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction
+            <h1 class="title is-1 publication-title">GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for
+              Geometrically Consistent Rendering and Reconstruction
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -236,14 +239,10 @@
 
       <!-- Visual Comparision -->
       <div class="columns is-centered">
+        <!-- Replica -->
         <div class="column is-full-width">
           <h2 class="title is-3">Extrapolation Views Rendering Comparisions</h2>
 
-          <div class="content has-text-justified">
-            <p>
-              3D Gaussian Splatting initialized with dense point clouds, denoted as 3DGS*
-            </p>
-          </div>
           <h3 class="title is-4">Replica</h3>
 
           <div class="content has-text-justified">
@@ -257,28 +256,22 @@
 
             <div class="column">
               <div class="content">
-                <!-- adjust bal-container-small height -->
-                <div class="bal-container-small image-compare" style="height:300px;">
-
-                  <div class="bal-after">
-                    <img src="images/replica/rendering/room0/gssdf_000004.jpg">
-                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      Ours
-                    </div>
-                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
-                      21 MB
-                    </div> -->
-                  </div>
+                <div class="bal-container-small image-compare" style="height:310px;">
 
                   <div class="bal-before">
                     <div class="bal-before-inset">
-                      <img src="images/replica/rendering/room0/gt_00004.jpeg">
-                      <div class="bal-beforePosition beforeLabel">
-                        Ground Truth
+                      <img src="images/replica/rendering/room0/ingp_00004.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel" style="z-index:1;">
+                        InstantNGP
                       </div>
-                      <!-- <div class="bal-beforePosition beforeSize">
-                        600 MB
-                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+
+                    <img src="images/replica/rendering/room0/h2mapping_000004.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel">
+                      H2Mapping
                     </div>
                   </div>
 
@@ -291,67 +284,28 @@
               </div>
             </div>
 
+
+
             <div class="column">
               <div class="content">
-                <div class="bal-container-small image-compare" style="height:300px;">
+
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
 
                   <div class="bal-before">
                     <div class="bal-before-inset">
-                      <img src="images/replica/rendering/room0/h2mapping_000004.jpg">
+                      <img src="images/replica/rendering/room0/3dgs_00004.jpeg" style="width: 100%; height: auto;">
                       <div class="bal-beforePosition beforeLabel">
-                        H2Mapping
+                        3DGS
                       </div>
-                      <!-- <div class="bal-beforePosition beforeSize">
-                        600 MB
-                      </div> -->
                     </div>
                   </div>
 
                   <div class="bal-after">
-                    <img src="images/replica/rendering/room0/monogs_000004.jpg">
+                    <img src="images/replica/rendering/room0/monogs_000004.jpg" style="width: 100%; height: auto;">
                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
                       MonoGS
                     </div>
-                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
-                      21 MB
-                    </div> -->
-                  </div>
-
-                  <div class="bal-handle">
-                    <span class="handle-left-arrow"></span>
-                    <span class="handle-right-arrow"></span>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="content">
-
-                <!-- adjust bal-container-small height -->
-                <div class="bal-container-small image-compare" style="height:300px;">
-
-                  <div class="bal-before">
-                    <div class="bal-before-inset">
-                      <img src="images/replica/rendering/room0/3dgs_00004.jpeg">
-                      <div class="bal-beforePosition beforeLabel">
-                        3DGS*
-                      </div>
-                      <!-- <div class="bal-beforePosition beforeSize">
-                        600 MB
-                      </div> -->
-                    </div>
-                  </div>
-
-                  <div class="bal-after">
-                    <img src="images/replica/rendering/room0/ingp_00004.jpg">
-                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      InstantNGP
-                    </div>
-                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
-                      21 MB
-                    </div> -->
                   </div>
 
                   <div class="bal-handle">
@@ -366,34 +320,236 @@
           </div>
 
 
-          <h3 class="title is-4"><a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a></h3>
           <div class="columns is-centered has-text-centered">
             <!-- Visual Effects. -->
 
             <div class="column">
               <div class="content">
-                <img src="images/fast_livo2/extra/redsculture_ours.jpeg">
-                <img src="images/fast_livo2/extra/drive_ours.jpeg">
-                <h4 class="title is-5">Ours</h4>
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+                  <div class="bal-after">
+                    <img src="images/replica/rendering/room0/2dgs_00004.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      2DGS
+                    </div>
+                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                      21 MB
+                    </div> -->
+                  </div>
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/replica/rendering/room0/pgsr_00004.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel">
+                        PGSR
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
               </div>
             </div>
 
-            <div class="column">
-              <div class="content">
-                <img src="images/fast_livo2/extra/redsculture_3dgs.jpeg">
-                <img src="images/fast_livo2/extra/drive_3dgs.jpg">
-                <h4 class="title is-5">3DGS*</h4>
-              </div>
-            </div>
 
             <div class="column">
               <div class="content">
-                <img src="images/fast_livo2/extra/redsculture_ingp.jpeg">
-                <img src="images/fast_livo2/extra/drive_ingp.jpg">
-                <h4 class="title is-5">InstantNGP</h4>
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+                  <div class="bal-after">
+                    <img src="images/replica/rendering/room0/gssdf_000004.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Ours
+                    </div>
+                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                      21 MB
+                    </div> -->
+                  </div>
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/replica/rendering/room0/m2mapping_000004.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel">
+                        M2Mapping
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!--/ Visual Effects. -->
+          </div>
+
+
+          <h3 class="title is-4"><a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a></h3>
+
+          <div class="columns is-centered has-text-centered">
+            <!-- Visual Effects. -->
+
+            <div class="column">
+              <div class="content">
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/fast_livo2/drive/ingp_01442.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel" style="z-index:1;">
+                        InstantNGP
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+
+                    <img src="images/fast_livo2/drive/3dgs_00054.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel">
+                      3DGS
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="column">
+              <div class="content">
+
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/fast_livo2/drive/2dgs_00054.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel">
+                        2DGS
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+                    <img src="images/fast_livo2/drive/pgsr_01442.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      PGSR
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
               </div>
             </div>
             <!--/ Visual Effects. -->
+          </div>
+
+
+          <div class="columns is-centered has-text-centered">
+            <!-- Visual Effects. -->
+
+            <div class="column">
+              <div class="content">
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/fast_livo2/drive/our_render_reg_1442.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel">
+                        RR
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+                    <img src="images/fast_livo2/drive/ours_center_reg_1442.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      RR+CR
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="column">
+              <div class="content">
+                <!-- adjust bal-container-small height -->
+                <div class="bal-container-small image-compare" style="height:310px;">
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img src="images/fast_livo2/drive/m2mp_1442.jpg" style="width: 100%; height: auto;">
+                      <div class="bal-beforePosition beforeLabel">
+                        M2Mapping
+                      </div>
+                      <!-- <div class="bal-beforePosition beforeSize">
+                        600 MB
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <div class="bal-after">
+                    <img src="images/fast_livo2/drive/ours_1442.jpg" style="width: 100%; height: auto;">
+                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                      Ours(RR+SR)
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class="handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <!--/ Visual Effects. -->
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              * RR: Render Regularization, CR: Center Regularization, SR: Structure Regularization.
+            </p>
           </div>
         </div>
       </div>
@@ -421,14 +577,14 @@
             <div class="grid-container">
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office0.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/office0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Office-0</h3>
               </div>
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office1.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/office1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Office-1</h3>
               </div>
             </div>
@@ -436,14 +592,14 @@
             <div class="grid-container">
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office2.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/office2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Office-2</h3>
               </div>
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office3.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/office3.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Office-3</h3>
               </div>
             </div>
@@ -451,14 +607,14 @@
             <div class="grid-container">
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office4.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/office4.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Office-4</h3>
               </div>
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room0.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/room0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Room-0</h3>
               </div>
             </div>
@@ -466,14 +622,14 @@
             <div class="grid-container">
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room1.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/room1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Room-1</h3>
               </div>
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room2.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/replica/room2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Room-2</h3>
               </div>
             </div>
@@ -496,8 +652,9 @@
             <div class="grid-container">
               <!-- https://modelviewer.dev/editor/ -->
               <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m" src="./mesh/fast_livo2/campus.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/campus.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Campus</h3>
               </div>
               <div class="container is-centered has-text-centered">
@@ -516,8 +673,8 @@
               </div>
               <div class="container is-centered has-text-centered">
                 <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
-                  src="./mesh/fast_livo2/drive.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                  src="./mesh/fast_livo2/drive.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Drive</h3>
               </div>
             </div>
