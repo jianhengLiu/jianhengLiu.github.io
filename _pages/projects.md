@@ -10,7 +10,7 @@ author_profile: true
 <br/>
 A unified LiDAR-visual system achieving geometrically consistent photorealistic rendering and high-granularity surface reconstruction.
 <br/>
-<img src="../Projects/GS_SDF/images/pipeline.jpg"/><br/>
+<img src="../Projects/GS-SDF/images/pipeline.jpg"/><br/>
 <a href="https://github.com/hku-mars/GS-SDF">GS-SDF</a> | <a href="https://jianhengliu.github.io/Projects/GS-SDF/">Project Page</a>
 
 ## Neural Surface Reconstruction and Rendering for Lidar-Visual Systems
