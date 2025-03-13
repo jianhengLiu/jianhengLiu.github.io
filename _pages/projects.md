@@ -4,6 +4,15 @@ title: "Projects"
 author_profile: true
 ---
 
+## GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction
+
+<small><strong>Jianheng Liu</strong>, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
+<br/>
+A unified LiDAR-visual system achieving geometrically consistent photorealistic rendering and high-granularity surface reconstruction.
+<br/>
+<img src="../Projects/GS_SDF/images/pipeline.jpg"/><br/>
+<a href="https://github.com/hku-mars/GS-SDF">GS-SDF</a> | <a href="https://jianhengliu.github.io/Projects/GS-SDF/">Project Page</a>
+
 ## Neural Surface Reconstruction and Rendering for Lidar-Visual Systems
 
 <small><strong>Jianheng Liu</strong>, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai and Fu Zhang</small>
@@ -12,7 +21,7 @@ author_profile: true
 <br/>
 A MultiModal Mapping (M2Mapping) Framework for Nueral Surface Reconstruction and Novel View Synthesis with LiDAR-Visual Systems
 <br/>
-<img src="../Projects/M2Mapping/static/images/pipeline_h.jpg"/><br/>
+<img src="../Projects/M2Mapping/images/pipeline_h.jpg"/><br/>
 <a href="https://github.com/hku-mars/M2Mapping.git">M2Mapping</a> | <a href="https://jianhengliu.github.io/Projects/M2Mapping/">Project Page</a>
 
 ## Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio
