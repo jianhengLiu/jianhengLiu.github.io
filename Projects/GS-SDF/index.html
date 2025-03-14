@@ -133,21 +133,13 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2409.05310" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2503.10170" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Paper</span>
                   </a>
                 </span>
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/2409.05310" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span> -->
                 <!-- Video Link. -->
                 <span class="link-block">
                   <a href="https://www.youtube.com/watch?v=XFzzAGVbzek"
@@ -565,89 +557,11 @@
               Compressed Mesh.
             </p>
           </div>
-          <!-- Replica. -->
-          <h3 class="title is-4">Replica</h3>
-          <div class="content has-text-justified">
-            <p>
-              We show our surface reconstructions results on room-scale indoor simulation dataset.
-            </p>
-          </div>
-          <div class="content has-text-centered">
-
-            <div class="grid-container">
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Office-0</h3>
-              </div>
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Office-1</h3>
-              </div>
-            </div>
-
-            <div class="grid-container">
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Office-2</h3>
-              </div>
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office3.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Office-3</h3>
-              </div>
-            </div>
-
-            <div class="grid-container">
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/office4.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Office-4</h3>
-              </div>
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room0.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Room-0</h3>
-              </div>
-            </div>
-
-            <div class="grid-container">
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room1.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Room-1</h3>
-              </div>
-              <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 180deg"
-                  src="./mesh/replica/room2.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
-                  ar-status="not-presenting"></model-viewer>
-                <h4 class="title is-5">Room-2</h3>
-              </div>
-            </div>
-          </div>
-          <!--/ Replica. -->
 
 
           <!-- FAST-LIVO2. -->
           <h3 class="title is-4"><a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a></h3>
-          <div class="content has-text-justified">
-            <p>
-              For real-world datasets, we evaluate three types of trajectory datasets collected with a camera and a
-              LiDAR: forward-facing, object-centric, and free-view trajectories. Using handheld devices and the
-              <a href="https://github.com/hku-mars/FAST-LIVO2">FAST-LIVO2</a> localization algorithm, M2Mapping can be
-              quickly deployed without time-consuming
-              Structure-from-Motion.
-            </p>
-          </div>
+
           <div class="content has-text-centered">
             <div class="grid-container">
               <!-- https://modelviewer.dev/editor/ -->
@@ -658,24 +572,46 @@
                 <h4 class="title is-5">Campus</h3>
               </div>
               <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
-                  src="./mesh/fast_livo2/red_bird.glb" camera-controls="" auto-rotate="" exposure=".5"
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/sculture.glb" camera-controls="" auto-rotate="" exposure=".5"
                   generate-schema="" ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Sculpture</h3>
               </div>
             </div>
             <div class="grid-container">
               <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
-                  src="./mesh/fast_livo2/culture01.glb" camera-controls="" auto-rotate="" exposure=".5"
-                  generate-schema="" ar-status="not-presenting"></model-viewer>
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/culture.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Culture</h3>
               </div>
               <div class="container is-centered has-text-centered">
-                <model-viewer style="height: 240px; width: 360px;" orientation="0deg 0deg 0deg"
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
                   src="./mesh/fast_livo2/drive.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
                   ar-status="not-presenting"></model-viewer>
                 <h4 class="title is-5">Drive</h3>
+              </div>
+            </div>
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/station.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Station</h3>
+              </div>
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 360px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/cbd.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">CBD</h3>
+              </div>
+            </div>
+            <div class="grid-container">
+              <div class="container is-centered has-text-centered">
+                <model-viewer style="height: 240px; width: 760px;" camera-orbit="-84.19deg 79.63deg 83.74m"
+                  src="./mesh/fast_livo2/sysu.glb" camera-controls="" auto-rotate="" exposure=".5" generate-schema=""
+                  ar-status="not-presenting"></model-viewer>
+                <h4 class="title is-5">Sysu</h3>
               </div>
             </div>
           </div>
@@ -691,14 +627,14 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-          @misc{liu2024neuralsurfacereconstructionrendering,
-            title={Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems}, 
-            author={Jianheng Liu and Chunran Zheng and Yunfei Wan and Bowen Wang and Yixi Cai and Fu Zhang},
-            year={2024},
-            eprint={2409.05310},
+          @misc{liu2025gssdflidaraugmentedgaussiansplatting,
+            title={GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction}, 
+            author={Jianheng Liu and Yunfei Wan and Bowen Wang and Chunran Zheng and Jiarong Lin and Fu Zhang},
+            year={2025},
+            eprint={2503.10170},
             archivePrefix={arXiv},
             primaryClass={cs.RO},
-            url={https://arxiv.org/abs/2409.05310}, 
+            url={https://arxiv.org/abs/2503.10170}, 
           }
           </code></pre>
     </div>
@@ -707,14 +643,6 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="content has-text-centered">
-        <a class="icon-link" href="https://arxiv.org/abs/2409.05310">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="https://github.com/hku-mars/M2Mapping" class="external-link" disabled>
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
