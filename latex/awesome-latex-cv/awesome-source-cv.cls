@@ -223,6 +223,9 @@
 % Usage: \weibo{<weibo>}
 \newcommand*{\weibo}[1]{\sociallink{\weiboSymbol}{http://www.weibo.com/#1}{weibo.com/#1}}
 
+% Render author's Google Scholar (optional)
+% Usage: \googlescholar{<googlescholar-id>}
+\newcommand*{\googlescholar}[1]{\sociallink{\faGraduationCap}{https://scholar.google.com/citations?user=#1}{Google Scholar}}
 
 % Render author's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
