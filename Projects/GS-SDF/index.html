@@ -190,27 +190,15 @@
           <div class="container is-max-desktop  is-centered">
             <img src="./images/pipeline.jpg" class="center">
             <h2 class="subtitle has-text-centered">
-              A MultiModal Mapping (M2Mapping) Framework for LiDAR-Visual Systems
+              A unified LiDAR-visual system that synergizes Gaussian splatting with a neural signed distance field.
             </h2>
           </div>
 
           <div class="content has-text-justified">
             <p>
-              This paper presents a unified surface reconstruction and rendering framework for LiDAR-visual systems,
-              integrating Neural Radiance Fields (NeRF) and Neural Distance Fields (NDF) to recover both appearance and
-              structural information from posed images and point clouds.
-              We address the structural visible gap between NeRF and NDF by utilizing a visible-aware occupancy map to
-              classify space into the free, occupied, visible unknown, and background regions. This classification
-              facilitates the recovery of a complete appearance and structure of the scene.
-              We unify the training of the NDF and NeRF using a spatial-varying scale SDF-to-density transformation for
-              levels of detail for both structure and appearance.
-              The proposed method leverages the learned NDF for structure-aware NeRF training by an adaptive sphere
-              tracing
-              sampling strategy for accurate structure rendering.
-              In return, NeRF further refines structural in recovering missing or fuzzy structures in the NDF.
-              Extensive experiments demonstrate the superior quality and versatility of the proposed method across
-              various
-              scenarios.
+              We propose a unified LiDAR-visual system that synergizes Gaussian splatting with a neural signed distance field. 
+              The accurate LiDAR point clouds enable a trained neural signed distance field to offer a manifold geometry field, 
+              This motivates us to offer an SDF-based Gaussian initialization for physically grounded primitive placement and a comprehensive geometric regularization for geometrically consistent rendering and reconstruction.
             </p>
           </div>
         </div>
