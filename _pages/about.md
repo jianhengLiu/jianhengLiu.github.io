@@ -19,21 +19,26 @@ Education
 
 # Publication
 
+- **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**
+  <br>
+  **Jianheng Liu**, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang
+  <br>
+  IROS, 2025, <a href="https://jianhengliu.github.io/Projects/GS-SDF/">GS-SDF</a>
 - **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**
   <br>
   **Jianheng Liu**, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang
   <br>
-  ICRA, 2025
+  ICRA, 2025, <a href="https://jianhengliu.github.io/Projects/M2Mapping/">M2Mapping</a>
 - **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**
   <br>
   **Jianheng Liu**, Haoyao Chen
   <br>
-  ICRA, 2024
+  ICRA, 2024, <a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>
 - **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**
   <br>
   **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fu
   <br>
-  RAL, 2023
+  RAL, 2023, <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>
 - **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**
   <br>
   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
@@ -43,7 +48,7 @@ Education
   <br>
   **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen
   <br>
-  RA-L and IROS, 2022
+  RA-L and IROS, 2022, <a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>, <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>
 - **Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**
   <br>
   Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
@@ -58,7 +63,7 @@ Education
   <br>
   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu
   <br>
-  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2021)
+  IROS, 2021, <a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>
 
 > \* equal contribution
 
