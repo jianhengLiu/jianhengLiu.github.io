@@ -69,6 +69,7 @@ Education
 
 # Honors & Awards
 
+- **The Arthur and Louise May Memorial Fund Scholarship 2024-2025**
 - **Outstanding Graduates of 2023**
 - **National Scholarships for Masters Students**
 - the First Price for **2020 National ROBOCON Competition**; the Second Price for ***2020 National Quadruped Simulation Competition***
