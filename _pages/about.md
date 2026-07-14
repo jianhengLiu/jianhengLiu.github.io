@@ -13,9 +13,9 @@ My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural 
 Education
 =========
 
-- Ph.D in Mechanical Engineering [@MaRS-Lab](https://mars.hku.hk/), The University of Hong Kong, 2023/09-
-- M.Eng. in Control Science and Engineering [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HIT), 2021/09-2023/06
-- B.Eng. in Automation [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HIT), 2017/09-2021/06
+- Ph.D in Mechanical Engineering [@MaRS-Lab](https://mars.hku.hk/), The University of Hong Kong (HKU), 2023/09- 2027/06(expected)
+- M.Eng. in Control Science and Engineering [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HITSZ), 2021/09-2023/06
+- B.Eng. in Automation [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HITSZ), 2017/09-2021/06
 
 # Publication
 
@@ -69,8 +69,8 @@ Education
 
 # Honors & Awards
 
-- **The Arthur and Louise May Memorial Fund Scholarship 2024-2025**
-- **Outstanding Graduates of 2023**
+- [**The Arthur and Louise May Memorial Fund Scholarship 2024-2025**](https://scholar.aas.hku.hk/?action=showonesscheme&ss_id=474)
+- [**2023 Outstanding Graduates of of Harbin Institute of Technology**](https://www.nrs-lab.com/2023/06/14/%e7%a5%9d%e8%b4%banros-lab2021%e7%ba%a7%e7%a1%95%e5%a3%ab%e5%88%98%e5%81%a5%e6%81%92%e5%90%8c%e5%ad%a6%e8%8e%b7%e5%be%97%e5%93%88%e5%b0%94%e6%bb%a8%e5%b7%a5%e4%b8%9a%e5%a4%a7%e5%ad%a6%e4%bc%98/)
 - **National Scholarships for Masters Students**
 - the First Price for **2020 National ROBOCON Competition**; the Second Price for ***2020 National Quadruped Simulation Competition***
 - the Best Design Award for **2020 Smart C-end Technology Innovation Training Camp**
