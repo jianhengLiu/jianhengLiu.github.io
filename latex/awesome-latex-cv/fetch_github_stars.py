@@ -199,4 +199,17 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    # Windows consoles default to GBK/cp936; ✓ and ★ would raise UnicodeEncodeError.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
+    # Never break a LaTeX build: fall back to whatever counts are already cached.
+    try:
+        raise SystemExit(main())
+    except SystemExit:
+        raise
+    except Exception as exc:  # noqa: BLE001
+        print(f"star refresh failed ({exc}); using cached counts")
+        raise SystemExit(0)

@@ -1,0 +1,61 @@
+{
+  // Workspace override: the first recipe is the default one used by "Build LaTeX project".
+  // "xelatex + stars" refreshes GitHub star counts (github_stars_data.tex) before compiling.
+  // Tools run in the root .tex file's directory, so the script path is relative to it.
+  "latex-workshop.latex.tools": [
+    {
+      "name": "fetch-github-stars",
+      "command": "python",
+      "args": ["fetch_github_stars.py"]
+    },
+    {
+      "name": "fetch-citations",
+      "command": "python",
+      "args": ["fetch_citations.py"]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex + stars/citations",
+      "tools": ["fetch-github-stars", "fetch-citations", "xelatex"]
+    },
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "pdflatex",
+      "tools": ["pdflatex"]
+    },
+    {
+      "name": "xe->bib->xe->xe",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first"
+}

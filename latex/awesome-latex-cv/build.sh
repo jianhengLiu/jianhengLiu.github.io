@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Refresh GitHub star counts, then compile the CV with XeLaTeX.
+# Refresh GitHub star + citation counts, then compile the CV with XeLaTeX.
 #
 # Usage:
 #   ./build.sh                        # build liujianheng-cv-eng.tex
@@ -13,7 +13,9 @@ DOC="${1:-liujianheng-cv-eng}"
 DOC="${DOC%.tex}"
 FORCE="${2:-}"
 
-python3 fetch_github_stars.py ${FORCE:+--force} || echo "star refresh failed; using cached counts"
+PY="$(command -v python3 || command -v python)"
+"$PY" fetch_github_stars.py ${FORCE:+--force} || echo "star refresh failed; using cached counts"
+"$PY" fetch_citations.py ${FORCE:+--force} || echo "citation refresh failed; using cached counts"
 
 xelatex -synctex=1 -interaction=nonstopmode -file-line-error "$DOC.tex"
 
