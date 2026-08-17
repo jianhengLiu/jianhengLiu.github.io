@@ -1,7 +1,10 @@
 {% comment %}
-  Citation badge from _data/citations.yml (auto-synced by fetch_citations.py).
+  Citation badge from local _data/citations.yml (no external CDN).
   Usage: {% include citations.html key="gs-sdf" %}
 {% endcomment %}
-{% if include.key and site.data.citations[include.key] and site.data.citations[include.key] > 0 %}
-<img src="https://img.shields.io/badge/citations-{{ site.data.citations[include.key] }}-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="citations"/>
+{% if include.key %}
+  {% assign cites = site.data.citations[include.key] %}
+  {% if cites and cites > 0 %}
+<span class="metric-badge metric-badge--cites" title="Google Scholar citations"><i class="ai ai-google-scholar" aria-hidden="true"></i> {{ cites }}</span>
+  {% endif %}
 {% endif %}

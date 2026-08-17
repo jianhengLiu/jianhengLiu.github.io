@@ -1,7 +1,10 @@
 {% comment %}
-  Live GitHub star badge (shields.io — always current, no sync commit needed).
+  GitHub star badge from local _data/github_stars.yml (no external CDN).
   Usage: {% include github-stars.html repo="owner/repo" %}
 {% endcomment %}
 {% if include.repo %}
-<a href="https://github.com/{{ include.repo }}"><img src="https://img.shields.io/github/stars/{{ include.repo }}?style=social" alt="GitHub stars"/></a>
+  {% assign stars = site.data.github_stars[include.repo] %}
+  {% if stars %}
+<a class="metric-badge metric-badge--stars" href="https://github.com/{{ include.repo }}" title="GitHub stars"><i class="fab fa-github" aria-hidden="true"></i> ★ {{ stars }}</a>
+  {% endif %}
 {% endif %}
