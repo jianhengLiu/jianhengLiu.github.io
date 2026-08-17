@@ -1,0 +1,7 @@
+{% comment %}
+  Live GitHub star badge (shields.io — always current, no sync commit needed).
+  Usage: {% include github-stars.html repo="owner/repo" %}
+{% endcomment %}
+{% if include.repo %}
+<a href="https://github.com/{{ include.repo }}"><img src="https://img.shields.io/github/stars/{{ include.repo }}?style=social" alt="GitHub stars"/></a>
+{% endif %}

@@ -1,0 +1,7 @@
+{% comment %}
+  Citation badge from _data/citations.yml (auto-synced by fetch_citations.py).
+  Usage: {% include citations.html key="gs-sdf" %}
+{% endcomment %}
+{% if include.key and site.data.citations[include.key] and site.data.citations[include.key] > 0 %}
+<img src="https://img.shields.io/badge/citations-{{ site.data.citations[include.key] }}-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="citations"/>
+{% endif %}

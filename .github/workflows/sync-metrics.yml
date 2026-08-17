@@ -1,0 +1,44 @@
+name: Sync stars & citations
+
+on:
+  schedule:
+    # Weekly Monday 00:00 UTC
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh GitHub stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python latex/awesome-latex-cv/fetch_github_stars.py --force
+
+      - name: Refresh citation counts
+        run: python latex/awesome-latex-cv/fetch_citations.py --force
+
+      - name: Commit updated metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            latex/awesome-latex-cv/github_stars_data.tex \
+            latex/awesome-latex-cv/citations_data.tex \
+            _data/github_stars.yml \
+            _data/citations.yml
+          if git diff --staged --quiet; then
+            echo "No metric changes."
+          else
+            git commit -m "chore: sync GitHub stars and citation counts"
+            git push
+          fi
