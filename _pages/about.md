@@ -19,63 +19,47 @@ Education
 
 # Publication
 
-- **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**
-  {% include github-stars.html repo="hku-mars/GS-SDF" %}
-  {% include citations.html key="gs-sdf" %}
+- **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**{% include github-stars.html repo="hku-mars/GS-SDF" %}{% include citations.html key="gs-sdf" %}
   <br>
   **Jianheng Liu**, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang
   <br>
   IROS, 2025, <a href="https://jianhengliu.github.io/Projects/GS-SDF/">GS-SDF</a>
-- **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**
-  {% include github-stars.html repo="hku-mars/M2Mapping" %}
-  {% include citations.html key="m2mapping" %}
+- **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**{% include github-stars.html repo="hku-mars/M2Mapping" %}{% include citations.html key="m2mapping" %}
   <br>
   **Jianheng Liu**, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang
   <br>
   ICRA, 2025, <a href="https://jianhengliu.github.io/Projects/M2Mapping/">M2Mapping</a>
-- **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**
-  {% include github-stars.html repo="HITSZ-NRSL/RIM" %}
-  {% include citations.html key="rim" %}
+- **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**{% include github-stars.html repo="HITSZ-NRSL/RIM" %}{% include citations.html key="rim" %}
   <br>
   **Jianheng Liu**, Haoyao Chen
   <br>
   ICRA, 2024, <a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>
-- **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**
-  {% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}
-  {% include citations.html key="active-implicit-recon" %}
+- **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**{% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}{% include citations.html key="active-implicit-recon" %}
   <br>
   **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fu
   <br>
   RAL, 2023, <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>
-- **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**
-  {% include citations.html key="adaptive-trajectory-uav" %}
+- **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**{% include citations.html key="adaptive-trajectory-uav" %}
   <br>
   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
   <br>
   Automatica, 2023
-- **RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**
-  {% include github-stars.html repo="HITSZ-NRSL/Dynamic-VINS" %}
-  {% include github-stars.html repo="jianhengLiu/VINS-RGBD-FAST" %}
-  {% include citations.html key="dynamic-vins" %}
+- **RGB-D Inertial Odometry for a Resource-restricted Robot in Dynamic Environments**{% include citations.html key="dynamic-vins" %}
   <br>
   **Jianheng Liu**, XuanFu Li, Yueqian Liu, Haoyao Chen
   <br>
-  RA-L and IROS, 2022, <a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>, <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>
-- **Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**
-  {% include citations.html key="sampling-based-view-planning" %}
+  RA-L and IROS, 2022, <a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Dynamic-VINS</a>{% include github-stars.html repo="HITSZ-NRSL/Dynamic-VINS" %}, <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">VINS-RGBD-FAST</a>{% include github-stars.html repo="jianhengLiu/VINS-RGBD-FAST" %}
+- **Sampling-Based View Planning for MAVs in Active Visual-inertial State Estimation**{% include citations.html key="sampling-based-view-planning" %}
   <br>
   Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
   <br>
   IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
-- **Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**
-  {% include citations.html key="vision-inertial-hexacopter" %}
+- **Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**{% include citations.html key="vision-inertial-hexacopter" %}
   <br>
   Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen
   <br>
   IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
-- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**
-  {% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}
-  {% include citations.html key="vision-encoder-payload" %}
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**{% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}{% include citations.html key="vision-encoder-payload" %}
   <br>
   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu
   <br>

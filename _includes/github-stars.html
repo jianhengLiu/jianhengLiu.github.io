@@ -1,10 +1,10 @@
-{% comment %}
-  GitHub star badge from local _data/github_stars.yml (no external CDN).
+{%- comment -%}
+  GitHub star count from _data/github_stars.yml (local, no CDN).
   Usage: {% include github-stars.html repo="owner/repo" %}
-{% endcomment %}
-{% if include.repo %}
-  {% assign stars = site.data.github_stars[include.repo] %}
-  {% if stars %}
-<a class="metric-badge metric-badge--stars" href="https://github.com/{{ include.repo }}" title="GitHub stars"><i class="fab fa-github" aria-hidden="true"></i> ★ {{ stars }}</a>
-  {% endif %}
-{% endif %}
+{%- endcomment -%}
+{%- if include.repo -%}
+{%- assign stars = site.data.github_stars[include.repo] -%}
+{%- if stars -%}
+<a class="metric metric--stars" href="https://github.com/{{ include.repo }}" title="{{ stars }} GitHub stars"><i class="fab fa-github" aria-hidden="true"></i><span class="metric__star" aria-hidden="true">★</span>{{ stars }}</a>
+{%- endif -%}
+{%- endif -%}
