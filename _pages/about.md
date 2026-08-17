@@ -19,26 +19,26 @@ Education
 
 # Publication
 
-- **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**{% include github-stars.html repo="hku-mars/GS-SDF" %}{% include citations.html key="gs-sdf" %}
+- **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**{% include citations.html key="gs-sdf" %}
   <br>
   **Jianheng Liu**, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang
   <br>
-  IROS, 2025, <a href="https://jianhengliu.github.io/Projects/GS-SDF/">GS-SDF</a>
-- **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**{% include github-stars.html repo="hku-mars/M2Mapping" %}{% include citations.html key="m2mapping" %}
+  IROS, 2025, <a href="https://github.com/hku-mars/GS-SDF">Code</a>{% include github-stars.html repo="hku-mars/GS-SDF" %}, <a href="https://jianhengliu.github.io/Projects/GS-SDF/">Project Page</a>
+- **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**{% include citations.html key="m2mapping" %}
   <br>
   **Jianheng Liu**, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang
   <br>
-  ICRA, 2025, <a href="https://jianhengliu.github.io/Projects/M2Mapping/">M2Mapping</a>
-- **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**{% include github-stars.html repo="HITSZ-NRSL/RIM" %}{% include citations.html key="rim" %}
+  ICRA, 2025, <a href="https://github.com/hku-mars/M2Mapping">Code</a>{% include github-stars.html repo="hku-mars/M2Mapping" %}, <a href="https://jianhengliu.github.io/Projects/M2Mapping/">Project Page</a>
+- **Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio**{% include citations.html key="rim" %}
   <br>
   **Jianheng Liu**, Haoyao Chen
   <br>
-  ICRA, 2024, <a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>
-- **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**{% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}{% include citations.html key="active-implicit-recon" %}
+  ICRA, 2024, <a href="https://github.com/HITSZ-NRSL/RIM">RIM</a>{% include github-stars.html repo="HITSZ-NRSL/RIM" %}
+- **Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation**{% include citations.html key="active-implicit-recon" %}
   <br>
   **Jianheng Liu**\*, Dongyu Yan\*, Quanfeng Yu, Haoyao Chen, Mengmeng Fu
   <br>
-  RAL, 2023, <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>
+  RAL, 2023, <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">ActiveImplicitRecon</a>{% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}
 - **Adaptive trajectory tracking of UAV with a cable-suspended load using vision-inertial-based estimation**{% include citations.html key="adaptive-trajectory-uav" %}
   <br>
   Siqiang Wang, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
@@ -59,11 +59,11 @@ Education
   Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen
   <br>
   IEEE International Conference on Real-time Computing and Robotics (RCAR, 2022)
-- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**{% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}{% include citations.html key="vision-encoder-payload" %}
+- **Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload**{% include citations.html key="vision-encoder-payload" %}
   <br>
   **Jianheng Liu**\*, Yunfan Ren\*, Haoyao Chen, Yunhui Liu
   <br>
-  IROS, 2021, <a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>
+  IROS, 2021, <a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>{% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}
 
 > \* equal contribution
 

@@ -12,9 +12,9 @@ A unified LiDAR-visual system achieving geometrically consistent photorealistic 
 <br/>
 <img src="../Projects/GS-SDF/images/pipeline.jpg"/><br/>
 <p class="project-links">
-  <a href="https://github.com/hku-mars/GS-SDF">Code</a>
+  <a href="https://github.com/hku-mars/GS-SDF">Code</a>{% include github-stars.html repo="hku-mars/GS-SDF" %}
   <a href="https://jianhengliu.github.io/Projects/GS-SDF/">Project Page</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="hku-mars/GS-SDF" %}{% include citations.html key="gs-sdf" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="gs-sdf" %}</span>
 </p>
 
 ## Neural Surface Reconstruction and Rendering for Lidar-Visual Systems
@@ -27,9 +27,9 @@ A MultiModal Mapping (M2Mapping) Framework for Nueral Surface Reconstruction and
 <br/>
 <img src="../Projects/M2Mapping/images/pipeline_h.jpg"/><br/>
 <p class="project-links">
-  <a href="https://github.com/hku-mars/M2Mapping.git">Code</a>
+  <a href="https://github.com/hku-mars/M2Mapping.git">Code</a>{% include github-stars.html repo="hku-mars/M2Mapping" %}
   <a href="https://jianhengliu.github.io/Projects/M2Mapping/">Project Page</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="hku-mars/M2Mapping" %}{% include citations.html key="m2mapping" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="m2mapping" %}</span>
 </p>
 
 ## Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio
@@ -42,10 +42,10 @@ Robot-centric Implicit Mapping (RIM) is designed for large-scale incremental den
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=912450927&cid=1167555130&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/HITSZ-NRSL/RIM">Code</a>
+  <a href="https://github.com/HITSZ-NRSL/RIM">Code</a>{% include github-stars.html repo="HITSZ-NRSL/RIM" %}
   <a href="https://www.bilibili.com/video/BV1BJ4m1V778/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>
   <a href="https://youtu.be/OZDNp90_DLE?si=1AvKupCzvtvn1aQ8">Youtube</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="HITSZ-NRSL/RIM" %}{% include citations.html key="rim" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="rim" %}</span>
 </p>
 
 ## Active Implicit Object Reconstruction using Uncertainty-guided Next-Best-View Optimziation
@@ -58,10 +58,10 @@ We manage to transplant active reconstruction methods into implicit representati
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=574222068&cid=1217088233&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">Code</a>
+  <a href="https://github.com/HITSZ-NRSL/ActiveImplicitRecon">Code</a>{% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}
   <a href="https://www.bilibili.com/video/BV13z4y1s71y/?share_source=copy_web&vd_source=98e0b0102bbc355156eba6f968dc7cfb">Bilibili</a>
   <a href="https://youtu.be/qKmFzIE4-C0?si=Whwq7n-kU87mvSzS">Youtube</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="HITSZ-NRSL/ActiveImplicitRecon" %}{% include citations.html key="active-implicit-recon" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="active-implicit-recon" %}</span>
 </p>
 
 ## LVI-SAM-LIVOX
@@ -83,10 +83,10 @@ Dynamic-VINS is a real-time RGB-D Visual Inertial Odometry (VIO) system for reso
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=296794486&cid=730222765&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Code</a>
+  <a href="https://github.com/HITSZ-NRSL/Dynamic-VINS.git">Code</a>{% include github-stars.html repo="HITSZ-NRSL/Dynamic-VINS" %}
   <a href="https://www.bilibili.com/video/BV1bF411t7mx">Bilibili</a>
   <a href="https://youtu.be/y0U1IVtFBwY">Youtube</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="HITSZ-NRSL/Dynamic-VINS" %}{% include citations.html key="dynamic-vins" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="dynamic-vins" %}</span>
 </p>
 
 ## VINS-RGBD-FAST
@@ -100,8 +100,7 @@ VINS-RGBD-FAST is a SLAM system based on VINS-RGBD. I do some refinements to imp
 <br/>
 <img src="../Projects/misc/positioning.gif"/><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/VINS-RGBD-FAST" %}</span>
+  <a href="https://github.com/jianhengLiu/VINS-RGBD-FAST">Code</a>{% include github-stars.html repo="jianhengLiu/VINS-RGBD-FAST" %}
 </p>
 
 ## SemanticLineRecon
@@ -110,8 +109,7 @@ Semantic line reconstruction with colmap and line3d++.
 <br/>
 <img src="../Projects/misc/slrecon.jpg"/><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/SV-SLAM">Code</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/SV-SLAM" %}</span>
+  <a href="https://github.com/jianhengLiu/SV-SLAM">Code</a>{% include github-stars.html repo="jianhengLiu/SV-SLAM" %}
 </p>
 
 ## Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload
@@ -124,9 +122,9 @@ We develops a novel real-time system for estimating the payload position; the sy
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=590278777&cid=4046807133&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="0" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>
+  <a href="https://github.com/jianhengLiu/Vision-encoder-based-Payload-State-Estimator">Code</a>{% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}
   <a href="https://www.bilibili.com/video/BV1Qq4y1U7n4?share_source=copy_web">Video</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/Vision-encoder-based-Payload-State-Estimator" %}{% include citations.html key="vision-encoder-payload" %}</span>
+  <span class="project-links__metrics">{% include citations.html key="vision-encoder-payload" %}</span>
 </p>
 
 ## MatRix
@@ -144,9 +142,8 @@ Quadrotor controller based on SE3 geometric control.
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=250421025&bvid=BV1xv411w7Md&cid=405321832&page=0&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>
+  <a href="https://github.com/jianhengLiu/quad_controller_SE3">Code</a>{% include github-stars.html repo="jianhengLiu/quad_controller_SE3" %}
   <a href="https://www.bilibili.com/video/BV1xv411w7Md?share_source=copy_web">Video</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/quad_controller_SE3" %}</span>
 </p>
 
 ## BezierTrajGenerator & MinimumSnapTrajGenerator
@@ -166,9 +163,8 @@ Quadrotor controller based on SE3 geometric control.
 <br/>
 <iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=547978814&bvid=BV1rq4y1N76T&cid=405322254&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/FlightController">Code</a>
+  <a href="https://github.com/jianhengLiu/FlightController">Code</a>{% include github-stars.html repo="jianhengLiu/FlightController" %}
   <a href="https://www.bilibili.com/video/BV1rq4y1N76T?share_source=copy_web">Video</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/FlightController" %}</span>
 </p>
 
 ## CoppeliaSim/V-Rep舵轮教程
@@ -177,8 +173,7 @@ Quadrotor controller based on SE3 geometric control.
 <br/>
 <img src="../Projects/misc/steeringwheel.png"/><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial" %}</span>
+  <a href="https://github.com/jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial">Code</a>{% include github-stars.html repo="jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial" %}
 </p>
 
 ## Manipulator_GUI
@@ -187,6 +182,5 @@ C++ Course Project (Complied in CodeBlocks)
 <br/>
 <img src="../Projects/misc/manipulator.gif"/><br/>
 <p class="project-links">
-  <a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>
-  <span class="project-links__metrics">{% include github-stars.html repo="jianhengLiu/Manipulator_GUI" %}</span>
+  <a href="https://github.com/jianhengLiu/Manipulator_GUI">Code</a>{% include github-stars.html repo="jianhengLiu/Manipulator_GUI" %}
 </p>
