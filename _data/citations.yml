@@ -3,11 +3,11 @@
 # Or wait for the weekly GitHub Action sync.
 
 active-implicit-recon: 43
-adaptive-trajectory-uav: 6
-dynamic-vins: 126
-gs-sdf: 15
-m2mapping: 12
-rim: 12
-sampling-based-view-planning: 3
-vision-encoder-payload: 11
+adaptive-trajectory-uav: 5
+dynamic-vins: 108
+gs-sdf: 3
+m2mapping: 2
+rim: 6
+sampling-based-view-planning: 2
+vision-encoder-payload: 6
 vision-inertial-hexacopter: 1

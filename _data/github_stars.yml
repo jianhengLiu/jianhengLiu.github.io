@@ -5,7 +5,7 @@
 "HITSZ-NRSL/ActiveImplicitRecon": 14
 "HITSZ-NRSL/Dynamic-VINS": 387
 "HITSZ-NRSL/RIM": 114
-"hku-mars/GS-SDF": 525
+"hku-mars/GS-SDF": 528
 "hku-mars/M2Mapping": 268
 "hku-mars/Mesh-Learner": 33
 "jianhengLiu/BezierTrajGenerator": 3
@@ -17,6 +17,6 @@
 "jianhengLiu/MinimumSnapTrajGenerator": 1
 "jianhengLiu/PUTN": 3
 "jianhengLiu/quad_controller_SE3": 25
-"jianhengLiu/SV-SLAM": 2
+"jianhengLiu/SV-SLAM": 3
 "jianhengLiu/VINS-RGBD-FAST": 160
 "jianhengLiu/Vision-encoder-based-Payload-State-Estimator": 6
