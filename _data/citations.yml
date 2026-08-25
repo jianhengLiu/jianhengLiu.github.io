@@ -6,8 +6,11 @@ active-implicit-recon: 44
 adaptive-trajectory-uav: 6
 dynamic-vins: 126
 gs-sdf: 15
+lidar-geometric-prior: 1
 m2mapping: 12
+mesh-learner: 1
 rim: 12
 sampling-based-view-planning: 3
+swept-volume: 1
 vision-encoder-payload: 12
 vision-inertial-hexacopter: 1

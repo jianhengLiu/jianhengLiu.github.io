@@ -24,6 +24,21 @@ Education
   **Jianheng Liu**, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang
   <br>
   IROS, 2025, <a href="https://github.com/hku-mars/GS-SDF">Code</a>{% include github-stars.html repo="hku-mars/GS-SDF" %}, <a href="https://jianhengliu.github.io/Projects/GS-SDF/">Project Page</a>
+- **Mesh-Learner: Texturing Mesh with Spherical Harmonics**{% include citations.html key="mesh-learner" %}
+  <br>
+  Yunfei Wan, **Jianheng Liu**, Chunran Zheng, Jiarong Lin, Fu Zhang
+  <br>
+  IROS, 2025, <a href="https://github.com/hku-mars/Mesh-Learner">Code</a>{% include github-stars.html repo="hku-mars/Mesh-Learner" %}
+- **Efficient Swept Volume-Based Trajectory Generation for Arbitrary-Shaped Ground Robot Navigation**{% include citations.html key="swept-volume" %}
+  <br>
+  Yisheng Li, Longji Yin, Yixi Cai, **Jianheng Liu**, Fangcheng Zhu, Mingpu Ma, Siqi Liang, Haotian Li, Fu Zhang
+  <br>
+  IROS, 2025
+- **LiDAR as a Geometric Prior: Enhancing Camera Pose Tracking Through High-Fidelity View Synthesis**{% include citations.html key="lidar-geometric-prior" %}
+  <br>
+  Rafael Muñoz-Salinas, **Jianheng Liu**, Francisco J Romero-Ramirez, Manuel J Marín-Jiménez, Fu Zhang
+  <br>
+  Applied Sciences, 2025
 - **Neural Surface Reconstruction and Rendering for LiDAR-Visual Systems**{% include citations.html key="m2mapping" %}
   <br>
   **Jianheng Liu**, Chunran Zheng, Yunfei Wan, Bowen Wang, Yixi Cai, Fu Zhang

@@ -76,6 +76,15 @@ WEB_KEYS = {
         "vision-inertial-hexacopter",
     "Vision-encoder-based Payload State Estimation for Autonomous MAV With a Suspended Payload":
         "vision-encoder-payload",
+    "Mesh-Learner: Texturing Mesh with Spherical Harmonics":
+        "mesh-learner",
+    "Efficient Swept Volume-Based Trajectory Generation for Arbitrary-Shaped Ground Robot Navigation":
+        "swept-volume",
+    "LiDAR as a Geometric Prior: Enhancing Camera Pose Tracking Through High-Fidelity View Synthesis":
+        "lidar-geometric-prior",
+    # SpaRV is deliberately absent: it is under review at T-RO and has no Google
+    # Scholar record yet. Its closest profile entry is GS-SDF at 0.56 similarity —
+    # a different paper — so aliasing it would just clone GS-SDF's count.
 }
 
 # \ghhref{repo}{title} | \paperhref{url}{repo}{title} | \pubhref{url}{title} | \pubtitle{title}
