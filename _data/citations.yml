@@ -2,7 +2,7 @@
 # Re-run: python3 latex/awesome-latex-cv/fetch_citations.py [--force]
 # Or wait for the weekly GitHub Action sync.
 
-active-implicit-recon: 44
+active-implicit-recon: 45
 adaptive-trajectory-uav: 6
 dynamic-vins: 126
 gs-sdf: 15
