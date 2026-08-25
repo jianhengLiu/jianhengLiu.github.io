@@ -1,4 +1,13 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  window.LIVE_METRICS = {
+    liveScholar: {{ site.live_scholar_citations | default: false | jsonify }},
+    scholarUser: {{ site.author.googlescholar | split: "user=" | last | split: "&" | first | jsonify }},
+    scholarTitles: {{ site.data.scholar_titles | jsonify }}
+  };
+</script>
+<script src="{{ base_path }}/assets/js/live-metrics.js" defer></script>
+
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}

@@ -1,10 +1,16 @@
 {%- comment -%}
-  GitHub star count from _data/github_stars.yml (local, no CDN).
+  GitHub star count for one repository.
+
+  Rendered from _data/github_stars.yml (last weekly sync) so the badge is correct
+  with JavaScript disabled; assets/js/live-metrics.js then tries to refresh it
+  from the GitHub API and rewrites .metric__count in place. If that fails the
+  baked-in number simply stays.
+
   Usage: {% include github-stars.html repo="owner/repo" %}
 {%- endcomment -%}
 {%- if include.repo -%}
 {%- assign stars = site.data.github_stars[include.repo] -%}
 {%- if stars -%}
-<a class="metric metric--stars" href="https://github.com/{{ include.repo }}" title="{{ stars }} GitHub stars"><i class="fab fa-github" aria-hidden="true"></i><span class="metric__star" aria-hidden="true">★</span>{{ stars }}</a>
+<a class="metric metric--stars" data-star-repo="{{ include.repo }}" href="https://github.com/{{ include.repo }}" title="{{ stars }} GitHub stars"><i class="fab fa-github" aria-hidden="true"></i><span class="metric__star" aria-hidden="true">★</span><span class="metric__count">{{ stars }}</span></a>
 {%- endif -%}
 {%- endif -%}

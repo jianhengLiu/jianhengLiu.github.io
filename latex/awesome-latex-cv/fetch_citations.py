@@ -6,14 +6,13 @@ Usage:
   python3 fetch_citations.py --force        # ignore TTL cache
   SCHOLAR_USER=xxxx python3 fetch_citations.py
 
-Sources, tried in order:
-  1. Google Scholar profile page (exact Scholar numbers, but Google often
-     answers 403/CAPTCHA from datacenter or repeat-visitor IPs)
-  2. OpenAlex title search (open API, no key; counts of duplicate records for
-     the same title — e.g. arXiv preprint + published version — are summed,
-     which mirrors how Scholar merges versions)
-  3. Semantic Scholar title search (aggressively rate-limited without a key)
-  4. whatever is already in citations_data.tex
+Google Scholar is the ONLY accepted source. OpenAlex / Semantic Scholar
+undercount robotics work badly (they do not merge the arXiv preprint with the
+published conference version the way Scholar does), so letting them fill in
+silently corrupts the numbers — that is exactly how the weekly CI run once
+rewrote dynamic-vins from 126 down to 108. When Scholar is unavailable (it
+answers 403/CAPTCHA from datacenter IPs, i.e. most GitHub Actions runs) the
+counts already in citations_data.tex are kept untouched.
 
 Paper titles are read straight out of the .tex sources, from the title argument
 of \ghhref / \paperhref / \pubhref / \pubtitle, and are used verbatim as the
@@ -39,6 +38,9 @@ ROOT = Path(__file__).resolve().parent
 SITE_ROOT = ROOT.parents[1]  # repo root (jianhengLiu.github.io)
 OUT = ROOT / "citations_data.tex"
 SITE_OUT = SITE_ROOT / "_data" / "citations.yml"
+# key -> exact Scholar title, so the browser-side live refresh can match the
+# rows it scrapes from the profile back onto the badges on the page.
+SITE_TITLES_OUT = SITE_ROOT / "_data" / "scholar_titles.yml"
 CACHE_TTL_SEC = int(os.environ.get("CITATIONS_TTL", str(24 * 3600)))
 SCHOLAR_USER = os.environ.get("SCHOLAR_USER", "ZMbWaLkAAAAJ")
 CONTACT_EMAIL = os.environ.get("OPENALEX_MAILTO", "a943678231@gmail.com")
@@ -197,67 +199,6 @@ def unescape_html(s: str) -> str:
     return html.unescape(s)
 
 
-# --------------------------------------------------------------------------- #
-# Source 2: OpenAlex
-# --------------------------------------------------------------------------- #
-def fetch_openalex(title: str) -> int | None:
-    url = "https://api.openalex.org/works?" + urllib.parse.urlencode(
-        {
-            "filter": "title.search:" + re.sub(r"[^\w\s-]", " ", title),
-            "per-page": 10,
-            "mailto": CONTACT_EMAIL,
-        }
-    )
-    try:
-        data = json.loads(get(url))
-    except Exception as e:  # noqa: BLE001
-        print(f"  ! OpenAlex failed for {title[:40]}...: {e}", file=sys.stderr)
-        return None
-    # Sum duplicate records of the same work (preprint + published), like Scholar merges them.
-    total, hits = 0, 0
-    for w in data.get("results", []):
-        remote = w.get("title") or w.get("display_name") or ""
-        if similar(remote, title) >= MATCH_CUTOFF:
-            total += int(w.get("cited_by_count") or 0)
-            hits += 1
-    return total if hits else None
-
-
-# --------------------------------------------------------------------------- #
-# Source 3: Semantic Scholar
-# --------------------------------------------------------------------------- #
-def fetch_semanticscholar(title: str, attempts: int = 3) -> int | None:
-    url = "https://api.semanticscholar.org/graph/v1/paper/search?" + urllib.parse.urlencode(
-        {"query": title, "fields": "title,citationCount", "limit": 5}
-    )
-    headers = {}
-    key = os.environ.get("S2_API_KEY")
-    if key:
-        headers["x-api-key"] = key
-    data = None
-    for attempt in range(attempts):
-        try:
-            data = json.loads(get(url, headers))
-            break
-        except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < attempts - 1:
-                time.sleep(3 * (attempt + 1))  # shared unauthenticated pool; back off
-                continue
-            print(f"  ! Semantic Scholar failed for {title[:40]}...: {e}", file=sys.stderr)
-            return None
-        except Exception as e:  # noqa: BLE001
-            print(f"  ! Semantic Scholar failed for {title[:40]}...: {e}", file=sys.stderr)
-            return None
-    if data is None:
-        return None
-    best = None
-    for p in data.get("data", []):
-        if similar(p.get("title") or "", title) >= MATCH_CUTOFF:
-            n = int(p.get("citationCount") or 0)
-            best = n if best is None else max(best, n)
-    return best
-
-
 def load_existing() -> dict[str, str]:
     if not OUT.exists():
         return {}
@@ -290,44 +231,35 @@ def main() -> int:
         return 0
 
     scholar = fetch_scholar(SCHOLAR_USER)
-    counts: dict[str, int] = {}
+    if not scholar:
+        print("  ! Google Scholar unavailable — keeping the counts already on disk "
+              "(no other source is trusted).", file=sys.stderr)
 
-    for i, title in enumerate(titles):
+    counts: dict[str, int] = {}
+    scholar_titles: dict[str, str] = {}
+
+    for title in titles:
         n: int | None = None
-        src = ""
+        matched = ""
         if scholar:
             lookup = TITLE_ALIASES.get(title, title)
             best_key, best_score = None, 0.0
             for k in scholar:
-                s = similar(k, lookup)
-                if s > best_score:
-                    best_key, best_score = k, s
+                sc = similar(k, lookup)
+                if sc > best_score:
+                    best_key, best_score = k, sc
             if best_key is not None and best_score >= MATCH_CUTOFF:
-                n, src = scholar[best_key], "scholar"
-        if n is None:
-            # Neither open source alone tracks robotics venues well: OpenAlex misses
-            # arXiv-only work, S2 misses some published records. Take the higher of
-            # the two — that is the closer approximation of the Scholar number.
-            if i:
-                time.sleep(0.4)  # be polite to the open APIs
-            oa = fetch_openalex(title)
-            s2 = fetch_semanticscholar(title)
-            candidates = {"openalex": oa, "s2": s2}
-            best = [(k, v) for k, v in candidates.items() if v is not None]
-            if best:
-                src, n = max(best, key=lambda kv: kv[1])
-                other = ", ".join(f"{k}={v}" for k, v in best if k != src)
-                if other:
-                    src = f"{src}; {other}"
+                n, matched = scholar[best_key], best_key
         if n is None:
             if title in cached:
                 counts[title] = int(cached[title])
-                print(f"  ~ {title[:52]}: cached {cached[title]}")
+                print(f"  ~ {title[:52]}: kept {cached[title]} (not on Scholar this run)")
             else:
-                print(f"  x {title[:52]}: no data")
+                print(f"  x {title[:52]}: no Scholar entry")
             continue
         counts[title] = n
-        print(f"  + {title[:52]}: {n} ({src})")
+        scholar_titles[title] = matched
+        print(f"  + {title[:52]}: {n}")
 
     lines = [
         "% Auto-generated by fetch_citations.py — do not edit by hand",
@@ -343,7 +275,22 @@ def main() -> int:
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {OUT.name} ({sum(1 for n in counts.values() if n > 0)} entries)")
     write_site_yaml(counts)
+    write_scholar_titles(scholar_titles)
     return 0
+
+
+def web_key_for(title: str) -> str | None:
+    """Map a CV/Scholar paper title onto the short key used by the website."""
+    key = WEB_KEYS.get(title)
+    if key:
+        return key
+    # Fuzzy-match against WEB_KEYS titles (handles tiny spelling diffs).
+    best_key, best_score = None, 0.0
+    for t, k in WEB_KEYS.items():
+        score = similar(t, title)
+        if score > best_score:
+            best_key, best_score = k, score
+    return best_key if best_score >= MATCH_CUTOFF else None
 
 
 def write_site_yaml(counts: dict[str, int]) -> None:
@@ -352,16 +299,7 @@ def write_site_yaml(counts: dict[str, int]) -> None:
     for title, n in counts.items():
         if n <= 0:
             continue
-        key = WEB_KEYS.get(title)
-        if not key:
-            # Fuzzy-match against WEB_KEYS titles (handles tiny spelling diffs).
-            best_key, best_score = None, 0.0
-            for t, k in WEB_KEYS.items():
-                s = similar(t, title)
-                if s > best_score:
-                    best_key, best_score = k, s
-            if best_key is not None and best_score >= MATCH_CUTOFF:
-                key = best_key
+        key = web_key_for(title)
         if key:
             web[key] = max(n, web.get(key, 0))
 
@@ -384,6 +322,41 @@ def write_site_yaml(counts: dict[str, int]) -> None:
     out_lines.append("")
     SITE_OUT.write_text("\n".join(out_lines), encoding="utf-8")
     print(f"Wrote {SITE_OUT.relative_to(SITE_ROOT)} ({len(web)} entries)")
+
+
+def write_scholar_titles(scholar_titles: dict[str, str]) -> None:
+    """Mirror key -> exact Scholar title into _data/scholar_titles.yml.
+
+    The website's live refresh scrapes the Scholar profile in the visitor's
+    browser; it needs to know which scraped row belongs to which badge.
+    """
+    web: dict[str, str] = {}
+    for title, scholar_title in scholar_titles.items():
+        key = web_key_for(title)
+        if key and scholar_title:
+            web[key] = scholar_title
+
+    if not web:  # Scholar was unreachable this run; leave the existing map alone.
+        return
+
+    # Keep keys this run did not see (e.g. a paper temporarily off the profile).
+    if SITE_TITLES_OUT.exists():
+        for line in SITE_TITLES_OUT.read_text(encoding="utf-8").splitlines():
+            m = re.match(r'^([A-Za-z0-9_-]+):\s*"(.*)"\s*$', line.strip())
+            if m and m.group(1) not in web:
+                web[m.group(1)] = m.group(2)
+
+    out_lines = [
+        "# Auto-generated by latex/awesome-latex-cv/fetch_citations.py — do not edit by hand",
+        "# Maps a badge key to the exact title on the Google Scholar profile, so the",
+        "# browser-side live refresh can match scraped rows back onto the badges.",
+        "",
+    ]
+    for key in sorted(web):
+        out_lines.append(f'{key}: "{web[key]}"')
+    out_lines.append("")
+    SITE_TITLES_OUT.write_text("\n".join(out_lines), encoding="utf-8")
+    print(f"Wrote {SITE_TITLES_OUT.relative_to(SITE_ROOT)} ({len(web)} entries)")
 
 
 if __name__ == "__main__":

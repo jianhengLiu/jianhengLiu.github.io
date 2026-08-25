@@ -86,6 +86,15 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
+
+# Badge metrics (assets/js/live-metrics.js). GitHub stars are always refreshed
+# live in the visitor's browser — api.github.com is CORS-open and reliable.
+# Google Scholar has no API and blocks every datacenter IP, so every public CORS
+# proxy gets a CAPTCHA; the live citation path is therefore off by default and
+# the badges render from _data/citations.yml, kept fresh by the local sync timer
+# (latex/awesome-latex-cv/sync_metrics.sh). Flip this to true if you ever find a
+# proxy Scholar will answer — it fails closed, so nothing breaks either way.
+live_scholar_citations   : false
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page

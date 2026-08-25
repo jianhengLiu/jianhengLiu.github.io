@@ -24,7 +24,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python latex/awesome-latex-cv/fetch_github_stars.py --force
 
-      - name: Refresh citation counts
+      # Best-effort only. Google Scholar serves a CAPTCHA to every datacenter IP,
+      # so this step almost always finds nothing on a hosted runner. That is safe:
+      # fetch_citations.py accepts no source but Scholar and keeps the counts
+      # already on disk when Scholar is unreachable. The citation numbers are
+      # really kept fresh by latex/awesome-latex-cv/sync_metrics.sh, run from a
+      # daily timer on a machine Scholar will answer.
+      - name: Refresh citation counts (best-effort)
         run: python latex/awesome-latex-cv/fetch_citations.py --force
 
       - name: Commit updated metrics
@@ -35,7 +41,8 @@ jobs:
             latex/awesome-latex-cv/github_stars_data.tex \
             latex/awesome-latex-cv/citations_data.tex \
             _data/github_stars.yml \
-            _data/citations.yml
+            _data/citations.yml \
+            _data/scholar_titles.yml
           if git diff --staged --quiet; then
             echo "No metric changes."
           else

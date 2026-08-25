@@ -1,10 +1,17 @@
 {%- comment -%}
-  Citation count from _data/citations.yml (local, no CDN).
+  Citation count for one paper.
+
+  Rendered from _data/citations.yml (last successful Google Scholar sync) so the
+  badge is correct with JavaScript disabled; assets/js/live-metrics.js then tries
+  to refresh it from the live Scholar profile and rewrites .metric__count in
+  place. Google Scholar is the only accepted source — if the live fetch fails the
+  baked-in number simply stays.
+
   Usage: {% include citations.html key="gs-sdf" %}
 {%- endcomment -%}
 {%- if include.key -%}
 {%- assign cites = site.data.citations[include.key] -%}
 {%- if cites and cites > 0 -%}
-<span class="metric metric--cites" title="{{ cites }} Google Scholar citations"><i class="ai ai-google-scholar" aria-hidden="true"></i>{{ cites }}</span>
+<span class="metric metric--cites" data-cite-key="{{ include.key }}" title="{{ cites }} Google Scholar citations"><i class="ai ai-google-scholar" aria-hidden="true"></i><span class="metric__count">{{ cites }}</span></span>
 {%- endif -%}
 {%- endif -%}
