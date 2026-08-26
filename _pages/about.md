@@ -73,7 +73,7 @@ My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural 
   <br>
   Zhengyu Hua, Jiabi Sun, Fengyu Quan, Haoyao Chen, **Jianheng Liu**, Yunhui Liu
   <br>
-  IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS, 2022)
+  IROS, 2022
 - **Vision-Inertial-based Adaptive State Estimation of Hexacopter with a Cable-Suspended Load**{% include citations.html key="vision-inertial-hexacopter" %}
   <br>
   Siqiang Wang, **Jianheng Liu**, Xin Jiang, Haoyao Chen
