@@ -23,7 +23,7 @@ A unified LiDAR-visual system achieving geometrically consistent photorealistic 
 <br/>
 <small><i><strong>ICRA, 2025</strong></i></small>
 <br/>
-A MultiModal Mapping (M2Mapping) Framework for Nueral Surface Reconstruction and Novel View Synthesis with LiDAR-Visual Systems
+A MultiModal Mapping (M2Mapping) Framework for Neural Surface Reconstruction and Novel View Synthesis with LiDAR-Visual Systems
 <br/>
 <img src="../Projects/M2Mapping/images/pipeline_h.jpg"/><br/>
 <p class="project-links">
@@ -32,7 +32,7 @@ A MultiModal Mapping (M2Mapping) Framework for Nueral Surface Reconstruction and
   <span class="project-links__metrics">{% include citations.html key="m2mapping" %}</span>
 </p>
 
-## Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representatio
+## Towards Large-Scale Incremental Dense Mapping using Robot-centric Implicit Neural Representation
 
 <small><strong>Jianheng Liu</strong> and Haoyao Chen</small>
 <br/>
