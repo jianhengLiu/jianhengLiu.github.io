@@ -10,12 +10,17 @@ I am pursuing PhD degree at **The University of Hong Kong** under the supervisio
 
 My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural Fields**.
 
-Education
-=========
+# Education
 
-- Ph.D in Mechanical Engineering [@MaRS-Lab](https://mars.hku.hk/), The University of Hong Kong (HKU), 2023/09- 2027/06(expected)
-- M.Eng. in Control Science and Engineering [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HITSZ), 2021/09-2023/06
-- B.Eng. in Automation [@nROS-Lab](http://nrs-lab.com/), Harbin Institute of Technology, Shenzhen (HITSZ), 2017/09-2021/06
+- **Ph.D. in Mechanical Engineering**, 2023/09 - 2027/06 (expected)
+  <br>
+  The University of Hong Kong (HKU), [@MaRS-Lab](https://mars.hku.hk/)
+- **M.Eng. in Control Science and Engineering**, 2021/09 - 2023/06
+  <br>
+  Harbin Institute of Technology, Shenzhen (HITSZ), [@nROS-Lab](http://nrs-lab.com/)
+- **B.Eng. in Automation**, 2017/09 - 2021/06
+  <br>
+  Harbin Institute of Technology, Shenzhen (HITSZ), [@nROS-Lab](http://nrs-lab.com/)
 
 # Publication
 

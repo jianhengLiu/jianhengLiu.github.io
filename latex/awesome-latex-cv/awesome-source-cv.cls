@@ -126,6 +126,7 @@
   \setmainfont[
     BoldFont = Source Sans Pro Semibold, 
     ItalicFont= Source Sans Pro Light Italic,
+    BoldItalicFont = Source Sans Pro Semibold Italic,
     SmallCapsFont = Source Sans Pro]{Source Sans Pro Light}
 }
 {
@@ -133,6 +134,7 @@
     Path = fonts/, 
     BoldFont = SourceSansPro-Semibold, 
     ItalicFont = SourceSansPro-LightIt, 
+    BoldItalicFont = SourceSansPro-SemiboldIt,
     SmallCapsFont = SourceSansPro-Regular]{SourceSansPro-Light}
 }
 
