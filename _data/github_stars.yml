@@ -6,7 +6,7 @@
 "HITSZ-NRSL/Dynamic-VINS": 387
 "HITSZ-NRSL/RIM": 114
 "hku-mars/GS-SDF": 530
-"hku-mars/M2Mapping": 268
+"hku-mars/M2Mapping": 269
 "hku-mars/Mesh-Learner": 34
 "jianhengLiu/BezierTrajGenerator": 3
 "jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial": 4
@@ -18,5 +18,5 @@
 "jianhengLiu/PUTN": 3
 "jianhengLiu/quad_controller_SE3": 25
 "jianhengLiu/SV-SLAM": 3
-"jianhengLiu/VINS-RGBD-FAST": 160
+"jianhengLiu/VINS-RGBD-FAST": 161
 "jianhengLiu/Vision-encoder-based-Payload-State-Estimator": 6
