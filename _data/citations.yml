@@ -4,7 +4,7 @@
 
 active-implicit-recon: 48
 adaptive-trajectory-uav: 6
-dynamic-vins: 129
+dynamic-vins: 130
 gs-sdf: 16
 lidar-geometric-prior: 1
 m2mapping: 12
