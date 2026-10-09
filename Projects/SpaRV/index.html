@@ -93,21 +93,27 @@
       <div class="vswitch">
         <div class="cmp" style="aspect-ratio: 4 / 3">
           <div class="cmp-layer"><video muted loop playsinline data-lead
-              data-tpl="videos/teaser/garden_rgb.mp4" data-poster-tpl="videos/teaser/garden_rgb.jpg"
-              poster="videos/teaser/garden_rgb.jpg"></video></div>
+              data-tpl="videos/teaser/{scene}_rgb.mp4" data-poster-tpl="videos/teaser/{scene}_rgb.jpg"
+              poster="videos/teaser/campus_rgb.jpg"></video></div>
           <div class="cmp-layer"><video muted loop playsinline
-              data-tpl="videos/teaser/garden_{mode}.mp4"></video></div>
+              data-tpl="videos/teaser/{scene}_{mode}.mp4"></video></div>
           <span class="cmp-label ours">Color</span>
           <span class="cmp-label" data-text="{mode.label}"></span>
         </div>
-        <div class="seg" data-var="mode">
-          <span class="seg-label">Compare color with:</span>
-          <button type="button" class="active" data-value="depth" data-label="Depth">Depth</button>
-          <button type="button" data-value="normal" data-label="Normal">Normal</button>
+        <div class="seg-row">
+          <div class="seg" data-var="scene">
+            <span class="seg-label">Scene:</span>
+            <button type="button" class="active" data-value="campus" data-label="Campus">Campus</button>
+            <button type="button" data-value="garden" data-label="Garden">Garden</button>
+          </div>
+          <div class="seg" data-var="mode">
+            <span class="seg-label">Compare color with:</span>
+            <button type="button" class="active" data-value="depth" data-label="Depth">Depth</button>
+            <button type="button" data-value="normal" data-label="Normal">Normal</button>
+          </div>
         </div>
+        <p class="hint" data-text="A fly-through of {scene.label} rendered from one SpaRV map. Drag the divider to compare the color render with the depth or normal render of the same frames."></p>
       </div>
-      <p class="hint">A fly-through of Garden rendered from one SpaRV map. Drag the divider to compare the
-        color render with the depth or normal render of the same frames.</p>
       <p class="lead">SpaRV builds a sparse radiance voxel map from LiDAR and cameras. The map stays
         geometrically consistent away from the captured trajectory. SpaRV also optimizes the camera poses and
         focal lengths against the map, and reconstructs a university campus captured in 63,582 images on one
@@ -424,13 +430,6 @@
             <div class="cmp-layer"><img src="images/replica/extrap_gssdf.jpg" alt="GS-SDF, Replica room-0 extrapolated view" loading="lazy"></div>
             <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
           </div>
-          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
-            <div class="cmp" style="aspect-ratio: 1200 / 680">
-              <div class="cmp-layer"><img src="images/replica/extrap_sparv.jpg" alt="SpaRV, Replica room-0 extrapolated view" loading="lazy"></div>
-              <div class="cmp-layer"><img src="images/replica/extrap_gt.jpg" alt="Ground truth, Replica room-0 extrapolated view" loading="lazy"></div>
-              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
-            </div>
-          </details>
         </div>
         <div class="pane" data-pane="rep-interp" hidden>
           <div class="cmp" style="aspect-ratio: 1200 / 680">
@@ -535,13 +534,6 @@
             <div class="cmp-layer"><img src="images/oxford/keble05_gssdf.jpg" alt="GS-SDF, Keble-05" loading="lazy"></div>
             <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
           </div>
-          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
-            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-              <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" alt="SpaRV, Keble-05" loading="lazy"></div>
-              <div class="cmp-layer"><img src="images/oxford/keble05_gt.jpg" alt="Ground truth, Keble-05" loading="lazy"></div>
-              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
-            </div>
-          </details>
           <p class="hint">On Keble-05, the baselines blur the bricks and the tree trunks are missing.</p>
         </div>
         <div class="pane" data-pane="ox-obs01" hidden>
@@ -551,13 +543,6 @@
             <div class="cmp-layer"><img src="images/oxford/obs01_gssdf.jpg" alt="GS-SDF, Obs.-01" loading="lazy"></div>
             <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
           </div>
-          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
-            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-              <div class="cmp-layer"><img src="images/oxford/obs01_sparv.jpg" alt="SpaRV, Obs.-01" loading="lazy"></div>
-              <div class="cmp-layer"><img src="images/oxford/obs01_gt.jpg" alt="Ground truth, Obs.-01" loading="lazy"></div>
-              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
-            </div>
-          </details>
           <p class="hint">On Obs.-01, the baselines blur the roof and the building corner is missing.</p>
         </div>
         <div class="pane" data-pane="ox-bodleian02" hidden>
@@ -567,13 +552,6 @@
             <div class="cmp-layer"><img src="images/oxford/bodleian02_gssdf.jpg" alt="GS-SDF, Bodleian-02" loading="lazy"></div>
             <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
           </div>
-          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
-            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-              <div class="cmp-layer"><img src="images/oxford/bodleian02_sparv.jpg" alt="SpaRV, Bodleian-02" loading="lazy"></div>
-              <div class="cmp-layer"><img src="images/oxford/bodleian02_gt.jpg" alt="Ground truth, Bodleian-02" loading="lazy"></div>
-              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
-            </div>
-          </details>
           <p class="hint">On Bodleian-02, the paving joints of the baselines become a grey patch.</p>
         </div>
       </div>

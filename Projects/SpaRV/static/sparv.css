@@ -191,6 +191,8 @@ figcaption b { color: var(--ink); }
 .seg button:hover { border-color: #b6bec7; }
 .seg button.active { background: var(--btn); border-color: var(--btn); color: #fff; }
 .seg .seg-label { align-self: center; color: var(--muted); font-size: 14px; margin-right: 4px; }
+.seg-row { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 28px; }
+.seg-row .seg { margin-bottom: 4px; }
 
 .pane[hidden] { display: none; }
 
