@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpaRV: Sparse Radiance Voxels for Scalable Geometrically Consistent LiDAR-Visual Mapping and Rendering</title>
+  <meta name="description"
+    content="SpaRV builds a sparse radiance voxel map from LiDAR and cameras. Its geometry stays consistent away from the captured trajectory, it optimizes the camera poses and focal lengths against the map, and it reconstructs a university campus on one 24 GB GPU.">
+  <meta name="keywords" content="SpaRV, LiDAR-visual mapping, radiance field, sparse voxels, novel view synthesis, camera optimization, large-scale reconstruction">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SpaRV: Sparse Radiance Voxels for Scalable Geometrically Consistent LiDAR-Visual Mapping and Rendering">
+  <meta property="og:description" content="A sparse radiance voxel map for geometrically consistent LiDAR-visual mapping and rendering at campus scale.">
+  <meta property="og:url" content="https://jianhengliu.github.io/Projects/SpaRV/">
+  <meta property="og:image" content="https://jianhengliu.github.io/Projects/SpaRV/images/pipeline.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/sparv.css">
+
+  <script>
+    // Links for the buttons at the top of the page. An empty string shows the
+    // button greyed out as "Coming soon". For the video, a YouTube or Bilibili
+    // page URL works (it is converted to an embedded player).
+    window.SPARV_LINKS = {
+      paper: "",
+      arxiv: "",
+      code: "",
+      video: ""
+    };
+  </script>
+  <script defer src="static/sparv.js"></script>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="page">
+      <a href="https://jianhengliu.github.io/">Jianheng Liu</a>
+      <nav>
+        <span>More research:</span>
+        <a href="https://jianhengliu.github.io/Projects/GS-SDF/">GS-SDF</a>
+        <a href="https://jianhengliu.github.io/Projects/M2Mapping/">M2Mapping</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="page">
+
+    <!-- ============================================================ header -->
+    <header class="paper">
+      <h1><span class="acronym">SpaRV</span>: Sparse Radiance Voxels for Scalable Geometrically Consistent
+        LiDAR-Visual Mapping and Rendering</h1>
+      <p class="authors">
+        <span><a href="https://github.com/jianhengLiu">Jianheng Liu</a>,</span>
+        <span>Yunfei Wan,</span>
+        <span>Fangming Cheng,</span>
+        <span>Xiangyu Hong,</span>
+        <span>Zuhao Zou,</span>
+        <span>Haotian Li,</span>
+        <span>Longji Yin,</span>
+        <span><a href="https://github.com/xuankuzcr">Chunran Zheng</a>,</span>
+        <span><a href="https://github.com/ziv-lin">Jiarong Lin</a>,</span>
+        <span>and <a href="https://mars.hku.hk/people.html">Fu Zhang</a></span>
+      </p>
+      <p class="affil">The University of Hong Kong</p>
+      <p class="venue">IEEE Transactions on Robotics (under review)</p>
+
+      <div class="buttons">
+        <a class="btn is-disabled" data-link="paper">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Paper <span class="soon">(coming soon)</span></a>
+        <a class="btn is-disabled" data-link="arxiv">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h10v2H4z"/></svg>
+          arXiv <span class="soon">(coming soon)</span></a>
+        <a class="btn is-disabled" data-link="code">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.7 16.6 4.1 12l4.6-4.6L7.3 6l-6 6 6 6 1.4-1.4zm6.6 0 4.6-4.6-4.6-4.6L16.7 6l6 6-6 6-1.4-1.4z"/></svg>
+          Code <span class="soon">(coming soon)</span></a>
+        <a class="btn is-disabled" data-link="video">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Video <span class="soon">(coming soon)</span></a>
+        <a class="btn" href="#bibtex">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+          BibTeX</a>
+      </div>
+    </header>
+
+    <!-- ============================================================ teaser -->
+    <section id="teaser">
+      <div class="vswitch">
+        <div class="cmp" style="aspect-ratio: 4 / 3">
+          <div class="cmp-layer"><video muted loop playsinline data-lead
+              data-tpl="videos/teaser/garden_rgb.mp4" data-poster-tpl="videos/teaser/garden_rgb.jpg"
+              poster="videos/teaser/garden_rgb.jpg"></video></div>
+          <div class="cmp-layer"><video muted loop playsinline
+              data-tpl="videos/teaser/garden_{mode}.mp4"></video></div>
+          <span class="cmp-label ours">Color</span>
+          <span class="cmp-label" data-text="{mode.label}"></span>
+        </div>
+        <div class="seg" data-var="mode">
+          <span class="seg-label">Compare color with:</span>
+          <button type="button" class="active" data-value="depth" data-label="Depth">Depth</button>
+          <button type="button" data-value="normal" data-label="Normal">Normal</button>
+        </div>
+      </div>
+      <p class="hint">A fly-through of Garden rendered from one SpaRV map. Drag the divider to compare the
+        color render with the depth or normal render of the same frames.</p>
+      <p class="lead">SpaRV builds a sparse radiance voxel map from LiDAR and cameras. The map stays
+        geometrically consistent away from the captured trajectory. SpaRV also optimizes the camera poses and
+        focal lengths against the map, and reconstructs a university campus captured in 63,582 images on one
+        24&nbsp;GB GPU.</p>
+    </section>
+
+    <!-- ========================================================== abstract -->
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <hr>
+      <p>Robotic simulation, navigation, and inspection need photorealistic and geometrically accurate maps.
+        Radiance fields achieve photorealism, but building them from robot data raises three challenges.
+        A robot's trajectory serves its task, not reconstruction, so images from few viewpoints leave the
+        geometry under-constrained.
+        Residual errors in camera poses and intrinsics blur the map.
+        The map's GPU memory grows with scene size, which limits its level of detail in large scenes.
+        We present <b>SpaRV</b>, a <b>Spa</b>rse <b>R</b>adiance <b>V</b>oxel map rendered by differentiable
+        ray marching, which lets irregular LiDAR scans supervise it alongside images.
+        LiDAR depth and occupancy anchor the under-constrained geometry, and normal and smoothness regularizers
+        keep it smooth between LiDAR points.
+        To correct camera errors, SpaRV alternates map training with photometric optimization of the camera
+        poses and focal lengths.
+        To bound GPU memory in training and rendering, SpaRV holds one submap at a time at full resolution and
+        the rest at coarser octree levels.
+        Experiments show that SpaRV keeps the geometry consistent away from the captured trajectory and
+        sharpens textures by optimizing the camera parameters.
+        On one 24&nbsp;GB GPU, SpaRV reconstructs a university campus captured in 63,582 images and simulates
+        other cameras and LiDARs.
+        We will open-source our implementation.</p>
+    </section>
+
+    <!-- ============================================================= video -->
+    <section id="video">
+      <h2>Video</h2>
+      <hr>
+      <div class="embed" id="video-embed">The overview video will be posted here.</div>
+    </section>
+
+    <!-- ============================================================ method -->
+    <section id="method">
+      <h2>Method</h2>
+      <hr>
+      <figure>
+        <img src="images/pipeline.jpg" alt="Overview of the SpaRV pipeline" width="1800" height="892">
+        <figcaption><b>Overview of SpaRV.</b> (1) Inputs: RGB images, LiDAR scans, and initial camera
+          parameters. The top panel shows one frame as its allocated voxels (left) and the view rendered from
+          them (right). (2) A granularity-driven cut selects voxels from the octree, and a differentiable ray
+          marcher renders them into color and depth. (3) Training runs over the submaps coarse-to-fine and
+          alternates map training with camera optimization. The trained map is used for novel view synthesis,
+          surface reconstruction, and LiDAR simulation.</figcaption>
+      </figure>
+
+      <!-- 1 -->
+      <h3 class="left"><span class="num">1</span>Ray-marching rendering of sparse radiance voxels</h3>
+      <p>SpaRV stores the scene as sparse voxels in an octree, allocated only around surfaces and refined
+        where more detail is needed.</p>
+      <p>A differentiable ray marcher traverses the voxels along each ray independently. Camera pixels, LiDAR
+        rays, and rays of non-pinhole cameras therefore supervise the map through one renderer. The rasterizer
+        of SVRaster, in contrast, batches a pinhole pixel lattice and does not directly apply to LiDAR rays or
+        non-pinhole cameras.</p>
+      <figure class="diagram narrow">
+        <img src="images/method/sparse_voxel.png" alt="Sparse voxels on a two-object scene" width="1400" height="520" loading="lazy">
+        <figcaption><b>Sparse voxels on a two-object scene.</b> (a) Voxels are allocated only around the
+          surfaces. (b) Finer voxels (darker) concentrate where the detail is required. (c) Trilinear
+          interpolation of the eight vertex densities.</figcaption>
+      </figure>
+      <figure class="diagram narrow">
+        <img src="images/method/raster_vs_raymarch.png" alt="Rasterization versus ray marching" width="1400" height="589" loading="lazy">
+        <figcaption><b>Rasterization versus ray marching.</b> (a) Rasterization batches a pinhole pixel
+          lattice. (b) Ray marching evaluates each ray independently.</figcaption>
+      </figure>
+
+      <!-- 2 -->
+      <h3 class="left"><span class="num">2</span>Geometry-grounded map training</h3>
+      <p>Color supervision fits every camera ray but leaves the geometry under-constrained, since different
+        density profiles can render the same pixel color. LiDAR depth supervision anchors the field at the
+        measured range, but only along measured rays. Between these anchors, normal and smoothness
+        regularizers keep the surface locally smooth.</p>
+      <figure class="diagram narrow">
+        <img src="images/method/loss_coverage.png" alt="Loss terms and the regions they constrain" width="1400" height="492" loading="lazy">
+        <figcaption><b>Loss terms and the regions they constrain.</b> (a) Color: a floater (dashed) and a
+          surface-aligned density profile (solid) render the same pixel color. (b) LiDAR depth: the target
+          distribution (rose) pulls the rendered depth distribution (blue) onto the measured range. (c) Normal
+          and smoothness: between the LiDAR anchors, a rippling surface (blue, dashed) fits the images as well
+          as a smooth one, and the regularizers smooth it (rose).</figcaption>
+      </figure>
+      <p>A LiDAR scan is sparse, and its field of view does not coincide with the camera's. Floaters off the
+        measured rays therefore get no depth supervision. The point cloud still marks which voxels contain a
+        measured surface. Occupied voxel guidance turns that occupancy into a termination target for camera
+        rays that hit an occupied voxel.</p>
+      <figure class="diagram narrow">
+        <img src="images/method/occ_guidance.png" alt="Occupied voxel guidance" width="1400" height="560" loading="lazy">
+        <figcaption><b>Occupied voxel guidance.</b> Teal dots are input LiDAR points. (a) LiDAR depth
+          supervision leaves floaters off the measured rays unconstrained. (b) Guiding camera rays to terminate
+          in the first occupied voxel suppresses floaters in front of it. (c) Voxel adaptation removes floater
+          voxels whose blending weights fall below the pruning threshold.</figcaption>
+      </figure>
+
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="occ-color">Color</button>
+          <button type="button" data-tab="occ-depth">Depth</button>
+          <button type="button" data-tab="occ-normal">Normal from depth</button>
+        </div>
+        <div class="pane" data-pane="occ-color">
+          <div class="cmp" style="aspect-ratio: 1600 / 758">
+            <div class="cmp-layer"><img src="images/occ/wo_color.jpg" alt="Without occupied voxel guidance, color" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/occ/w_color.jpg" alt="With occupied voxel guidance, color" loading="lazy"></div>
+            <span class="cmp-label">Without guidance</span><span class="cmp-label ours">With guidance</span>
+          </div>
+        </div>
+        <div class="pane" data-pane="occ-depth" hidden>
+          <div class="cmp" style="aspect-ratio: 1600 / 758">
+            <div class="cmp-layer"><img src="images/occ/wo_depth.jpg" alt="Without occupied voxel guidance, depth" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/occ/w_depth.jpg" alt="With occupied voxel guidance, depth" loading="lazy"></div>
+            <span class="cmp-label">Without guidance</span><span class="cmp-label ours">With guidance</span>
+          </div>
+        </div>
+        <div class="pane" data-pane="occ-normal" hidden>
+          <div class="cmp" style="aspect-ratio: 1600 / 758">
+            <div class="cmp-layer"><img src="images/occ/wo_normal.jpg" alt="Without occupied voxel guidance, normal" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/occ/w_normal.jpg" alt="With occupied voxel guidance, normal" loading="lazy"></div>
+            <span class="cmp-label">Without guidance</span><span class="cmp-label ours">With guidance</span>
+          </div>
+        </div>
+      </div>
+      <p class="hint">The same view on an Oxford Spires scene, from maps trained without and with occupied
+        voxel guidance. The color images are nearly the same, but without the guidance the depth and normal
+        maps show a band of floaters over the lawn.</p>
+
+      <!-- 3 -->
+      <h3 class="left"><span class="num">3</span>Map-driven camera optimization</h3>
+      <p>The cameras of robot data are metrically plausible but carry residual errors in every frame, and
+        these errors blur the textures of the map. SpaRV alternates map training with photometric optimization
+        of the pose and focal length of each camera against the current map. On the six FAST-LIVO2 scenes,
+        camera optimization raises the training-view PSNR of SpaRV from 26.55&nbsp;dB with the odometry
+        cameras to 29.87&nbsp;dB.</p>
+
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="cam-drive">Drive</button>
+          <button type="button" data-tab="cam-sculpture">Sculpture</button>
+          <button type="button" data-tab="cam-cbd">CBD</button>
+          <button type="button" data-tab="cam-culture01">Culture</button>
+        </div>
+        <div class="pane" data-pane="cam-drive">
+          <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+            <div class="cmp-layer"><img src="images/camopt/drive_odom.jpg" alt="Drive, odometry cameras" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/camopt/drive_opt.jpg" alt="Drive, optimized cameras" loading="lazy"></div>
+            <span class="cmp-label">Odometry cameras</span><span class="cmp-label ours">Optimized cameras</span>
+          </div>
+          <details class="fold"><summary>Show optimized cameras vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+              <div class="cmp-layer"><img src="images/camopt/drive_opt.jpg" alt="Drive, optimized cameras" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/camopt/drive_gt.jpg" alt="Drive, ground truth" loading="lazy"></div>
+              <span class="cmp-label ours">Optimized cameras</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+        </div>
+        <div class="pane" data-pane="cam-sculpture" hidden>
+          <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+            <div class="cmp-layer"><img src="images/camopt/sculpture_odom.jpg" alt="Sculpture, odometry cameras" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/camopt/sculpture_opt.jpg" alt="Sculpture, optimized cameras" loading="lazy"></div>
+            <span class="cmp-label">Odometry cameras</span><span class="cmp-label ours">Optimized cameras</span>
+          </div>
+          <details class="fold"><summary>Show optimized cameras vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+              <div class="cmp-layer"><img src="images/camopt/sculpture_opt.jpg" alt="Sculpture, optimized cameras" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/camopt/sculpture_gt.jpg" alt="Sculpture, ground truth" loading="lazy"></div>
+              <span class="cmp-label ours">Optimized cameras</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+        </div>
+        <div class="pane" data-pane="cam-cbd" hidden>
+          <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+            <div class="cmp-layer"><img src="images/camopt/cbd_odom.jpg" alt="CBD, odometry cameras" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/camopt/cbd_opt.jpg" alt="CBD, optimized cameras" loading="lazy"></div>
+            <span class="cmp-label">Odometry cameras</span><span class="cmp-label ours">Optimized cameras</span>
+          </div>
+          <details class="fold"><summary>Show optimized cameras vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+              <div class="cmp-layer"><img src="images/camopt/cbd_opt.jpg" alt="CBD, optimized cameras" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/camopt/cbd_gt.jpg" alt="CBD, ground truth" loading="lazy"></div>
+              <span class="cmp-label ours">Optimized cameras</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+        </div>
+        <div class="pane" data-pane="cam-culture01" hidden>
+          <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+            <div class="cmp-layer"><img src="images/camopt/culture01_odom.jpg" alt="Culture, odometry cameras" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/camopt/culture01_opt.jpg" alt="Culture, optimized cameras" loading="lazy"></div>
+            <span class="cmp-label">Odometry cameras</span><span class="cmp-label ours">Optimized cameras</span>
+          </div>
+          <details class="fold"><summary>Show optimized cameras vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+              <div class="cmp-layer"><img src="images/camopt/culture01_opt.jpg" alt="Culture, optimized cameras" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/camopt/culture01_gt.jpg" alt="Culture, ground truth" loading="lazy"></div>
+              <span class="cmp-label ours">Optimized cameras</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+        </div>
+      </div>
+      <p class="hint">SpaRV on a FAST-LIVO2 training view, trained with the odometry cameras (left) and with
+        the cameras it optimized (right).</p>
+
+      <figure>
+        <video controls muted loop playsinline width="1280" height="696" data-src="videos/camopt/drive_camopt.mp4"
+          poster="videos/camopt/drive_camopt.jpg"></video>
+        <figcaption>FAST-LIVO2 Drive along the training trajectory. 3DGS, SVRaster, and SpaRV, each trained on
+          the odometry cameras (top) and on the cameras optimized by SpaRV (bottom).</figcaption>
+      </figure>
+
+      <div class="tbl">
+        <table>
+          <caption>Training-view PSNR&uarr; on FAST-LIVO2.</caption>
+          <thead>
+            <tr><th class="l">Method</th><th>Landmark</th><th>CBD</th><th>Culture</th><th>Drive</th><th>Sculpture</th><th>Street</th><th>Avg.</th></tr>
+          </thead>
+          <tbody>
+            <tr class="group"><td colspan="8">odometry cameras</td></tr>
+            <tr><td class="l">InstantNGP</td><td>31.705</td><td>25.312</td><td>23.131</td><td>18.379</td><td><u>25.276</u></td><td>23.429</td><td>24.539</td></tr>
+            <tr><td class="l">3DGS</td><td><u>32.260</u></td><td>22.033</td><td>21.571</td><td>25.570</td><td>24.294</td><td><u>26.836</u></td><td>25.427</td></tr>
+            <tr><td class="l">SVRaster</td><td>31.616</td><td><u>26.419</u></td><td><u>24.749</u></td><td>26.035</td><td>24.636</td><td>26.025</td><td><u>26.580</u></td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td>31.223</td><td>25.923</td><td>24.681</td><td><u>26.871</u></td><td>24.483</td><td>26.130</td><td>26.552</td></tr>
+            <tr class="ours"><td class="l">SpaRV (cam. opt.)</td><td><b>36.190</b></td><td><b>28.114</b></td><td><b>26.512</b></td><td><b>29.817</b></td><td><b>28.548</b></td><td><b>30.007</b></td><td><b>29.865</b></td></tr>
+            <tr class="group"><td colspan="8">optimized cameras</td></tr>
+            <tr><td class="l">InstantNGP</td><td>31.693</td><td>25.182</td><td>24.064</td><td>19.622</td><td>25.290</td><td>23.596</td><td>24.908</td></tr>
+            <tr><td class="l">3DGS</td><td><u>36.256</u></td><td>23.159</td><td>21.231</td><td>27.006</td><td>27.937</td><td><b>30.657</b></td><td>27.708</td></tr>
+            <tr><td class="l">SVRaster</td><td>36.011</td><td><b>28.680</b></td><td>24.755</td><td>27.587</td><td><u>28.411</u></td><td>29.443</td><td>29.148</td></tr>
+            <tr><td class="l">LetsGo</td><td>32.066</td><td>27.107</td><td>24.218</td><td>17.712</td><td>23.177</td><td>28.408</td><td>25.448</td></tr>
+            <tr><td class="l">GS-SDF</td><td>35.744</td><td><u>28.584</u></td><td><b>27.143</b></td><td><u>28.298</u></td><td>28.066</td><td><u>30.493</u></td><td><u>29.721</u></td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td><b>36.403</b></td><td>28.157</td><td><u>26.601</u></td><td><b>29.914</b></td><td><b>28.605</b></td><td>30.013</td><td><b>29.949</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tbl-note">Odometry cameras: every method is trained on the FAST-LIVO2 odometry poses, and SpaRV
+        (cam. opt.) also runs camera optimization. Optimized cameras: every method is trained on the cameras
+        that SpaRV (cam. opt.) optimized.</p>
+
+      <!-- 4 -->
+      <h3 class="left"><span class="num">4</span>Large-scale reconstruction under bounded GPU memory</h3>
+      <p>The GPU memory of a map grows with the extent of the scene. A single view, however, needs fine detail
+        only near the camera, since distant regions project to few pixels. The octree of SpaRV keeps every
+        coarser level that training passes through, and a coarser voxel needs no further optimization to be
+        rendered as a level of detail. A granularity-driven cut selects voxels by the number of pixels they
+        span on the image plane. It holds the submap in focus at the finest available level and the rest of the
+        scene at coarser levels. The same cut rule serves training and rendering.</p>
+      <figure class="diagram">
+        <img src="images/method/lod_pipeline.png" alt="Large-scale training and deployment" width="1800" height="352" loading="lazy">
+        <figcaption><b>Large-scale training and deployment.</b> (1) Coarse training subdivides the octree over
+          the whole scene up to the memory budget and keeps each coarser level as frozen nodes. (2) Submap
+          training trains one submap at a time, with its relevant views, on a cut: the interior (blue) is
+          subdivided, the exterior (violet) stays frozen, and grey nodes are not in the cut. (3) Deployment
+          renders from the cut around the deploy box that contains the camera.</figcaption>
+      </figure>
+      <div class="grid cols-4">
+        <figure><img src="images/lod/level_10.jpg" alt="Octree level 10" width="720" height="873" loading="lazy"><figcaption>Level 10</figcaption></figure>
+        <figure><img src="images/lod/level_11.jpg" alt="Octree level 11" width="720" height="873" loading="lazy"><figcaption>Level 11</figcaption></figure>
+        <figure><img src="images/lod/level_12.jpg" alt="Octree level 12" width="720" height="873" loading="lazy"><figcaption>Level 12</figcaption></figure>
+        <figure><img src="images/lod/level_16.jpg" alt="Octree level 16" width="720" height="873" loading="lazy"><figcaption>Level 16</figcaption></figure>
+        <figure><img src="images/lod/tau_1.jpg" alt="Cut at tau 1" width="720" height="873" loading="lazy"><figcaption>&tau; = 1</figcaption></figure>
+        <figure><img src="images/lod/tau_5.jpg" alt="Cut at tau 5" width="720" height="873" loading="lazy"><figcaption>&tau; = 5</figcaption></figure>
+        <figure><img src="images/lod/tau_9.jpg" alt="Cut at tau 9" width="720" height="873" loading="lazy"><figcaption>&tau; = 9</figcaption></figure>
+        <figure><img src="images/lod/tau_17.jpg" alt="Cut at tau 17" width="720" height="873" loading="lazy"><figcaption>&tau; = 17</figcaption></figure>
+      </div>
+      <p class="hint">Levels of detail of one octree, seen from a single viewpoint. Top: increasingly fine
+        levels. Bottom: cuts at an increasing granularity target &tau;, in pixels.</p>
+    </section>
+
+    <!-- =========================================================== results -->
+    <section id="results">
+      <h2>Results</h2>
+      <hr>
+      <p>We compare SpaRV with InstantNGP, 3DGS, SVRaster, LetsGo, and GS-SDF on synthetic indoor scenes and
+        two outdoor LiDAR-visual datasets, with H3DGS on two large scenes we collected, and with EgoNeRF and
+        OmniGS on an omnidirectional benchmark. In the tables, <b>bold</b> is the best result and
+        <u>underlined</u> the second best.</p>
+
+      <h3>Rendering away from the captured trajectory</h3>
+      <p>A robot plans, simulates, and navigates beyond the views it captured, so the map is expected to stay
+        geometrically consistent at those viewpoints. On FAST-LIVO2 Street, the methods are hard to tell apart
+        at an interpolated view and separate once the camera moves off the captured trajectory. The image-only
+        methods (InstantNGP, 3DGS, SVRaster) degrade. The Gaussian-based LetsGo and GS-SDF show popping on the
+        billboard, where SpaRV stays consistent.</p>
+      <div class="cmp" style="aspect-ratio: 1830 / 630">
+        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_3dgs.jpg" alt="3DGS, extrapolated view of Street" loading="lazy"></div>
+        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_sparv.jpg" alt="SpaRV, extrapolated view of Street" loading="lazy"></div>
+        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_gssdf.jpg" alt="GS-SDF, extrapolated view of Street" loading="lazy"></div>
+        <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+      </div>
+      <p class="hint">FAST-LIVO2 Street at an extrapolated view away from the captured trajectory. Drag the
+        two dividers.</p>
+      <figure>
+        <video controls muted loop playsinline width="1280" height="570" data-src="videos/extrap/street_extrap.mp4"
+          poster="videos/extrap/street_extrap.jpg"></video>
+        <figcaption>All six methods on Street, with the viewpoint moved away from the captured
+          trajectory.</figcaption>
+      </figure>
+
+      <h3>Replica</h3>
+      <p>Replica is a synthetic indoor dataset with ground-truth camera poses, which remove camera error from
+        the comparison. We evaluate 8 scenes at interpolated viewpoints along the trajectory and at
+        extrapolated viewpoints sampled uniformly in each scene. Pixels that no training view sees are
+        excluded from the extrapolated evaluation.</p>
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="rep-extrap">Extrapolated view</button>
+          <button type="button" data-tab="rep-interp">Interpolated view</button>
+        </div>
+        <div class="pane" data-pane="rep-extrap">
+          <div class="cmp" style="aspect-ratio: 1200 / 680">
+            <div class="cmp-layer"><img src="images/replica/extrap_3dgs.jpg" alt="3DGS, Replica room-0 extrapolated view" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/replica/extrap_sparv.jpg" alt="SpaRV, Replica room-0 extrapolated view" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/replica/extrap_gssdf.jpg" alt="GS-SDF, Replica room-0 extrapolated view" loading="lazy"></div>
+            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+          </div>
+          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
+            <div class="cmp" style="aspect-ratio: 1200 / 680">
+              <div class="cmp-layer"><img src="images/replica/extrap_sparv.jpg" alt="SpaRV, Replica room-0 extrapolated view" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/replica/extrap_gt.jpg" alt="Ground truth, Replica room-0 extrapolated view" loading="lazy"></div>
+              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+        </div>
+        <div class="pane" data-pane="rep-interp" hidden>
+          <div class="cmp" style="aspect-ratio: 1200 / 680">
+            <div class="cmp-layer"><img src="images/replica/interp_3dgs.jpg" alt="3DGS, Replica room-0 interpolated view" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/replica/interp_sparv.jpg" alt="SpaRV, Replica room-0 interpolated view" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/replica/interp_gssdf.jpg" alt="GS-SDF, Replica room-0 interpolated view" loading="lazy"></div>
+            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+          </div>
+        </div>
+      </div>
+      <p class="hint">Replica Room-0. Every method is close to the reference at the interpolated training
+        view; at the extrapolated view of the same maps, the methods separate.</p>
+
+      <div class="tbl">
+        <table>
+          <caption>Rendering on Replica, averaged over the 8 scenes.</caption>
+          <thead>
+            <tr><th class="l" rowspan="2">Method</th><th colspan="3">Extrapolated (E)</th><th colspan="3">Interpolated (I)</th></tr>
+            <tr><th class="metric">PSNR&uarr;</th><th class="metric">SSIM&uarr;</th><th class="metric">LPIPS&darr;</th><th class="metric">PSNR&uarr;</th><th class="metric">SSIM&uarr;</th><th class="metric">LPIPS&darr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l">InstantNGP</td><td>35.643</td><td>0.944</td><td>0.150</td><td>33.713</td><td>0.933</td><td>0.154</td></tr>
+            <tr><td class="l">3DGS</td><td>28.714</td><td>0.922</td><td>0.161</td><td>40.439</td><td>0.974</td><td>0.095</td></tr>
+            <tr><td class="l">SVRaster</td><td>33.347</td><td>0.946</td><td>0.135</td><td>39.600</td><td><u>0.975</u></td><td>0.090</td></tr>
+            <tr><td class="l">LetsGo</td><td>25.051</td><td>0.886</td><td>0.198</td><td>38.892</td><td>0.965</td><td>0.122</td></tr>
+            <tr><td class="l">GS-SDF</td><td><u>36.053</u></td><td><u>0.962</u></td><td><u>0.103</u></td><td><u>40.548</u></td><td>0.973</td><td><u>0.078</u></td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td><b>36.690</b></td><td><b>0.963</b></td><td><b>0.077</b></td><td><b>41.001</b></td><td><b>0.982</b></td><td><b>0.047</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>FAST-LIVO2</h3>
+      <p>FAST-LIVO2 is a real-world LiDAR-visual dataset captured with a solid-state Livox AVIA LiDAR. Its
+        non-repetitive scan pattern makes the range measurements of each frame sparse and irregular. We use six
+        outdoor scenes with three trajectory types: forward-facing (Landmark, CBD, Street), object-centric
+        (Sculpture), and free-view (Culture, Drive). The initial cameras come from the FAST-LIVO2 odometry.</p>
+      <figure>
+        <img src="images/fastlivo2/overview.jpg" alt="The six FAST-LIVO2 scenes" width="1800" height="865" loading="lazy">
+        <figcaption>The six FAST-LIVO2 scenes: LiDAR map, trajectory, and a SpaRV render per scene.</figcaption>
+      </figure>
+
+      <div class="vswitch">
+        <div class="seg" data-var="scene">
+          <button type="button" data-value="campus" data-label="Landmark">Landmark</button>
+          <button type="button" data-value="cbd" data-label="CBD">CBD</button>
+          <button type="button" data-value="culture01" data-label="Culture">Culture</button>
+          <button type="button" data-value="drive" data-label="Drive">Drive</button>
+          <button type="button" data-value="sculpture" data-label="Sculpture">Sculpture</button>
+          <button type="button" class="active" data-value="station" data-label="Street">Street</button>
+        </div>
+        <div class="cmp narrow" style="aspect-ratio: 640 / 512">
+          <div class="cmp-layer"><video muted loop playsinline data-tpl="videos/fastlivo2/{scene}/{base}.mp4"></video></div>
+          <div class="cmp-layer"><video muted loop playsinline data-lead data-tpl="videos/fastlivo2/{scene}/ours.mp4"
+              data-poster-tpl="videos/fastlivo2/{scene}/ours.jpg"></video></div>
+          <span class="cmp-label" data-text="{base.label}"></span><span class="cmp-label ours">SpaRV (Ours)</span>
+        </div>
+        <div class="seg" data-var="base">
+          <span class="seg-label">Compare with:</span>
+          <button type="button" class="active" data-value="3dgs" data-label="3DGS">3DGS</button>
+          <button type="button" data-value="svraster" data-label="SVRaster">SVRaster</button>
+          <button type="button" data-value="lod3dgs" data-label="LetsGo">LetsGo</button>
+          <button type="button" data-value="gssdf" data-label="GS-SDF">GS-SDF</button>
+        </div>
+      </div>
+      <p class="hint">Fly-throughs along the test-view trajectory, with every method trained on the optimized
+        cameras. Pick a scene and a baseline, and drag the divider.</p>
+
+      <p>On a test split that holds out one image in every eight, SpaRV has the lowest LPIPS on all six scenes
+        and the highest SSIM on five of them. Its average PSNR is 0.13&nbsp;dB below GS-SDF.</p>
+      <div class="tbl">
+        <table>
+          <caption>FAST-LIVO2 test split under the optimized cameras, averaged over the six scenes.</caption>
+          <thead>
+            <tr><th class="l">Method</th><th>PSNR&uarr;</th><th>SSIM&uarr;</th><th>LPIPS&darr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l">InstantNGP</td><td>25.350</td><td>0.761</td><td>0.325</td></tr>
+            <tr><td class="l">3DGS</td><td>27.198</td><td>0.845</td><td>0.224</td></tr>
+            <tr><td class="l">SVRaster</td><td>28.042</td><td>0.873</td><td>0.168</td></tr>
+            <tr><td class="l">LetsGo</td><td>28.395</td><td>0.881</td><td>0.164</td></tr>
+            <tr><td class="l">GS-SDF</td><td><b>28.802</b></td><td><u>0.892</u></td><td><u>0.149</u></td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td><u>28.676</u></td><td><b>0.911</b></td><td><b>0.103</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Oxford Spires</h3>
+      <p>Oxford Spires has 12 outdoor sequences around Oxford landmarks, captured with a 64-channel Hesai QT64
+        LiDAR and three synchronized global-shutter cameras. Its ground-truth trajectories are registered
+        against a millimeter-accurate laser scan, so this benchmark compares the methods with accurate cameras.
+        SpaRV leads on all three averaged metrics, and its LPIPS is the lowest on all 12 sequences.</p>
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="ox-keble05">Keble-05</button>
+          <button type="button" data-tab="ox-obs01">Obs.-01</button>
+          <button type="button" data-tab="ox-bodleian02">Bodleian-02</button>
+        </div>
+        <div class="pane" data-pane="ox-keble05">
+          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+            <div class="cmp-layer"><img src="images/oxford/keble05_3dgs.jpg" alt="3DGS, Keble-05" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" alt="SpaRV, Keble-05" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/keble05_gssdf.jpg" alt="GS-SDF, Keble-05" loading="lazy"></div>
+            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+          </div>
+          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+              <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" alt="SpaRV, Keble-05" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/oxford/keble05_gt.jpg" alt="Ground truth, Keble-05" loading="lazy"></div>
+              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+          <p class="hint">On Keble-05, the baselines blur the bricks and the tree trunks are missing.</p>
+        </div>
+        <div class="pane" data-pane="ox-obs01" hidden>
+          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+            <div class="cmp-layer"><img src="images/oxford/obs01_3dgs.jpg" alt="3DGS, Obs.-01" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/obs01_sparv.jpg" alt="SpaRV, Obs.-01" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/obs01_gssdf.jpg" alt="GS-SDF, Obs.-01" loading="lazy"></div>
+            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+          </div>
+          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+              <div class="cmp-layer"><img src="images/oxford/obs01_sparv.jpg" alt="SpaRV, Obs.-01" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/oxford/obs01_gt.jpg" alt="Ground truth, Obs.-01" loading="lazy"></div>
+              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+          <p class="hint">On Obs.-01, the baselines blur the roof and the building corner is missing.</p>
+        </div>
+        <div class="pane" data-pane="ox-bodleian02" hidden>
+          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+            <div class="cmp-layer"><img src="images/oxford/bodleian02_3dgs.jpg" alt="3DGS, Bodleian-02" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/bodleian02_sparv.jpg" alt="SpaRV, Bodleian-02" loading="lazy"></div>
+            <div class="cmp-layer"><img src="images/oxford/bodleian02_gssdf.jpg" alt="GS-SDF, Bodleian-02" loading="lazy"></div>
+            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+          </div>
+          <details class="fold"><summary>Show SpaRV vs. ground truth</summary>
+            <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+              <div class="cmp-layer"><img src="images/oxford/bodleian02_sparv.jpg" alt="SpaRV, Bodleian-02" loading="lazy"></div>
+              <div class="cmp-layer"><img src="images/oxford/bodleian02_gt.jpg" alt="Ground truth, Bodleian-02" loading="lazy"></div>
+              <span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">Ground truth</span>
+            </div>
+          </details>
+          <p class="hint">On Bodleian-02, the paving joints of the baselines become a grey patch.</p>
+        </div>
+      </div>
+
+      <div class="tbl">
+        <table>
+          <caption>Oxford Spires, averaged over the 12 sequences.</caption>
+          <thead>
+            <tr><th class="l">Method</th><th>PSNR&uarr;</th><th>SSIM&uarr;</th><th>LPIPS&darr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l">InstantNGP</td><td>24.102</td><td>0.772</td><td>0.428</td></tr>
+            <tr><td class="l">3DGS</td><td>25.759</td><td>0.796</td><td>0.366</td></tr>
+            <tr><td class="l">SVRaster</td><td>25.286</td><td>0.814</td><td><u>0.302</u></td></tr>
+            <tr><td class="l">LetsGo</td><td>25.714</td><td><u>0.835</u></td><td>0.304</td></tr>
+            <tr><td class="l">GS-SDF</td><td><u>25.880</u></td><td>0.817</td><td>0.329</td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td><b>26.837</b></td><td><b>0.857</b></td><td><b>0.232</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Large scenes: Garden and Campus</h3>
+      <p>We captured Garden and Campus with a handheld scanner that carries a solid-state Livox MID360 LiDAR
+        and three fisheye cameras. Garden is an outdoor district densely covered with complex objects: 44,550
+        images and 146.7&nbsp;M LiDAR points along a 2,239&nbsp;m trajectory. Campus spans an entire
+        university: 63,582 images and 151.6&nbsp;M LiDAR points along a 3,534&nbsp;m trajectory. We compare
+        SpaRV at two stages with H3DGS. SpaRV (coarse) is the output of coarse training, and SpaRV (deploy)
+        adds submap training and renders through a cut around the camera.</p>
+      <figure>
+        <img src="images/large_scale/overview.jpg" alt="Garden and Campus reconstructed by SpaRV" width="1800" height="1136" loading="lazy">
+        <figcaption><b>Garden (top) and Campus (bottom), reconstructed by SpaRV on a single GPU.</b> Each scene
+          is drawn as the accumulated LiDAR point cloud of the capture, viewed from above. Beside each red
+          dashed box, <i>points</i> is the point cloud of that region seen from a free viewpoint and
+          <i>render</i> is the SpaRV rendering from the same viewpoint.</figcaption>
+      </figure>
+
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="ls-campus">Campus</button>
+          <button type="button" data-tab="ls-garden">Garden</button>
+        </div>
+        <div class="pane" data-pane="ls-campus">
+          <figure>
+            <video controls muted loop playsinline width="1280" height="356" data-src="videos/large_scale/campus.mp4"
+              poster="videos/large_scale/campus.jpg"></video>
+          </figure>
+        </div>
+        <div class="pane" data-pane="ls-garden" hidden>
+          <figure>
+            <video controls muted loop playsinline width="1280" height="356" data-src="videos/large_scale/garden.mp4"
+              poster="videos/large_scale/garden.jpg"></video>
+          </figure>
+        </div>
+      </div>
+      <p class="hint">SpaRV (coarse), H3DGS, and SpaRV (deploy) along the same fly-through.</p>
+
+      <p>Submap training improves SpaRV (coarse) on every metric, most on Campus (+2.5&nbsp;dB PSNR). On
+        Campus, SpaRV (deploy) renders at 68.8 FPS with a peak of 15.6&nbsp;GiB of GPU memory, against
+        29.6 FPS and 22.5&nbsp;GiB for H3DGS.</p>
+      <div class="tbl">
+        <table>
+          <caption>Rendering quality on Garden and Campus, evaluated on the training views.</caption>
+          <thead>
+            <tr><th class="l">Scene</th><th class="l">Method</th><th>PSNR&uarr;</th><th>SSIM&uarr;</th><th>LPIPS&darr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l" rowspan="3">Garden</td><td class="l">H3DGS</td><td>18.02</td><td>0.620</td><td><b>0.282</b></td></tr>
+            <tr class="ours"><td class="l">SpaRV (coarse)</td><td><u>20.89</u></td><td><u>0.712</u></td><td>0.346</td></tr>
+            <tr class="ours"><td class="l">SpaRV (deploy)</td><td><b>21.12</b></td><td><b>0.713</b></td><td><u>0.295</u></td></tr>
+            <tr><td class="l" rowspan="3">Campus</td><td class="l">H3DGS</td><td>20.01</td><td><u>0.660</u></td><td><u>0.295</u></td></tr>
+            <tr class="ours"><td class="l">SpaRV (coarse)</td><td><u>20.62</u></td><td>0.652</td><td>0.451</td></tr>
+            <tr class="ours"><td class="l">SpaRV (deploy)</td><td><b>23.16</b></td><td><b>0.760</b></td><td><b>0.283</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tbl">
+        <table>
+          <caption>Training and rendering cost on Campus (3,960-frame fly-through at 1280&times;960).</caption>
+          <thead>
+            <tr><th class="l" rowspan="2">Method</th><th rowspan="2">Train [h]&darr;</th><th rowspan="2">FPS&uarr;</th><th colspan="2">Peak VRAM [GiB]&darr;</th></tr>
+            <tr><th class="metric">Train</th><th class="metric">Render</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l">H3DGS</td><td><u>7.3</u></td><td>29.6</td><td><b>8.3</b></td><td>22.5</td></tr>
+            <tr class="ours"><td class="l">SpaRV (coarse)</td><td><b>0.8</b></td><td><b>248.4</b></td><td>12.5</td><td><b>4.3</b></td></tr>
+            <tr class="ours"><td class="l">SpaRV (deploy)</td><td>8.7</td><td><u>68.8</u></td><td><u>11.7</u></td><td><u>15.6</u></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Omnidirectional cameras: EgoNeRF</h3>
+      <p>SpaRV renders equirectangular cameras with the same ray marcher, and uses the renderer and training
+        schedule of the pinhole experiments unchanged. OmniGS, in contrast, specializes its rasterizer for the
+        equirectangular camera. SpaRV outperforms OmniGS on all three metrics on both splits. The PSNR margin
+        is small (0.34&nbsp;dB on OmniBlender, 0.15&nbsp;dB on Ricoh360), while LPIPS drops by 26% and 11%.</p>
+      <div class="tabs">
+        <div class="seg" data-tabs role="tablist">
+          <button type="button" class="active" data-tab="ego-ricoh">Ricoh360 (real)</button>
+          <button type="button" data-tab="ego-omni">OmniBlender (synthetic)</button>
+        </div>
+        <div class="pane" data-pane="ego-ricoh">
+          <figure>
+            <video controls muted loop playsinline width="1280" height="452" data-src="videos/egonerf/ricoh360.mp4"
+              poster="videos/egonerf/ricoh360.jpg"></video>
+          </figure>
+        </div>
+        <div class="pane" data-pane="ego-omni" hidden>
+          <figure>
+            <video controls muted loop playsinline width="1280" height="504" data-src="videos/egonerf/omniblender.mp4"
+              poster="videos/egonerf/omniblender.jpg"></video>
+          </figure>
+        </div>
+      </div>
+      <div class="tbl">
+        <table>
+          <caption>Novel view synthesis on the test frames of the EgoNeRF dataset.</caption>
+          <thead>
+            <tr><th class="l" rowspan="2">Method</th><th colspan="3">OmniBlender (11 scenes)</th><th colspan="3">Ricoh360 (11 scenes)</th></tr>
+            <tr><th class="metric">PSNR&uarr;</th><th class="metric">SSIM&uarr;</th><th class="metric">LPIPS&darr;</th><th class="metric">PSNR&uarr;</th><th class="metric">SSIM&uarr;</th><th class="metric">LPIPS&darr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="l">EgoNeRF</td><td>30.93</td><td>0.892</td><td>0.207</td><td>24.89</td><td>0.752</td><td>0.353</td></tr>
+            <tr><td class="l">OmniGS</td><td>33.09</td><td>0.918</td><td>0.174</td><td>25.99</td><td>0.825</td><td>0.262</td></tr>
+            <tr class="ours"><td class="l">SpaRV</td><td><b>33.43</b></td><td><b>0.926</b></td><td><b>0.129</b></td><td><b>26.14</b></td><td><b>0.838</b></td><td><b>0.233</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ====================================================== applications -->
+    <section id="applications">
+      <h2>Applications</h2>
+      <hr>
+      <h3>Sensor simulation</h3>
+      <p>The ray marcher accepts arbitrary rays, so one trained map can render other cameras and LiDARs. From
+        the Garden map, SpaRV renders three camera models (pinhole, fisheye, and omnidirectional) and three
+        LiDAR scan patterns (Livox AVIA, Livox MID360, and an OS128-style ring pattern).</p>
+      <figure>
+        <video controls muted loop playsinline width="1280" height="670" data-src="videos/sensor/sensor_sim.mp4"
+          poster="videos/sensor/sensor_sim.jpg"></video>
+        <figcaption>Sensor simulation from one trained map: three camera models (top) and three LiDAR scan
+          patterns (bottom).</figcaption>
+      </figure>
+
+      <h3>Mesh extraction</h3>
+      <figure>
+        <img src="images/mesh/station.jpg" alt="Mesh of Street" width="1600" height="241" loading="lazy">
+        <figcaption style="text-align:center">Street</figcaption>
+      </figure>
+      <figure>
+        <img src="images/mesh/cbd.jpg" alt="Mesh of CBD" width="1600" height="275" loading="lazy">
+        <figcaption style="text-align:center">CBD</figcaption>
+      </figure>
+      <div class="grid cols-2">
+        <figure><img src="images/mesh/campus.jpg" alt="Mesh of Landmark" width="1600" height="826" loading="lazy"><figcaption>Landmark</figcaption></figure>
+        <figure><img src="images/mesh/sculpture.jpg" alt="Mesh of Sculpture" width="1600" height="826" loading="lazy"><figcaption>Sculpture</figcaption></figure>
+        <figure><img src="images/mesh/culture.jpg" alt="Mesh of Culture" width="1600" height="826" loading="lazy"><figcaption>Culture</figcaption></figure>
+        <figure><img src="images/mesh/drive.jpg" alt="Mesh of Drive" width="1600" height="826" loading="lazy"><figcaption>Drive</figcaption></figure>
+      </div>
+      <p class="hint">Meshes extracted from the six FAST-LIVO2 maps by marching cubes.</p>
+    </section>
+
+    <!-- ============================================================ bibtex -->
+    <section id="bibtex">
+      <h2>BibTeX</h2>
+      <hr>
+      <div class="bib">
+        <button type="button">Copy</button>
+<pre>@article{liu2026sparv,
+  title   = {SpaRV: Sparse Radiance Voxels for Scalable Geometrically Consistent LiDAR-Visual Mapping and Rendering},
+  author  = {Liu, Jianheng and Wan, Yunfei and Cheng, Fangming and Hong, Xiangyu and Zou, Zuhao and
+             Li, Haotian and Yin, Longji and Zheng, Chunran and Lin, Jiarong and Zhang, Fu},
+  journal = {IEEE Transactions on Robotics},
+  note    = {Under review},
+  year    = {2026}
+}</pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="page">
+      Page design adapted from the
+      <a href="https://research.nvidia.com/labs/sil/projects/neural-harmonic-textures/">Neural Harmonic Textures</a>
+      project page.
+    </div>
+  </footer>
+
+</body>
+
+</html>

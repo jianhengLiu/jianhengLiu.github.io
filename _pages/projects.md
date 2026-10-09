@@ -4,6 +4,19 @@ title: "Projects"
 author_profile: true
 ---
 
+## SpaRV: Sparse Radiance Voxels for Scalable Geometrically Consistent LiDAR-Visual Mapping and Rendering
+
+<small><strong>Jianheng Liu</strong>, Yunfei Wan, Fangming Cheng, Xiangyu Hong, Zuhao Zou, Haotian Li, Longji Yin, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
+<br/>
+<small><i><strong>T-RO (under review)</strong></i></small>
+<br/>
+A sparse radiance voxel map from LiDAR and cameras that stays geometrically consistent away from the captured trajectory and reconstructs a whole university campus on one 24 GB GPU.
+<br/>
+<img src="../Projects/SpaRV/images/pipeline.jpg"/><br/>
+<p class="project-links">
+  <a href="https://jianhengliu.github.io/Projects/SpaRV/">Project Page</a>
+</p>
+
 ## GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction
 
 <small><strong>Jianheng Liu</strong>, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
