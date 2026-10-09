@@ -8,7 +8,7 @@ author_profile: true
 
 <small><strong>Jianheng Liu</strong>, Yunfei Wan, Fangming Cheng, Xiangyu Hong, Zuhao Zou, Haotian Li, Longji Yin, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
 <br/>
-<small><i><strong>T-RO (under review)</strong></i></small>
+<small><i><strong>Under review</strong></i></small>
 <br/>
 A sparse radiance voxel map from LiDAR and cameras that stays geometrically consistent away from the captured trajectory and reconstructs a whole university campus on one 24 GB GPU.
 <br/>
