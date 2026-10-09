@@ -233,21 +233,27 @@
 
   /* ------------------------------------------------- switchable videos -- */
 
-  // .vswitch fills the data-src of its videos from templates such as
+  // .vswitch fills the sources of its images and videos from templates such as
   // "videos/fastlivo2/{scene}/{base}.mp4"; each .seg[data-var] button group
-  // sets one variable ({name} -> data-value, {name.label} -> data-label).
+  // sets one variable ({name} -> data-value of the active button, {name.attr}
+  // -> its data-attr, e.g. {base.label}).
   function initSwitch(root) {
     var groups = root.querySelectorAll('.seg[data-var]');
     function fill(tpl) {
-      return tpl.replace(/\{(\w+)(\.label)?\}/g, function (_, name, isLabel) {
+      return tpl.replace(/\{(\w+)(?:\.(\w+))?\}/g, function (_, name, attr) {
         var b = root.querySelector('.seg[data-var="' + name + '"] button.active');
-        return b ? (isLabel ? b.dataset.label : b.dataset.value) : '';
+        return b ? (b.dataset[attr || 'value'] || '') : '';
       });
     }
     function update() {
-      root.querySelectorAll('video[data-tpl]').forEach(function (v) {
-        v.dataset.src = fill(v.dataset.tpl);
-        if (v.dataset.posterTpl) v.dataset.poster = fill(v.dataset.posterTpl);
+      root.querySelectorAll('[data-tpl]').forEach(function (el) {
+        var url = fill(el.dataset.tpl);
+        if (el.tagName === 'VIDEO') {        // videos load lazily, see refreshGroup
+          el.dataset.src = url;
+          if (el.dataset.posterTpl) el.dataset.poster = fill(el.dataset.posterTpl);
+        } else if (el.getAttribute('src') !== url) {
+          el.src = url;
+        }
       });
       root.querySelectorAll('[data-text]').forEach(function (t) { t.textContent = fill(t.dataset.text); });
       var g = root.querySelector('.cmp');

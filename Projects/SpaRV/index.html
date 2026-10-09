@@ -398,14 +398,23 @@
         at an interpolated view and separate once the camera moves off the captured trajectory. The image-only
         methods (InstantNGP, 3DGS, SVRaster) degrade. The Gaussian-based LetsGo and GS-SDF show popping on the
         billboard, where SpaRV stays consistent.</p>
-      <div class="cmp" style="aspect-ratio: 1830 / 630">
-        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_3dgs.jpg" alt="3DGS, extrapolated view of Street" loading="lazy"></div>
-        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_sparv.jpg" alt="SpaRV, extrapolated view of Street" loading="lazy"></div>
-        <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_gssdf.jpg" alt="GS-SDF, extrapolated view of Street" loading="lazy"></div>
-        <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
+      <div class="vswitch">
+        <div class="cmp" style="aspect-ratio: 1830 / 630">
+          <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_3dgs.jpg" data-tpl="images/fastlivo2/street_extrap_{base}.jpg" alt="Baseline, extrapolated view of Street" loading="lazy"></div>
+          <div class="cmp-layer"><img src="images/fastlivo2/street_extrap_sparv.jpg" alt="SpaRV, extrapolated view of Street" loading="lazy"></div>
+          <span class="cmp-label" data-text="{base.label}">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span>
+        </div>
+        <div class="seg" data-var="base">
+          <span class="seg-label">Compare with:</span>
+          <button type="button" class="active" data-value="3dgs" data-label="3DGS">3DGS</button>
+          <button type="button" data-value="instant_ngp" data-label="InstantNGP">InstantNGP</button>
+          <button type="button" data-value="svraster" data-label="SVRaster">SVRaster</button>
+          <button type="button" data-value="lod3dgs" data-label="LetsGo">LetsGo</button>
+          <button type="button" data-value="gssdf" data-label="GS-SDF">GS-SDF</button>
+        </div>
       </div>
-      <p class="hint">FAST-LIVO2 Street at an extrapolated view away from the captured trajectory. Drag the
-        two dividers.</p>
+      <p class="hint">FAST-LIVO2 Street at an extrapolated view away from the captured trajectory. Pick a
+        baseline and drag the divider.</p>
       <figure>
         <video controls muted loop playsinline width="1280" height="570" data-src="videos/extrap/street_extrap.mp4"
           poster="videos/extrap/street_extrap.jpg"></video>
@@ -418,26 +427,23 @@
         the comparison. We evaluate 8 scenes at interpolated viewpoints along the trajectory and at
         extrapolated viewpoints sampled uniformly in each scene. Pixels that no training view sees are
         excluded from the extrapolated evaluation.</p>
-      <div class="tabs">
-        <div class="seg" data-tabs role="tablist">
-          <button type="button" class="active" data-tab="rep-extrap">Extrapolated view</button>
-          <button type="button" data-tab="rep-interp">Interpolated view</button>
+      <div class="vswitch">
+        <div class="seg" data-var="view">
+          <button type="button" class="active" data-value="extrap" data-label="Extrapolated view">Extrapolated view</button>
+          <button type="button" data-value="interp" data-label="Interpolated view">Interpolated view</button>
         </div>
-        <div class="pane" data-pane="rep-extrap">
-          <div class="cmp" style="aspect-ratio: 1200 / 680">
-            <div class="cmp-layer"><img src="images/replica/extrap_3dgs.jpg" alt="3DGS, Replica room-0 extrapolated view" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/replica/extrap_sparv.jpg" alt="SpaRV, Replica room-0 extrapolated view" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/replica/extrap_gssdf.jpg" alt="GS-SDF, Replica room-0 extrapolated view" loading="lazy"></div>
-            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
-          </div>
+        <div class="cmp" style="aspect-ratio: 1200 / 680">
+          <div class="cmp-layer"><img src="images/replica/extrap_3dgs.jpg" data-tpl="images/replica/{view}_{base}.jpg" alt="Baseline, Replica room-0" loading="lazy"></div>
+          <div class="cmp-layer"><img src="images/replica/extrap_sparv.jpg" data-tpl="images/replica/{view}_sparv.jpg" alt="SpaRV, Replica room-0" loading="lazy"></div>
+          <span class="cmp-label" data-text="{base.label}">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span>
         </div>
-        <div class="pane" data-pane="rep-interp" hidden>
-          <div class="cmp" style="aspect-ratio: 1200 / 680">
-            <div class="cmp-layer"><img src="images/replica/interp_3dgs.jpg" alt="3DGS, Replica room-0 interpolated view" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/replica/interp_sparv.jpg" alt="SpaRV, Replica room-0 interpolated view" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/replica/interp_gssdf.jpg" alt="GS-SDF, Replica room-0 interpolated view" loading="lazy"></div>
-            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
-          </div>
+        <div class="seg" data-var="base">
+          <span class="seg-label">Compare with:</span>
+          <button type="button" class="active" data-value="3dgs" data-label="3DGS">3DGS</button>
+          <button type="button" data-value="instant_ngp" data-label="InstantNGP">InstantNGP</button>
+          <button type="button" data-value="svraster" data-label="SVRaster">SVRaster</button>
+          <button type="button" data-value="lod3dgs" data-label="LetsGo">LetsGo</button>
+          <button type="button" data-value="gssdf" data-label="GS-SDF">GS-SDF</button>
         </div>
       </div>
       <p class="hint">Replica Room-0. Every method is close to the reference at the interpolated training
@@ -521,39 +527,29 @@
         LiDAR and three synchronized global-shutter cameras. Its ground-truth trajectories are registered
         against a millimeter-accurate laser scan, so this benchmark compares the methods with accurate cameras.
         SpaRV leads on all three averaged metrics, and its LPIPS is the lowest on all 12 sequences.</p>
-      <div class="tabs">
-        <div class="seg" data-tabs role="tablist">
-          <button type="button" class="active" data-tab="ox-keble05">Keble-05</button>
-          <button type="button" data-tab="ox-obs01">Obs.-01</button>
-          <button type="button" data-tab="ox-bodleian02">Bodleian-02</button>
+      <div class="vswitch">
+        <div class="seg" data-var="scene">
+          <button type="button" class="active" data-value="keble05" data-label="Keble-05"
+            data-hint="On Keble-05, the baselines blur the bricks and the tree trunks are missing.">Keble-05</button>
+          <button type="button" data-value="obs01" data-label="Obs.-01"
+            data-hint="On Obs.-01, the baselines blur the roof and the building corner is missing.">Obs.-01</button>
+          <button type="button" data-value="bodleian02" data-label="Bodleian-02"
+            data-hint="On Bodleian-02, the paving joints of the baselines become a grey patch.">Bodleian-02</button>
         </div>
-        <div class="pane" data-pane="ox-keble05">
-          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-            <div class="cmp-layer"><img src="images/oxford/keble05_3dgs.jpg" alt="3DGS, Keble-05" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" alt="SpaRV, Keble-05" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/keble05_gssdf.jpg" alt="GS-SDF, Keble-05" loading="lazy"></div>
-            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
-          </div>
-          <p class="hint">On Keble-05, the baselines blur the bricks and the tree trunks are missing.</p>
+        <div class="cmp narrow" style="aspect-ratio: 4 / 3">
+          <div class="cmp-layer"><img src="images/oxford/keble05_3dgs.jpg" data-tpl="images/oxford/{scene}_{base}.jpg" alt="Baseline, Oxford Spires" loading="lazy"></div>
+          <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" data-tpl="images/oxford/{scene}_sparv.jpg" alt="SpaRV, Oxford Spires" loading="lazy"></div>
+          <span class="cmp-label" data-text="{base.label}">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span>
         </div>
-        <div class="pane" data-pane="ox-obs01" hidden>
-          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-            <div class="cmp-layer"><img src="images/oxford/obs01_3dgs.jpg" alt="3DGS, Obs.-01" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/obs01_sparv.jpg" alt="SpaRV, Obs.-01" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/obs01_gssdf.jpg" alt="GS-SDF, Obs.-01" loading="lazy"></div>
-            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
-          </div>
-          <p class="hint">On Obs.-01, the baselines blur the roof and the building corner is missing.</p>
+        <div class="seg" data-var="base">
+          <span class="seg-label">Compare with:</span>
+          <button type="button" class="active" data-value="3dgs" data-label="3DGS">3DGS</button>
+          <button type="button" data-value="instant_ngp" data-label="InstantNGP">InstantNGP</button>
+          <button type="button" data-value="svraster" data-label="SVRaster">SVRaster</button>
+          <button type="button" data-value="lod3dgs" data-label="LetsGo">LetsGo</button>
+          <button type="button" data-value="gssdf" data-label="GS-SDF">GS-SDF</button>
         </div>
-        <div class="pane" data-pane="ox-bodleian02" hidden>
-          <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-            <div class="cmp-layer"><img src="images/oxford/bodleian02_3dgs.jpg" alt="3DGS, Bodleian-02" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/bodleian02_sparv.jpg" alt="SpaRV, Bodleian-02" loading="lazy"></div>
-            <div class="cmp-layer"><img src="images/oxford/bodleian02_gssdf.jpg" alt="GS-SDF, Bodleian-02" loading="lazy"></div>
-            <span class="cmp-label">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span><span class="cmp-label">GS-SDF</span>
-          </div>
-          <p class="hint">On Bodleian-02, the paving joints of the baselines become a grey patch.</p>
-        </div>
+        <p class="hint" data-text="{scene.hint}"></p>
       </div>
 
       <div class="tbl">
