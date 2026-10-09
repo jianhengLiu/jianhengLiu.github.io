@@ -103,8 +103,10 @@
         <div class="seg-row">
           <div class="seg" data-var="scene">
             <span class="seg-label">Scene:</span>
-            <button type="button" class="active" data-value="campus" data-label="Campus">Campus</button>
-            <button type="button" data-value="garden" data-label="Garden">Garden</button>
+            <button type="button" class="active" data-value="campus" data-label="Campus"
+              data-hint="The whole Campus fly-through (3,960 frames), played at 2&ndash;3&times; speed.">Campus</button>
+            <button type="button" data-value="garden" data-label="Garden"
+              data-hint="The whole Garden fly-through (1,440 frames).">Garden</button>
           </div>
           <div class="seg" data-var="mode">
             <span class="seg-label">Compare color with:</span>
@@ -112,7 +114,7 @@
             <button type="button" data-value="normal" data-label="Normal">Normal</button>
           </div>
         </div>
-        <p class="hint" data-text="A fly-through of {scene.label} rendered from one SpaRV map. Drag the divider to compare the color render with the depth or normal render of the same frames."></p>
+        <p class="hint" data-text="{scene.hint} Drag the divider to compare the color render of one SpaRV map with its rendered depth, or with the normal map derived from that depth."></p>
       </div>
       <p class="lead">SpaRV builds a sparse radiance voxel map from LiDAR and cameras. The map stays
         geometrically consistent away from the captured trajectory. SpaRV also optimizes the camera poses and
@@ -529,16 +531,16 @@
         SpaRV leads on all three averaged metrics, and its LPIPS is the lowest on all 12 sequences.</p>
       <div class="vswitch">
         <div class="seg" data-var="scene">
-          <button type="button" class="active" data-value="keble05" data-label="Keble-05"
+          <button type="button" data-value="keble05" data-label="Keble-05"
             data-hint="On Keble-05, the baselines blur the bricks and the tree trunks are missing.">Keble-05</button>
-          <button type="button" data-value="obs01" data-label="Obs.-01"
+          <button type="button" class="active" data-value="obs01" data-label="Obs.-01"
             data-hint="On Obs.-01, the baselines blur the roof and the building corner is missing.">Obs.-01</button>
           <button type="button" data-value="bodleian02" data-label="Bodleian-02"
             data-hint="On Bodleian-02, the paving joints of the baselines become a grey patch.">Bodleian-02</button>
         </div>
         <div class="cmp narrow" style="aspect-ratio: 4 / 3">
-          <div class="cmp-layer"><img src="images/oxford/keble05_3dgs.jpg" data-tpl="images/oxford/{scene}_{base}.jpg" alt="Baseline, Oxford Spires" loading="lazy"></div>
-          <div class="cmp-layer"><img src="images/oxford/keble05_sparv.jpg" data-tpl="images/oxford/{scene}_sparv.jpg" alt="SpaRV, Oxford Spires" loading="lazy"></div>
+          <div class="cmp-layer"><img src="images/oxford/obs01_3dgs.jpg" data-tpl="images/oxford/{scene}_{base}.jpg" alt="Baseline, Oxford Spires" loading="lazy"></div>
+          <div class="cmp-layer"><img src="images/oxford/obs01_sparv.jpg" data-tpl="images/oxford/{scene}_sparv.jpg" alt="SpaRV, Oxford Spires" loading="lazy"></div>
           <span class="cmp-label" data-text="{base.label}">3DGS</span><span class="cmp-label ours">SpaRV (Ours)</span>
         </div>
         <div class="seg" data-var="base">
@@ -602,7 +604,8 @@
           </figure>
         </div>
       </div>
-      <p class="hint">SpaRV (coarse), H3DGS, and SpaRV (deploy) along the same fly-through.</p>
+      <p class="hint">SpaRV (coarse), H3DGS, and SpaRV (deploy) along the whole fly-through of each scene.
+        Campus plays at 2&ndash;3&times; speed.</p>
 
       <p>Submap training improves SpaRV (coarse) on every metric, most on Campus (+2.5&nbsp;dB PSNR). On
         Campus, SpaRV (deploy) renders at 68.8 FPS with a peak of 15.6&nbsp;GiB of GPU memory, against
