@@ -4,7 +4,6 @@ title: "Projects"
 author_profile: true
 ---
 
-{% comment %} SpaRV: hidden for now; delete this tag and the endcomment tag to show it again.
 ## SpaRV: Sparse Radiance Voxels for Scalable Geometrically Consistent LiDAR-Visual Mapping and Rendering
 
 <small><strong>Jianheng Liu</strong>, Yunfei Wan, Fangming Cheng, Xiangyu Hong, Zuhao Zou, Haotian Li, Longji Yin, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
@@ -18,7 +17,6 @@ A sparse radiance voxel map from LiDAR and cameras that stays geometrically cons
   <a href="https://jianhengliu.github.io/Projects/SpaRV/">Project Page</a>
 </p>
 
-{% endcomment %}
 ## GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction
 
 <small><strong>Jianheng Liu</strong>, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang</small>
