@@ -15,8 +15,10 @@
 
   function applyLinks() {
     var links = window.SPARV_LINKS || {};
+    var localVideo = document.querySelector('#video-embed video');
     document.querySelectorAll('[data-link]').forEach(function (a) {
       var key = a.dataset.link, url = links[key];
+      if (key === 'video' && !url && localVideo) url = '#video';
       if (!url) {
         a.classList.add('is-disabled');
         a.setAttribute('aria-disabled', 'true');
@@ -128,7 +130,8 @@
       if (c.querySelector('video')) groups.push(c);
     });
     document.querySelectorAll('video').forEach(function (v) {
-      if (!v.closest('.cmp')) groups.push(v);
+      // data-manual: plays only when the viewer starts it (the overview video)
+      if (!v.closest('.cmp') && !v.hasAttribute('data-manual')) groups.push(v);
     });
     groups.forEach(function (g) {
       syncGroup(g);

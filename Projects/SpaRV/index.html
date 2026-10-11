@@ -26,8 +26,9 @@
 
   <script>
     // Links for the buttons at the top of the page. An empty string shows the
-    // button greyed out as "Coming soon". For the video, a YouTube or Bilibili
-    // page URL works (it is converted to an embedded player).
+    // button greyed out as "Coming soon". For the video, an empty string keeps
+    // the self-hosted videos/overview/sparv_video.mp4; a YouTube or Bilibili
+    // page URL replaces it with an embedded player.
     window.SPARV_LINKS = {
       paper: "",
       arxiv: "",
@@ -154,7 +155,10 @@
     <section id="video">
       <h2>Video</h2>
       <hr>
-      <div class="embed" id="video-embed">The overview video will be posted here.</div>
+      <div class="embed has-video" id="video-embed">
+        <video controls playsinline preload="none" data-manual width="1280" height="720"
+          poster="videos/overview/sparv_video.jpg" src="videos/overview/sparv_video.mp4"></video>
+      </div>
     </section>
 
     <!-- ============================================================ method -->
