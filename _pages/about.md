@@ -10,6 +10,9 @@ I am pursuing PhD degree at **The University of Hong Kong** under the supervisio
 
 My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural Fields**.
 
+**I am actively seeking industry opportunities related to Embodied AI and World Models. Feel free to [contact me](mailto:liujianhengchris@qq.com)!**
+{: .notice--info}
+
 # Education
 
 - **Ph.D. in Mechanical Engineering**, 2023/09 - 2027/06 (expected)
