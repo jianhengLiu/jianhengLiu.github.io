@@ -32,7 +32,7 @@
     window.SPARV_LINKS = {
       paper: "",
       arxiv: "",
-      code: "",
+      code: "https://github.com/hku-mars/SpaRV",
       video: ""
     };
   </script>
@@ -92,34 +92,8 @@
       </div>
     </header>
 
-    <!-- ============================================================ teaser -->
-    <section id="teaser">
-      <div class="vswitch">
-        <div class="cmp" style="aspect-ratio: 4 / 3">
-          <div class="cmp-layer"><video muted loop playsinline data-lead
-              data-tpl="videos/teaser/{scene}_rgb.mp4" data-poster-tpl="videos/teaser/{scene}_rgb.jpg"
-              poster="videos/teaser/campus_rgb.jpg"></video></div>
-          <div class="cmp-layer"><video muted loop playsinline
-              data-tpl="videos/teaser/{scene}_{mode}.mp4"></video></div>
-          <span class="cmp-label ours">Color</span>
-          <span class="cmp-label" data-text="{mode.label}"></span>
-        </div>
-        <div class="seg-row">
-          <div class="seg" data-var="scene">
-            <span class="seg-label">Scene:</span>
-            <button type="button" class="active" data-value="campus" data-label="Campus"
-              data-hint="The whole Campus fly-through (3,960 frames), played at 2&ndash;3&times; speed.">Campus</button>
-            <button type="button" data-value="garden" data-label="Garden"
-              data-hint="The whole Garden fly-through (1,440 frames).">Garden</button>
-          </div>
-          <div class="seg" data-var="mode">
-            <span class="seg-label">Compare color with:</span>
-            <button type="button" class="active" data-value="depth" data-label="Depth">Depth</button>
-            <button type="button" data-value="normal" data-label="Normal">Normal</button>
-          </div>
-        </div>
-        <p class="hint" data-text="{scene.hint} Drag the divider to compare the color render of one SpaRV map with its rendered depth, or with the normal map derived from that depth."></p>
-      </div>
+    <!-- ============================================================ summary -->
+    <section id="summary">
       <p class="lead">SpaRV builds a sparse radiance voxel map from LiDAR and cameras. The map stays
         geometrically consistent away from the captured trajectory. SpaRV also optimizes the camera poses and
         focal lengths against the map, and reconstructs a university campus captured in 63,582 images on one
@@ -148,7 +122,7 @@
         sharpens textures by optimizing the camera parameters.
         On one 24&nbsp;GB GPU, SpaRV reconstructs a university campus captured in 63,582 images and simulates
         other cameras and LiDARs.
-        We will open-source our implementation.</p>
+        Our code will be released at <a href="https://github.com/hku-mars/SpaRV">github.com/hku-mars/SpaRV</a>.</p>
     </section>
 
     <!-- ============================================================= video -->
