@@ -14,6 +14,7 @@ A sparse radiance voxel map from LiDAR and cameras that stays geometrically cons
 <br/>
 <img src="../Projects/SpaRV/images/pipeline.jpg"/><br/>
 <p class="project-links">
+  <a href="https://arxiv.org/abs/2610.25665">arXiv</a> |
   <a href="https://jianhengliu.github.io/Projects/SpaRV/">Project Page</a>
 </p>
 

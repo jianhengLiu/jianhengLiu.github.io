@@ -31,7 +31,7 @@ My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural 
   <br>
   **Jianheng Liu**, Yunfei Wan, Fangming Cheng, Xiangyu Hong, Zuhao Zou, Haotian Li, Longji Yin, Chunran Zheng, Jiarong Lin, and Fu Zhang
   <br>
-  Under review, 2026, <a href="https://jianhengliu.github.io/Projects/SpaRV/">Project Page</a>
+  Under review, 2026, <a href="https://arxiv.org/abs/2610.25665">arXiv</a>, <a href="https://jianhengliu.github.io/Projects/SpaRV/">Project Page</a>
 - **GS-SDF: LiDAR-Augmented Gaussian Splatting and Neural SDF for Geometrically Consistent Rendering and Reconstruction**{% include citations.html key="gs-sdf" %}
   <br>
   **Jianheng Liu**, Yunfei Wan, Bowen Wang, Chunran Zheng, Jiarong Lin, and Fu Zhang
