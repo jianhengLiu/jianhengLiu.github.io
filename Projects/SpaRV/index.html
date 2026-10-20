@@ -566,8 +566,14 @@
         images and 146.7&nbsp;M LiDAR points along a 2,239&nbsp;m trajectory. Campus spans an entire
         university: 63,582 images and 151.6&nbsp;M LiDAR points along a 3,534&nbsp;m trajectory. We compare
         SpaRV at two stages with H3DGS. SpaRV (coarse) is the output of coarse training, and SpaRV (deploy)
-        adds submap training and renders through a cut around the camera. The figure at the
-        <a href="#summary">top of this page</a> shows both scenes from above.</p>
+        adds submap training and renders through a cut around the camera.</p>
+      <figure>
+        <img src="images/large_scale/overview.jpg" alt="Garden and Campus reconstructed by SpaRV" width="2400" height="1515" loading="lazy">
+        <figcaption><b>Garden (top) and Campus (bottom), reconstructed by SpaRV on a single GPU.</b> Each scene
+          is drawn as the accumulated LiDAR point cloud of the capture, viewed from above. Beside each red
+          dashed box, <i>points</i> is the point cloud of that region seen from a free viewpoint and
+          <i>render</i> is the SpaRV rendering from the same viewpoint.</figcaption>
+      </figure>
 
       <div class="tabs">
         <div class="seg" data-tabs role="tablist">
