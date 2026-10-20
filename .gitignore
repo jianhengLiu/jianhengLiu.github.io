@@ -17,3 +17,5 @@ package-lock.json
 *.synctex.gz
 *.bbl
 *.pdf
+# SpaRV videos moved to the SpaRV-assets repo; this local copy stays untracked
+Projects/SpaRV/videos/
