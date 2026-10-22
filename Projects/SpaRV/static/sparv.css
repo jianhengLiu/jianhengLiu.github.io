@@ -146,6 +146,9 @@ p { margin: 0 0 14px; text-align: justify; hyphens: auto; }
 figure { margin: 18px 0 22px; }
 figure img, figure video { display: block; width: 100%; height: auto; border-radius: var(--radius); }
 figure.diagram img { border-radius: 0; }
+/* the top figure breaks out of the 960px column, up to 1240px */
+figure.hero { width: min(1240px, 100vw - 32px); margin-left: 50%; transform: translateX(-50%); }
+figure.hero figcaption { max-width: 928px; margin-left: auto; margin-right: auto; }
 figure.narrow { max-width: 760px; margin-left: auto; margin-right: auto; }
 figcaption {
   margin-top: 8px;
