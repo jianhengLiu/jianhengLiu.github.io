@@ -72,15 +72,17 @@
     var nodes = document.querySelectorAll("[data-star-repo]");
     if (!nodes.length) return;
 
-    var cached = readCache(STARS_CACHE);
-    if (cached) applyStars(cached.data);
-    if (cached && cached.fresh) return;
-
     var repos = [];
     Array.prototype.forEach.call(nodes, function (el) {
       var r = el.getAttribute("data-star-repo");
       if (r && repos.indexOf(r) === -1) repos.push(r);
     });
+
+    var cached = readCache(STARS_CACHE);
+    if (cached) applyStars(cached.data);
+    // A fresh cache only counts if it covers every repo on this page; a repo
+    // added since the visitor's last check would otherwise wait out the TTL.
+    if (cached && cached.fresh && repos.every(function (r) { return typeof cached.data[r] === "number"; })) return;
 
     // Start from the cached map so one failing repo does not drop the others.
     var counts = cached ? Object.assign({}, cached.data) : {};
