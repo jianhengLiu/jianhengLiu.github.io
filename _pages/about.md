@@ -106,20 +106,21 @@ My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural 
 
 # Beyond Research
 
-## Akasha
-
-A family information hub built for my parents. They snap a photo of an insurance policy, ID or medical record on their phone, and an AI model fills in the details and reminds the family before anything expires. Large text, big buttons, and a Chinese-first interface keep it easy for elderly users. It is self-hosted on a home NAS on top of [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) and is open source (MIT), so other families can run their own.
-<br/>
-<img src="/images/akasha.jpg" alt="Akasha screenshots: home page, AI auto-fill and document detail"/><br/>
-<p class="project-links">
-  <a href="https://github.com/jianhengLiu/akasha">Code</a>{% include github-stars.html repo="jianhengLiu/akasha" %}
-</p>
-
-## MatRix
-
-An interactive smart carpet made of magnetic, fool-proof tiles that can be joined without limit. It works as a home smart terminal, a game pad, or decoration. Best Design Award, 2020 Smart C-end Technology Innovation Training Camp.
-<br/>
-<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
-<p class="project-links">
-  <a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>
-</p>
+<div class="side-projects">
+  <a class="side-project" href="https://github.com/jianhengLiu/akasha">
+    <img src="/images/akasha.jpg" alt="Akasha screenshots" loading="lazy">
+    <div class="side-project__body">
+      <strong>Akasha</strong>
+      <span>An elder-friendly family info hub for my parents: snap a photo of a policy or ID, AI fills in the details and reminds before it expires. Self-hosted, open source.</span>
+      <em>GitHub ↗</em>
+    </div>
+  </a>
+  <a class="side-project" href="https://www.bilibili.com/video/BV1gb4y127by">
+    <img src="/images/matrix.jpg" alt="MatRix light-up carpet tiles" loading="lazy">
+    <div class="side-project__body">
+      <strong>MatRix</strong>
+      <span>An interactive smart carpet of magnetic tiles that snap together without limit. Best Design Award, 2020 Smart C-end Innovation Camp.</span>
+      <em>Video ↗</em>
+    </div>
+  </a>
+</div>

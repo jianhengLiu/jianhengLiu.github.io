@@ -78,6 +78,52 @@
     margin-left: -0.45rem;
     margin-right: 0.15rem;
   }
+  .side-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1em 0 2em;
+  }
+  .page__content a.side-project {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .page__content a.side-project:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  .side-project img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+  .side-project__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.8em 1em 1em;
+    font-size: 0.85em;
+    line-height: 1.5;
+  }
+  .side-project__body strong {
+    font-size: 1.15em;
+  }
+  .side-project__body span {
+    color: #57606a;
+  }
+  .side-project__body em {
+    margin-top: auto;
+    color: #2f6fdb;
+    font-style: normal;
+    font-size: 0.95em;
+  }
 </style>
 
 <!-- Support for MatJax -->
