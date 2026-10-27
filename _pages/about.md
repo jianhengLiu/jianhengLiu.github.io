@@ -103,3 +103,23 @@ My research interests lie in **Robotics and Autonomous Systems, SLAM and Neural 
 - Second Prize, **2020 National Quadruped Simulation Competition**; Best Design Award, **2020 Smart C-end Technology Innovation Training Camp**
 - Third Prize, **2019 National Challenge Cup**; Bronze Prize, **2019 Internet Plus (Heilongjiang Province)**; Golden Prize, **2019 ZuGuang Cup of Harbin Institute of Technology (Shenzhen)**
 - Second Prize, **2018 National English Competition for College Students**; Grand Prize, **2018 International Youth Drone Competition**
+
+# Beyond Research
+
+## Akasha
+
+A family information hub built for my parents. They snap a photo of an insurance policy, ID or medical record on their phone, and an AI model fills in the details and reminds the family before anything expires. Large text, big buttons, and a Chinese-first interface keep it easy for elderly users. It is self-hosted on a home NAS on top of [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) and is open source (MIT), so other families can run their own.
+<br/>
+<img src="/images/akasha.jpg" alt="Akasha screenshots: home page, AI auto-fill and document detail"/><br/>
+<p class="project-links">
+  <a href="https://github.com/jianhengLiu/akasha">Code</a>{% include github-stars.html repo="jianhengLiu/akasha" %}
+</p>
+
+## MatRix
+
+An interactive smart carpet made of magnetic, fool-proof tiles that can be joined without limit. It works as a home smart terminal, a game pad, or decoration. Best Design Award, 2020 Smart C-end Technology Innovation Training Camp.
+<br/>
+<iframe width="354px" height="225px" src="https://player.bilibili.com/player.html?aid=632887496&bvid=BV1gb4y127by&cid=405321402&page=1&as_wide=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe><br/>
+<p class="project-links">
+  <a href="https://www.bilibili.com/video/BV1gb4y127by?share_source=copy_web">Video</a>
+</p>
