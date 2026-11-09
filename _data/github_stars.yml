@@ -2,13 +2,13 @@
 # Re-run: python3 latex/awesome-latex-cv/fetch_github_stars.py [--force]
 # Website badges render from this file (no shields.io / external CDN).
 
-"HITSZ-NRSL/ActiveImplicitRecon": 15
+"HITSZ-NRSL/ActiveImplicitRecon": 16
 "HITSZ-NRSL/Dynamic-VINS": 390
 "HITSZ-NRSL/RIM": 114
-"hku-mars/GS-SDF": 545
+"hku-mars/GS-SDF": 546
 "hku-mars/M2Mapping": 275
 "hku-mars/Mesh-Learner": 34
-"hku-mars/SpaRV": 38
+"hku-mars/SpaRV": 52
 "jianhengLiu/akasha": 1
 "jianhengLiu/BezierTrajGenerator": 3
 "jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial": 4
