@@ -5,10 +5,10 @@
 "HITSZ-NRSL/ActiveImplicitRecon": 16
 "HITSZ-NRSL/Dynamic-VINS": 390
 "HITSZ-NRSL/RIM": 114
-"hku-mars/GS-SDF": 549
+"hku-mars/GS-SDF": 550
 "hku-mars/M2Mapping": 275
 "hku-mars/Mesh-Learner": 34
-"hku-mars/SpaRV": 53
+"hku-mars/SpaRV": 63
 "jianhengLiu/akasha": 1
 "jianhengLiu/BezierTrajGenerator": 3
 "jianhengLiu/CoppeliaSim_Steeringwheel_Tutorial": 4
